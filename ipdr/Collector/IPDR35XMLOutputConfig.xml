@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<IPDR35XMLOutputConfig>
+		<SchemaLocation>Amdocs.xsd</SchemaLocation>
+		<IPDRRecorderInfo>Amdocs IPDR Collector</IPDRRecorderInfo>
+		<version>3.5</version>
+		<dateFormat>yyyy-dd-MM'TO'hh:mm:ssz</dateFormat>
+		<Templates>
+			<Template templateID="10" typeName="DOCSIS-Type"/>
+			<Template templateID="11" typeName="VoIP-Type"/>
+			<Template templateID="4" typeName="XyzFwd-Type"/>
+			<Template templateID="3" typeName="Simple-Type"/>
+			<Template templateID="1" typeName="AMDOCS_Test-Type"/>
+			<Template templateID="2" typeName="AMDOCS_Test-Type"/>
+
+		</Templates>
+	</IPDR35XMLOutputConfig>

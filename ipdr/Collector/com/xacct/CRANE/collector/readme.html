@@ -1,0 +1,57 @@
+<html>
+<title>CRANE Collector readme</title>
+<body bgcolor=ivory>
+<font face="trebuchet ms,tahoma,verdana,helvetica">
+<hr width="70%" align="left">
+CRANE server (collector).
+<br>  
+<br>Copyright &copy; 1997-2003 XACCT Technologies, Ltd.
+<br><hr width="70%" align="left">
+
+<p>
+The classpath must include <code>jdom.jar</code> and <code>xerces.jar</code>.
+These are in the <code>Lib</code> directory, which also has
+<code>CRANEcollector.jar</code>.
+<p>
+From the top-level directory, you can do:
+<xmp>
+CLASSPATH='Lib/CRANEcollector.jar:Lib/jdom.jar:Lib/xerces.jar'
+java com.xacct.CRANE.collector.Test    \
+    crane/com/xacct/CRANE/collector/CRANEcollector_skeleton.xml 30 csv
+</xmp>
+(For Windows: "<code>CLASSPATH='Lib/CRANEcollector.jar;Lib/jdom.jar;Lib/xerces.jar'</code>").
+
+<p>
+To compile (on Windows; for Unix use "<code>:</code>" instead of "<code>;</code>"):
+<xmp>
+mkdir -p classes2
+javac -g -O -target 1.3 -classpath "Lib/jdom.jar;Lib/xerces.jar" -sourcepath crane \
+     -d classes2 crane/com/xacct/CRANE/collector/*.java
+</xmp>
+
+<p>
+To get configuration information from the client, after editing the
+xml file to have an appropriate client IP address (or name, if the
+client is defined by DNS):
+<xmp>
+  java com.xacct.CRANE.collector.Test CRANEcollector_skeleton.xml 30 config >config.xml
+</xmp>
+
+To run the server, using the "<code>config.xml</code>" file:
+<xmp>
+  java com.xacct.CRANE.collector.Test config.xml 30 csv
+</xmp>
+(where "<code>csv</code>" can be replaced by "<code>null</code>" or
+"<code>null0</code>" or "<code>dedup</code>")
+
+<p>
+For information about running the simulator, see
+<a href="../../../../readme.html">the top-level "readme"</a>.
+
+<br><hr width="70%" align="left">
+<address>
+$Id: readme.html,v 1.1 2005/01/21 15:58:55 ilyad Exp $
+</address>
+</font>
+</body>
+</html>

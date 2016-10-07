@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:o>
+	<head>
+		<title>State transitions for IPDR client and server</title>
+	</head>
+	<body bgcolor="ivory">
+		<font face="trebuchet ms,tahoma,verdana,helvetica">
+			<br>
+			<br>
+			Copyright (2005)© Amdocs, All Rights Reserved
+			<br>
+			<hr width="70%" align="left">
+			<h1>State transitions for client and server</h1>
+			<p>
+				This document gives extra explanation of the IPDR protocol states.
+				<h2>IPDR Protocol States</h2>
+				The IPDR protocol defines the following states corresponding to a IPDR session.
+				<table border="0" id="Table1">
+					<tr valign="top">
+						<td>DISCONNECTED</td>
+						<td>IPDR Collector or Exporter are not connected on both the Transport Layer and 
+							Protocol layer</td>
+					</tr>
+					<tr valign="top">
+						<td>CONNECTED</td>
+						<td>IPDR Collector and Exporter are connected on the Transport Layer</td>
+					</tr>
+					<tr valign="top">
+						<td>SESSION INITIATION</td>
+						<td>IPDR Collector and Exporter are connected on the Protocol Layer, the templates 
+							for connection have not been determined</td>
+					</tr>
+					<tr valign="top">
+						<td>READY</td>
+						<td>IPDR Collector has proper templates for the session and awaits for starting 
+							Active Session</td>
+					</tr>
+					<tr valign="top">
+						<td>ACTIVE SESSION</td>
+						<td>IPDR Collector has Active Session with Exporter</td>
+					</tr>
+				</table>
+				<h2>The IPDR State Machines</h2>
+				The operation of the IPDR Client and Server are modeled as state machines, 
+				which is described by the following state transition tables. Any implementation 
+				of a IPDR Client or Server <em>must</em> conform to the procedures specified by 
+				the table. The table does not exhaustively show all the state transitions that 
+				may occur at a IPDR Client or server, but the major transitions are outlined.
+				<h3>The IPDR Client (Exporter) State Machine</h3>
+				<table border="1" id="Table2">
+					<tr valign="top">
+						<th align="left">
+							From State</th><th align="left">Events</th><th align="left">Conditions/Actions</th><th align="left">To 
+							State</th></tr>
+					<tr valign="top">
+						<th align="left" rowspan="2">
+							DISCONNECTED</th>
+						<td>
+							<P class="MsoNormal">
+								<o:p>
+									<SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.1 
+      Exporter receives "CONNECT" Message from the Collector</SPAN>
+								</o:p></P>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.1 
+      Exporter Sends "CONNECT RESPONSE" Message to the Collector</SPAN></td>
+						<td>CONNECTED</td>
+					</tr>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.2. 
+      Exporter Implementation requires to establish connection with some 
+      Collector</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.2 
+      Exporter Sends "CONNECT" Message to the Collector</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTING</SPAN></TD>
+					</TR>
+					<TR>
+						<TH align="left" rowspan="2">
+							CONNECTING</TH>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.3 
+      Exporter receives "CONNECT RESPONSE" mess age from the Collector</SPAN></TD>
+						<TD></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.4 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken – In case KEEP ALIVE Message is received or other 
+      messages (in other Sessions) are received, Exporter SHOULD wait.</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.4 
+      Exporter disconnects from the collector at transport level</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="3">
+							CONNECTED</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.5 
+      Exporter receives "FLOW START" message from the high priority Collector 
+      </SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.5 
+      Exporter sends "TEMPLATE DATA" to the Collector with "Negotiable" flag set 
+      </SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></td>
+					</tr>
+					<tr>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.6 
+      Exporter receives "FLOW START" message from the low priority Collector 
+      </SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.6 
+      Exporter sends "TEMPLATE DATA" to the Collector with "Negotiable" not set 
+      – The Exporter have to wait for Primary Collector <B>before </B>sending 
+      E.6 if he wants to establish negotiation and send E.6 just after 
+      Negotiation was finished (just before SESION START sent to Primary 
+      Collector).</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></td>
+					</tr>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.7 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken – In case KEEP ALIVE Message is received or other 
+      messages (in other Sessions) are received, Exporter SHOULD wait.</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.7 
+      Exporter disconnects from the collector at transport level</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="5">
+							SESSION INITIATION</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.8 
+      Exporter receives "MODIFY TEMPLATE" Message</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.8 
+      Exporter sends "MODIFY TEMPLATE RESPONSE" Message to the collector – then 
+      it SHOULD send to all "low priority" Collectors TEMPLATE DATA no 
+      negotiable Message, to report about the Templates in the 
+Session.</SPAN>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></td>
+					</tr>
+					<tr>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.9 
+      Exporter receives "FINAL TEMPLATE DATA ACK" message from the high priority 
+      collector</SPAN>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.9 
+      Exporter sends "SESSION START" Message to the Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></td>
+					</tr>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E. 
+      10 Exporter receives "FINAL TEMPLATE DATA ACK" message from the low 
+      priority collector</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.10 
+      Exporter marks this Collector as "Ready for Session" and starts to send it 
+      "KEEP ALIVE" message each requested time interval – KEEP ALIVE in the 
+      requested interval MUST be send from the time it receive the<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>CONNECT/CONNECT RESPONSE 
+      Message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.11 
+      No message (except "KEEP ALIVE") received during Keep Alive timeout, 
+      Internal configurable Response timeout will be set. If no response from 
+      the Primary Collector during the internal Response timeout disconnect and 
+      choose one of the Collectors with the highest priority and start an Active 
+      Session with it</SPAN></TD>
+						<TD>
+							<P class="MsoNormal">C.11 Exporter send "DISCONNECT" Message to the Collector.
+								<o:p></o:p></P>
+							<SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">(If 
+      there are other READY Collectors - send START SESSION Message to the 
+      highest Collector from the set of Collectors that are in READY state) 
+      </SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECT</SPAN></TD>
+					</TR>
+					<TR>
+						<TD height="28"></TD>
+						<TD height="28">C.11A Exporters sends "TEMPLATE DATA" message to the Collector</TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="6">
+							ACTIVE SESSION</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.12 
+      Exporter receives "FLOW STOP" Message from the Collector</SPAN></td>
+						<td>
+							<P class="MsoNormal">C.12 Exporter get into CONNECTED state with this Collector.
+								<o:p></o:p></P>
+							<SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">If 
+      there are other Collectors that are available at READY state, Exporter 
+      sends "START SESSION" to one with highest priority</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></td>
+					</tr>
+					<tr>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.13 
+      Exporter has Data Records available for sending</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.13 
+      Exporter sends "DATA" messages</SPAN>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></td>
+					</tr>
+					<TR>
+						<TD height="26"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.14 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken</SPAN></TD>
+						<TD height="26"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.14 
+      Exporter sends SESSION STOP followed by <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>"DISCONNECT" Message to the 
+      Collector. If there are other exporter that are available at READY state, 
+      Exporter sends "START SESSION" to one with highest priority</SPAN></TD>
+						<TD height="26"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.15 
+      Exporter willing to renegotiate Templates it sends</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.15 
+      Exporter sends "SESSION STOP" message to the Collector</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.16 
+      Exporter receives "START NEGOTIATION" Message from the Collector</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.16 
+      If Exporter agree to renegotiate the templates, it sends "SESSION STOP" 
+      message </SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></TD>
+					</TR>
+					<TR>
+						<TD></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.16.a 
+      If Explorer not agree to renegotiate the templates, it sends "START 
+      NEGOTIATION REJECT" message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="6">
+							READY</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.17 
+      Exporter receives "FLOW STOP" Message from the Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.17 
+      Exporter get into CONNECTED state with this Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></td>
+					</tr>
+					<tr>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.18 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.18 
+      Exporter sends "DISCONNECT" Message to the Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></td>
+					</tr>
+					<tr>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E. 
+      19 Exporter willing to start transmitting "DATA" messages to the 
+      Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.19 
+      Exporter sends "START SESSION" message to the Collector</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></td>
+					</tr>
+				</table>
+				<h3>The IPDR Server (Collector) State Machine</h3>
+				<table border="1" id="Table3">
+					<tr valign="top">
+						<th align="left">
+							From State</th><th align="left">Events</th><th align="left">Conditions/Actions</th><th align="left">To 
+							State</th></tr>
+					<tr valign="top">
+						<th align="left" rowspan="1">
+							DISCONNECTED</th>
+						<td>
+							<P class="MsoNormal">E.1 Collector receives "CONNECT" Message from the Exporter
+								<o:p></o:p></P>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.1 
+      Collector Sends "CONNECT RESPONSE" Message to the Exporter</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 8pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></td>
+					</tr>
+					<TR>
+						<TD align="left"></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.2. 
+      Collector Implementation requires to establish connection with some 
+      Exporter</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.2 
+      Collector Sends "CONNECT" Message to the Exporter</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTING</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="2">
+							CONNECTING</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.3 
+      Collector receives "CONNECT RESPONSE" mess age from the Exporter</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.3 
+      Collector sends "FLOW START" message to the Exporter</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></td>
+					</tr>
+					<tr valign="top">
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.4 
+      No message<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>received during 
+      Keep Alive timeout or transport level connection is broken</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.4 
+      Collector disconnects from the Exporter at transport level</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></td>
+					</tr>
+					<TR>
+						<TH align="left">
+							CONNECTED</TH>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Collector 
+      is ready to initiate Session</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.5-a 
+      Collector send FLOW START Message</SPAN></TD>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></td>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="6">
+							SESSION INITIATION</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.5 
+      Collector receives negotiable "TEMPLATE DATA" message</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.5 
+      Collector sends "MODIFY TEMPLATE" message to the exporter with updated 
+      template</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></td>
+					</tr>
+					<tr valign="top">
+						<td></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.5a 
+      Collector Sends "FINAL TEMPLATE DATA ACK" message</SPAN>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN></td>
+					</tr>
+					<TR>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.5a 
+      Collector receives no-negotiable "TEMPLATE DATA" message </SPAN></TD>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.5a</SPAN></TD>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY 
+      </SPAN></td>
+					</TR>
+					<TR>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.6 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken– In case KEEP ALIVE Message is received or other 
+      messages (in other Sessions) are received, Exporter SHOULD wait.</SPAN></TD>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.6 
+      Collector sends FLOW STOP followed by<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>"DISCONNECT" Message to the 
+      Exporter. And Collector disconnects from the Exporter at transport 
+      level</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.7 
+      Collector Receives "MODIFY TEMPLATE DATA RESPONSE" Message</SPAN></TD>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.7 
+      Collector Sends "FINAL TEMPLATE DATA ACK" message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN></TD>
+					</TR>
+					<TR>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.8 
+      No message except "KEEP ALIVE" received - Internal configurable Response 
+      timeout will be set. If no response from the Exporter during the internal 
+      Response timeout the Collector will Disconnect</SPAN></TD>
+						<TD height="27"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.8 
+      FLOW STOP followed by DISCCONECT Message will sent</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="5">
+							READY</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.9 
+      Collector receives "SESSION START" message from the Exporter</SPAN>
+						</td>
+						<td>
+						</td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN>
+							</SPAN></td>
+					</tr>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.10 
+      No message received during Keep Alive timeout, or transport level 
+      connection is broken - </SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.10 
+      Collector sends FLOW STOP followed by<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>"DISCONNECT" Message to the 
+      Exporter. And Collector disconnects from the Exporter at transport 
+      level</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.11 
+      Collector receives negotiable "TEMPLATE DATA" message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.11 
+      Collector sends "MODIFY TEMPLATE" message to the exporter with updated 
+      template</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">SESSION 
+      INITIATION</SPAN></TD>
+					</TR>
+					<TR>
+						<TD></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.11a 
+      Collector Sends "FINAL TEMPLATE DATA ACK" message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.11a 
+      Collector receives no-negotiable "TEMPLATE DATA" message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.11a</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN></TD>
+					</TR>
+					<tr valign="top">
+						<th align="left" rowspan="7">
+							ACTIVE</th>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.12 
+      Collector receives "DATA" Message</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.12 
+      Collector sends "DATA ACKNOWLEDGE" Message</SPAN></td>
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></td>
+					</tr>
+					<tr valign="top">
+						<td height="26"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.13 
+      Collector Receives "SESSION STOP" Message</SPAN></td>
+						<td height="26"></td>
+						<td height="26"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">READY</SPAN>
+							</SPAN></td>
+					</tr>
+					<tr valign="top">
+						<td><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.14 
+      No message received during Keep Alive timeout or transport level 
+      connection is broken</SPAN></td>
+						<td></td>
+						<td>DISCONNECTED</td>
+					</tr>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.15 
+      Collector wants to STOP FLOW</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE"><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.15 
+      Collector send FLOW STOP Message</SPAN>
+							</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.16 
+      Collector wants to disconnect</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.16 
+      Collector send FLOW STOP followed by DISCONNECT Message and disconnect the 
+      underline connection</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">DISCONNECTED</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.17 
+      Collector wants to initiate renegotiation</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">C.17 
+      Collector send START NEGOTIATION Message</SPAN></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></TD>
+					</TR>
+					<TR>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">E.18 
+      Collector receive START NEGOTIATION REJECT MESSAGE</SPAN></TD>
+						<TD></TD>
+						<TD><SPAN style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">ACTIVE 
+      SESSION</SPAN></TD>
+					</TR>
+				</table>
+				<br>
+				<hr align="right" width="50%">
+				<div align="right">$Id: ProtocolStateMachine.html 2.100 2003/03/29 19:03:22 
+					[release 2.1.2 2003-04-15T21-36-38Z] $</div>
+		</font>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+# -*-Makefile-*-
+
+# $Id: cygwin.defs,v 1.1.1.1 2004/12/12 23:02:05 michaeld Exp $
+
+ARCH_FLAG := -DCYGWIN
+
+MT_SUPPORT := 1
+
+WARNING_FLAGS := -Wall -Wshadow -Wpointer-arith -Wcast-qual -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -DPTHREADS_SUPPORT # -pedantic -Wtraditional -Wcast-align -Wconversion
+
+#  -posix is needed for clock_gettime; but that causes other problems
+#  because fd_set isn't defined with the cygwin headers when "posix". sigh.
+#  take a look at gcc -dumpspecs | grep -e -D
+#  and maybe figure out a better way ...
+#  (e.g., use the -mthread option to set _MT
+#   and check for __CYGWIN)
+CFLAGS += $(ARCH_FLAG) -O -g -mthreads $(WARNING_FLAGS)
+CXXFLAGS += $(ARCH_FLAG) -DPTHREADS_SUPPORT -O -g -mthreads $(WARNING_FLAGS) -Wno-aggregate-return
+LDFLAGS := -g $(WARNING_FLAGS)
+CC := gcc -pipe
+CXX := g++ -pipe
+LD := g++ -pipe
+AR := ar
+RM := /bin/rm -rf
+MKDIR := mkdir
+SED := sed
+MAKE_DEP := g++ -pipe -M
+
+LINK_SHARED := -shared -export-dynamic
+PIC_FLAG := # -fpic
+SYS_LIBS := 
+
+ifeq ($(DEBUG_MODE), 1)
+CFLAGS += -g -DDEBUG_MODE
+CXXFLAGS += -g -DDEBUG_MODE
+LDFLAGS += -g
+endif
+
+ifeq ($(OPTIMIZE_MODE), 1)
+CFLAGS += -O2
+CXXFLAGS += -O2
+endif
+
+ifeq ($(MT_SUPPORT), 1)
+CFLAGS += -DMT_SUPPORT 
+CXXFLAGS += -DMT_SUPPORT 
+endif

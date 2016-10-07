@@ -1,0 +1,97 @@
+This document contains notes on RFC 3423 that appear to be in error.
+
+The RFC itself can be found at http://www.ietf.org/rfc/rfc3423.txt
+
+-------------
+
+A comment should be added to section 4.6 "Template Data (TMPL DATA)"
+that all numeric values are in the order specified by the 'E' flag
+(big endian or little endian). In particular, Time_SEC, Time_MSEC_64,
+Time_USEC_64, Time_MSEC_32, Time_USEC_32 are documented as having most
+signficant octet first; which is wrong and IP address is not mentioned
+(it should also be in the order specified by the 'E' flag).
+
+-------------
+
+The type for Arbitrary Data (BLOB) given in section 4.6 "Template Data
+(TMPL DATA)" should be 0x4017, to follow the naming convention for
+other types.
+
+-------------
+
+The Extended Key Block in section 4.13 "Get Templates Response (GET
+TMPL RSP)" has the Key Attribute Vector at the end of the block. It
+should be just before the Key Name:
+
+   0                   1                   2                   3
+   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                            Key ID                             |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |          Key Type ID          |        Key Name Length        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |          Key Label Length     |        Key Help Length        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                      Key Attribute Vector                   |K|
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                                                               |
+  ~                            Key Name                           ~
+  |                                                               |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                                                               |
+  ~                            Key Label                          ~
+  |                                                               |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                                                               |
+  ~                            Key Help                           ~
+  |                                                               |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-------------
+
+The header format given in section 3 "CRANE Message Format" does not
+match the code. An older version of the code reversed the Session ID
+and Message Flags, and this has been maintained for compatibility:
+
+  0                   1                   2                   3
+  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |  Version      |Message ID(MID)| Session ID    | Message Flags | doc
+  |  Version      |Message ID(MID)| Message Flags | Session ID    | code
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+  |                         Message Length                        |
+  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+-------------
+
+The terminology of "client" and "server" in the document might confuse
+some people. Better terminology would be something like:
+    - exporter, receiver (which is what the IPFIX working group uses)
+    - transmitter, collector (used in some of the code comments)
+
+-------------
+
+There is no default port for CRANE. However, as of 2002-11-26, port
+15001 is unassigned by IANA
+(http://www.iana.org/assignments/port-numbers).
+
+-------------
+
+The documentation is not completely clear as to whether keys are
+unique within templates or span templates. Section 4.6 implies that
+keys are unique with templates: "The Key ID field identifies the key
+within a template." However, many applications use a number of similar
+templates, where it is convenient to have the keys with the same
+meaning in the different templates. It is up to the configuration of
+the receiver to map these keys appropriately.
+
+-------------
+
+An "extension" mechanism should have been documented, giving a range
+of message IDs and types that can be used for experimental use (a
+number of protocols use this; it has a danger in that some
+"experimental" values because standardised in use).
+
+-------------
+
+$Id: rfc3423-errata.txt,v 1.1.1.1 2005/02/17 15:34:02 michaeld Exp $

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CRANEcollectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CRANEcollector.xsd">
+    <Clients>
+        <Client>
+            <IP>192.168.69.20</IP>
+            <Port>17000</Port>
+            <VerPort>17000</VerPort>
+            <VendorString>CRANE Simulator</VendorString>
+            <CnctTO>5000</CnctTO>
+            <CnctRetryTO>2000</CnctRetryTO>
+            <RecnctItvl>10000</RecnctItvl>
+            <CnctRndtrpTO>500</CnctRndtrpTO>
+            <AckLogItvl>60000</AckLogItvl>
+            <Desc/>
+            <Sessions>
+                <Session>
+                    <Id>100</Id>
+                    <Name>session1</Name>
+                    <Desc>TheSession 1</Desc>
+                    <Tmplts>
+                        <Tmpl>
+					<TmplRef>
+					1
+					</TmplRef>
+				</Tmpl>
+                    </Tmplts>
+                </Session>
+            </Sessions>
+        </Client><!-- dsdssd -->
+    </Clients>
+    <Templates>
+        <Template>
+            <GlobalRef>1</GlobalRef>
+            <Id>1</Id>
+            <Desc>smsFwdKeys</Desc>
+            <StatRsp>false</StatRsp>
+            <Fields>
+                <Field>
+                    <CrnKeyId>25</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>timestamp</CrnKeyName>
+                    <CrnKeyLabel>timestamp</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) timestamp</CrnKeyHelp>
+                    <CrnKeyTypeId>18</CrnKeyTypeId>
+                    <XFieldId>28605</XFieldId>
+                    <XFieldLabel>timestamp_DATE</XFieldLabel>
+                    <XFieldType>Date</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>1</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>transaction_type</CrnKeyName>
+                    <CrnKeyLabel>transaction_type</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) transaction_type</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28606</XFieldId>
+                    <XFieldLabel>transaction_type_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>2</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>message_type</CrnKeyName>
+                    <CrnKeyLabel>message_type</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) message_type</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28607</XFieldId>
+                    <XFieldLabel>message_type_SHORT</XFieldLabel>
+			  <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>3</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>invoke_id</CrnKeyName>
+                    <CrnKeyLabel>invoke_id</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) invoke_id</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28608</XFieldId>
+                    <XFieldLabel>invoke_id_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>4</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>transaction_id</CrnKeyName>
+                    <CrnKeyLabel>transaction_id</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) transaction_id</CrnKeyHelp>
+                    <CrnKeyTypeId>6</CrnKeyTypeId>
+                    <XFieldId>28609</XFieldId>
+                    <XFieldLabel>transaction_id_LONG</XFieldLabel>
+                    <XFieldType>Long</XFieldType>
+			</Field>
+                <Field>
+                    <CrnKeyId>5</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>called_net_adds_l</CrnKeyName>
+                    <CrnKeyLabel>called_net_adds_l</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) called_net_adds_len</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28610</XFieldId>
+                    <XFieldLabel>called_net_adds_l_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>6</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>called_net_np</CrnKeyName>
+                    <CrnKeyLabel>called_net_np</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) called_net_np</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28611</XFieldId>
+                    <XFieldLabel>called_net_np_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+			<Field>
+                    <CrnKeyId>7</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>called_net_enc_s</CrnKeyName>
+                    <CrnKeyLabel>called_net_enc_s</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) called_net_enc_scheme</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28612</XFieldId>
+                    <XFieldLabel>called_net_enc_s_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>9</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>called_net_adds</CrnKeyName>
+                    <CrnKeyLabel>called_net_adds</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) called_net_adds</CrnKeyHelp>
+                    <CrnKeyTypeId>16397</CrnKeyTypeId>
+                    <XFieldId>28613</XFieldId>
+                    <XFieldLabel>called_net_adds_STR</XFieldLabel>
+                    <XFieldType>String</XFieldType>
+                </Field>
+
+		<Field>
+                    <CrnKeyId>8</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>called_net_noa</CrnKeyName>
+                    <CrnKeyLabel>called_net_noa</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) called_net_noa</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28614</XFieldId>
+                    <XFieldLabel>called_net_noa_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>10</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>calling_net_adds_l</CrnKeyName>
+                    <CrnKeyLabel>calling_net_adds_l</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) calling_net_adds_len</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28615</XFieldId>
+                    <XFieldLabel>calling_net_adds_l_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+<Field>
+                    <CrnKeyId>11</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>calling_net_np</CrnKeyName>
+                    <CrnKeyLabel>calling_net_np</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) calling_net_np</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28616</XFieldId>
+                    <XFieldLabel>calling_net_np_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>12</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>calling_net_enc_s</CrnKeyName>
+                    <CrnKeyLabel>calling_net_enc_s</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) calling_net_enc_scheme</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28617</XFieldId>
+                    <XFieldLabel>calling_net_enc_s_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+		<Field>
+                    <CrnKeyId>14</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>calling_net_adds</CrnKeyName>
+                    <CrnKeyLabel>calling_net_adds</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) calling_net_adds</CrnKeyHelp>
+                    <CrnKeyTypeId>16397</CrnKeyTypeId>
+                    <XFieldId>28618</XFieldId>
+                    <XFieldLabel>calling_net_adds_STR</XFieldLabel>
+                    <XFieldType>String</XFieldType>
+                </Field>
+		    <Field>
+                    <CrnKeyId>13</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>calling_net_noa</CrnKeyName>
+                    <CrnKeyLabel>calling_net_noa</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) calling_net_noa</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28619</XFieldId>
+                    <XFieldLabel>calling_net_noa_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>15</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>dest_adds_type</CrnKeyName>
+                    <CrnKeyLabel>dest_adds_type</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) dest_adds_type</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28620</XFieldId>
+                    <XFieldLabel>dest_adds_type_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+		<Field>
+                    <CrnKeyId>16</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>dest_adds_l</CrnKeyName>
+                    <CrnKeyLabel>dest_adds_l</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) dest_adds_len</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28621</XFieldId>
+                    <XFieldLabel>dest_adds_l_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>17</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>dest_adds_noa</CrnKeyName>
+                    <CrnKeyLabel>dest_adds_noa</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) dest_adds_noa</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28622</XFieldId>
+                    <XFieldLabel>dest_adds_noa_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+<Field>
+                    <CrnKeyId>18</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>dest_adds_np</CrnKeyName>
+                    <CrnKeyLabel>dest_adds_np</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) dest_adds_np</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28623</XFieldId>
+                    <XFieldLabel>dest_adds_np_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>19</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>dest_adds</CrnKeyName>
+                    <CrnKeyLabel>dest_adds</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) dest_adds</CrnKeyHelp>
+                    <CrnKeyTypeId>16397</CrnKeyTypeId>
+                    <XFieldId>28624</XFieldId>
+                    <XFieldLabel>dest_adds_STR</XFieldLabel>
+                    <XFieldType>String</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>20</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>orig_adds_type</CrnKeyName>
+                    <CrnKeyLabel>orig_adds_type</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) orig_adds_type</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28625</XFieldId>
+                    <XFieldLabel>orig_adds_type_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>21</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>orig_adds_l</CrnKeyName>
+                    <CrnKeyLabel>orig_adds_l</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) orig_adds_len</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28626</XFieldId>
+                    <XFieldLabel>orig_adds_l_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>22</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>orig_adds_noa</CrnKeyName>
+                    <CrnKeyLabel>orig_adds_noa</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) orig_adds_noa</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28627</XFieldId>
+                    <XFieldLabel>orig_adds_noa_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>23</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>orig_adds_np</CrnKeyName>
+                    <CrnKeyLabel>orig_adds_np</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) orig_adds_np</CrnKeyHelp>
+                    <CrnKeyTypeId>2</CrnKeyTypeId>
+                    <XFieldId>28628</XFieldId>
+                    <XFieldLabel>orig_adds_np_SHORT</XFieldLabel>
+                    <XFieldType>Short</XFieldType>
+                </Field>
+                <Field>
+                    <CrnKeyId>24</CrnKeyId>
+                    <FieldUsed>true</FieldUsed>
+                    <CrnKeyName>orig_adds</CrnKeyName>
+                    <CrnKeyLabel>orig_adds</CrnKeyLabel>
+                    <CrnKeyHelp>(help for) orig_adds</CrnKeyHelp>
+                    <CrnKeyTypeId>16397</CrnKeyTypeId>
+                    <XFieldId>28629</XFieldId>
+                    <XFieldLabel>orig_adds_STR</XFieldLabel>
+                    <XFieldType>String</XFieldType>
+                </Field>
+            </Fields>
+        </Template>
+    </Templates>
+    <ConfigurationVersion>1</ConfigurationVersion>
+    <ServerIPAddress>192.168.69.20</ServerIPAddress>
+    <ServerPort>15001</ServerPort>
+    <ServerAckInterval>1000</ServerAckInterval>
+    <ServerStartInterval>10</ServerStartInterval>
+    <EnableDebugMsg>false</EnableDebugMsg>
+</CRANEcollectorConfiguration>

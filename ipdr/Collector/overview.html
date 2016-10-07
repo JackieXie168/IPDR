@@ -1,0 +1,90 @@
+<HTML>
+<BODY>
+<h2>Overview</h2>
+<P>The IPDR collector implements one end of a IPDR communication connection.
+The IPDR protocol is defined in <A HREF="http://www.ipdr.org/download-docs/protocol.html">IPDR Streaming Protocol specification</A>.
+A sample collector is given in <A HREF="org/ipdr/collector/Test.html">Test</A>.
+
+<p>The collector can initiate a connection to exporter(s) or listen and wait for an incoming connection from exporter(s),
+depending on configuration. The collector receives and outputs the data, sending data acknowledge messages and keepalive messages
+as instructed by the exporter. 
+<p>The main entry point for the collector is the <A HREF="org/ipdr/api/CollectorManager.html"><CODE>CollectorManager</CODE></A> class, 
+which should be provided with an implementation of the <A HREF="org/ipdr/api/configuration/CollectorConfigI.html"><CODE>CollectorConfigI</CODE></A> interface,
+<A HREF="org/ipdr/api/OutputterFactory.html"><CODE>OutputterFactory</CODE></A> interface, and an implementation of 
+<A HREF="org/ipdr/api/TemplateNegotiatorFactory.html"><CODE>TemplateNegotiatorFactory</CODE></A>. The collector may also accept an implementation of
+<A HREF="org/ipdr/api/StateMachineListener.html"><CODE>StateMachineListener</CODE></A>.
+<p>The basic flow of the collector is as follows:
+<OL>
+<LI>Initialize <A HREF="org/ipdr/ExporterHandler.html"><CODE>ExporterHandler</CODE></A> objects for each exporter found in the supplied configuration.
+<LI>Initialize <A HREF="org/ipdr/ListeningSocketHandler.html"><CODE>ListeningSocketHandler</CODE></A> object for inbound connections.
+<LI>Initialize <A HREF="org/ipdr/DiscoveryHandler.html"><CODE>DiscoveryHandler</CODE></A> if so configured for discovery requests.
+<LI>Launch all threads, spawn <A HREF="org/ipdr/api/ConnectionThread.html"><CODE>ConnectionThread</CODE></A> according to configured outbound connections.
+</OL>
+<h2>Configuration</h2>
+Configuration is contained in the <A HREF="org/ipdr/api/configuration/package-summary.html"><CODE>org.ipdr.api.configuration</CODE></A> package. An implementation
+of configuration must include implementations of the following interfaces:
+<UL>
+<LI><A HREF="org/ipdr/api/configuration/CollectorConfigI.html"><CODE>CollectorConfigI</CODE></A>
+<LI><A HREF="org/ipdr/api/configuration/ExporterConfigI.html"><CODE>ExporterConfigI</CODE></A>
+<LI><A HREF="org/ipdr/api/configuration/ConnectionConfigI.html"><CODE>ConnectionConfigI</CODE></A>
+<LI><A HREF="org/ipdr/api/configuration/SessionConfigI.html"><CODE>SessionConfigI</CODE></A>
+<LI><A HREF="org/ipdr/api/configuration/FieldConfigI.html"><CODE>FieldConfigI</CODE></A>
+</UL>
+It may be a good idea to derive from the provided base classes as shown in the table below, rather then implementing the interfaces from scratch.
+Also, a reference implementation of configuration class hierarchy is provided, which reads the configuration from an XML file. 
+The following table displays the correspondence between configuration interfaces, provided base classes and corresponding XML readers:
+<TABLE>
+<TR>
+	<TH>Interface</TH>
+	<TH>Base class</TH>
+	<TH>XML reader</TH>
+</TR>
+<TR>
+	<TD><A HREF="org/ipdr/api/configuration/CollectorConfigI.html"><CODE>CollectorConfigI</CODE></A></TD>
+	<TD><A HREF="org/ipdr/api/configuration/CollectorConfigBase.html"><CODE>CollectorConfigBase</CODE></A></TD>
+	<TD><A HREF="org/ipdr/collector/configuration/CollectorConfigXML.html"><CODE>CollectorConfigXML</CODE></A></TD>
+</TR>
+<TR>
+	<TD><A HREF="org/ipdr/api/configuration/ExporterConfigI.html"><CODE>ExporterConfigI</CODE></A></TD>
+	<TD><A HREF="org/ipdr/api/configuration/ExporterConfigBase.html"><CODE>ExporterConfigBase</CODE></A></TD>
+	<TD><A HREF="org/ipdr/collector/configuration/ExporterConfigXML.html"><CODE>ExporterConfigXML</CODE></A></TD>
+</TR>
+<TR>
+	<TD><A HREF="org/ipdr/api/configuration/ConnectionConfigI.html"><CODE>ConnectionConfigI</CODE></A></TD>
+	<TD><A HREF="org/ipdr/api/configuration/ConnectionConfigBase.html"><CODE>ConnectionConfigBase</CODE></A></TD>
+	<TD><A HREF="org/ipdr/collector/configuration/ConnectionConfigXML.html"><CODE>ConnectionConfigXML</CODE></A></TD>
+</TR>
+<TR>
+	<TD><A HREF="org/ipdr/api/configuration/SessionConfigI.html"><CODE>SessionConfigI</CODE></A></TD>
+	<TD><A HREF="org/ipdr/api/configuration/SessionConfigBase.html"><CODE>SessionConfigBase</CODE></A></TD>
+	<TD><A HREF="org/ipdr/collector/configuration/SessionConfigXML.html"><CODE>SessionConfigXML</CODE></A></TD>
+</TR>
+</TABLE>
+<br>
+The structure of the XML file can be found in <A HREF="org/ipdr/collector/configuration/CollectorConfigXML.html"><CODE>CollectorConfigXML</CODE></A>.
+<h2>Outputter(s)</h2>
+The implementor must implement the <A HREF="org/ipdr/api/Outputter.html"><CODE>Outputter</CODE></A> interface and the 
+<A HREF="org/ipdr/api/OutputterFactory.html"><CODE>OutputterFactory</CODE></A> interface. The following implementations are provided in this
+package:
+<UL>
+<LI><A HREF="org/ipdr/collector/CsvOutputter.html"><CODE>CsvOutputter</CODE></A> a sample outputter that writes the records as comma-separated values.
+<LI><A HREF="org/ipdr/collector/CsvOutputterFactory.html"><CODE>CsvOutputterFactory</CODE></A> factory for <CODE>CsvOutputter</CODE>.
+<LI><A HREF="org/ipdr/collector/DedupSummaryOutputter.html"><CODE>DedupSummaryOutputter</CODE></A> a sample outputter that looks for duplicate records and outputs
+          a summary of what it read.
+<LI><A HREF="org/ipdr/collector/DedupSummaryOutputterFactory.html"><CODE>DedupSummaryOutputterFactory</CODE></A> factory for <CODE>DedupSummaryOutputter</CODE>.
+</UL>
+<h2>Template negotiator</h2>
+The template negotiation is done via <A HREF="org/ipdr/api/TemplateNegotiator.html"><CODE>TemplateNegotiator</CODE></A> interface implementation. The interface 
+<A HREF="org/ipdr/api/TemplateNegotiatorFactory.html"><CODE>TemplateNegotiatorFactory</CODE></A> should be implemented as well. 
+A sample implementation, <A HREF="org/ipdr/collector/SimpleTemplateNegotiator.html"><CODE>SimpleTemplateNegotiator</CODE></A> and 
+<A HREF="org/ipdr/collector/SimpleTemplateNegotiatorFactory.html"><CODE>SimpleTemplateNegotiatorFactory</CODE></A> is provided. The implementation reads templates from an XML file,
+and upon negotiation requests, sends the appropriate templates as defined there.
+<h2>Logger</h2>
+Any implementation of <A HREF="org/ipdr/api/log/LogHandler.html"><CODE>LogHandler</CODE></A> interface may be registered as the log handler with the help of 
+<A HREF="org/ipdr/api/log/LogManager.html"><CODE>LogManager</CODE></A> class. The provided implementation, <A HREF="org/ipdr/collector/log/CollectorLog.html"><CODE>CollectorLog</CODE></A>, uses standard output and standard error for log messages.
+<h2>State machine listener</h2>
+IPDR state machine is capable of indicating state transitions to an implementation of <A HREF="org/ipdr/api/StateMachineListener.html"><CODE>StateMachineListener</CODE></A>. A sample implementation which logs state transitions is provided in <A HREF="org/ipdr/collector/SimpleStateMachineListener.html"><CODE>SimpleStateMachineListener</CODE></A>.
+<h2>CRANE integration</h2>
+Legacy CRANE collector is integrated into the package. It uses a separate file, <CODE>CRANEConfig.xml</CODE>, and by default always launches whenever the collector is started. In order to disable it, add a <CODE>supportCRANE="false"</CODE> attribute to <CODE>Collector</CODE> element in the <CODE>config.xml</CODE> file.
+</BODY>
+</HTML>

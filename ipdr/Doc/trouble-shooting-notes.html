@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Trouble-shooting notes for CRANE (20 March 2003)</title>
+	</head>
+	<body bgcolor="ivory" dir="ltr">
+		<font face="trebuchet ms,tahoma,verdana,helvetica">
+			<br>
+			<br>
+			<h1>Trouble-shooting notes for&nbsp;IPDR (31 May 2005)</h1>
+			<p>
+				This document contains notes on how to trouble-shoot various aspects of IPDR, 
+				both at the&nbsp;exporter&nbsp;and the collector.
+			</p>
+			<h2>Check-list</h2>
+			<p>If you want to report a problem, you should assemble the following:
+				<ul>
+					<li>
+						Snoop file(s) in <em>binary</em> form (e.g., from "<code>snoop -o <i>file</i></code>").
+					<li>
+					Full configuration information (XML files).
+					<li>
+						Exporter&nbsp;log with at least information level (debug level can be rather 
+						voluminous) - if necessary set the debug level by the console command "<code>set_debug_level&nbsp;*&nbsp;4</code>". 
+					Alternatively, if the exporter is directly accessible, you can use its output.
+					<li>
+					Collector log with at least information level.
+					<li>
+						The following information from <tt>telnet</tt>ing to port 40000 (or whatever it 
+						has been set to in the transmitter's configuration):
+						<br>
+						<code>parameters</code>
+						<br>
+						<code>version</code>
+						<br>
+						<code>get_debug_level</code>
+						<br>
+						<code>get_sessions</code>
+						<br>
+						<code>get_templates</code> 
+						<!--br>
+						<code>mib</code--></li>
+				</ul>
+			Note that older versions of the exporter do not have all these commands.
+			<P></P>
+			<p>If you're running multiple exporters&nbsp; (clients) and collectors (servers), 
+				then you must collect snoop files for <em>all</em> the exporter-collector 
+				connections, and also logs from all the exporters and collectors.
+			</p>
+			<p>Especially for problems with connectivity, be sure to start the log captures and 
+				snoop captures <em>before</em> you start doing any configuration. Ideally, 
+				start from a clean start (i.e., go through the entire configuration, first 
+				getting the&nbsp;exporter information and then starting the collector).
+			</p>
+			<h2>"Snoop" and "ethereal" are your friends</h2>
+			<p>If things aren't moving, your best friend is "snoop" or equivalent ("tcpdump" on 
+				Linux, "ethereal" on Windows). With snoop, you want to capture the <em>binary</em>
+				traffic, so you should run it with:
+				<br>
+				<code>snoop -o <i>file</i></code>
+				<br>
+				or, if there's a lot of traffic on the network, limit it by:
+				<br>
+				<code>snoop -o <i>file</i> 'host <i>xxx</i> or host <i>yyy</i>'</code>
+				<br>
+				where <i>xxx</i> and <i>yyy</i> are the transmitter and collector (you can also 
+				add "<code>and from <i>port</i></code>" and similar specifications to limit it 
+				even more - see the manual page for <tt>snoop(1M)</tt>).
+			</p>
+			<p>Be sure to start snoop <em>before</em> you do anything with IPDR, such as 
+				configuring the collector. Once you have captured the trace, you can examine 
+				it: "<code>snoop -i</code>" (there are lots of options: see the manual page) or 
+				with ethereal. You can download ethereal from <a href="http://www.ethereal.com">http://www.ethereal.com</a>, 
+				for both Windows and various flavors of Unix. Ethereal can read most file 
+				formats, including snoop.
+			</p>
+			<p>Don't worry about capturing too much data: it's easy to filter a snoop file 
+				(snoop itself can be used; or the tools that we provide).
+			</p>
+			<P></P>
+			<h2>IPDR development</h2>
+			<p>Besides the snoop files, the "exporter log" is very important. You can tailor 
+				the level of verbosity by calls to IPDR_SetModuleDebugLevel(), <!-- by values in 
+				the MIB, --> 
+				by the "configuration.logging.levels.module<i>XXX</i>" parameters, or by the 
+				set_debug_level command on port 40000 (or whatever it has been set to by 
+				configuration). See also the section on <a href="#logMsg">"Getting log messages"</a>.
+			</p>
+			<p>During development, it is highly recommended that you capture the exporter log 
+				at "info" level, also the Gatherer log (at "info" level), and the snoop file.
+			</p>
+			<!--
+<p>There are various useful scripts in the Makefiles for running
+tests.
+</p>
+-->
+			<!--
+<p>(More to be added in future)
+</p>
+-->
+			<h2>IPDR deployment</h2>
+			<h3><a name="logMsg"></a>Getting log messages from the IPDR exporter (client)</h3>
+			It is possible that the exporter refuses to allow telnet or console access to 
+			the log; or that the log outputting has been disabled. There are a few 
+			solutions to this.
+			<ol>
+				<li>
+					If the access port (40000 by default): "<code>configuration.console.consolePort</code>") 
+					is available (it is by default), then you can telnet to that. The command "<code>set_logger_addr</code>" 
+					can be used to set a destination. There is a small utility called <code>echoUDP.class</code>
+					in the <code>scripts</code> directory: run it by: "<code>javac scripts/echoUDP 514</code>" 
+					(or whatever port you chose with the "<code>set_logger_addr</code>" command). 
+					It will echo everything that is being output (warning: it is UDP, so the 
+					occasional message can be lost).
+					<p>
+						You can also set the logging level by "<code>set_debug_level * 4</code>".</p>
+				<li>
+					Sometimes the "log print" command on port 40000 can get output for you. The 
+					exact behavior depends on your configuration. (This command overrides the 
+					setting of UDP output; but you still need to be able to access the device's 
+					console to see log output.) 
+					<!--li>
+					The "mibset" command can be used to change configuration (you can examine the 
+					MIB via the "mib" command). Try "<code>mib 6</code>" or "<code>mib configuration"</code>
+					to see the configuration values.</li--></li>
+			</ol>
+			<hr>
+			<address>
+				<br>
+				$Id: trouble-shooting-notes.html,v 1.1.1.1 2005/02/17 15:34:02 michaeld Exp $<BR>
+			</address>
+		</font>
+	</body>
+</html>

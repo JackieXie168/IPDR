@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>State transitions for CRANE client</title>
+</head>
+
+<font face="trebuchet ms,tahoma,verdana,helvetica">
+<br>  
+<br>Copyright &copy; 1997-2003 XACCT Technologies, Ltd.
+<br><hr width="70%" align="left">
+
+<h1>The CRANE Template Negotiation</h1>
+
+<p>
+A CRANE Server may initiate the template negotiation process when it
+is not in the DISCONNECTED state.  It is initiated in response to an
+upper layer request. The CRANE Server MUST then complete all pending
+operations in its current state, and send the "START NEGOTIATION"
+message to the CRANE Client. After receiving the "TMPL DATA" message
+from the Client, it starts template negotiation as outlined in section
+5.3 of specification and described below.
+
+<p>
+At the Client, it MUST acknowledge the message with the "START
+NEGOTIATION ACK".  Upon completing all pending operations, it will
+transition to the STARTED state and send the "TMPL DATA" message to
+all the Servers participating in the session. The template negotiation
+will be carried out according to section 5.2.
+
+<h2>Example of Template Negotiation</h2>
+
+Presented below is the message interaction involved in template
+negotiation in a series of more complex scenarios. Each one of these
+scenarios is a conforming implementation of the CRANE protocol.
+
+<ol>
+<li>No negotiation by collector: 
+  <ol>
+   <li>Exporter says: "I am outputting fields a,b,c,d,e." 
+   <li>Collector says: "I agree; please send everything."
+  </ol>
+<li>No negotiation by exporter: 
+  <ol>
+  <li>Exporter says: "I am outputting fields a,b,c,d,e." 
+  <li>Collector says: "I only want fields a,c,e." 
+  <li>Exporter says: "Too bad, I'm sending all fields anyway." 
+  <li>Collector  replies "OK" and says to itself: "Oh well, I can just throw away what I don't need".
+  </ol>
+<li>Negotiation by collector and exporter: 
+  <ol>
+  <li>Exporter says: "I am outputting fields a,b,c,d,e." 
+  <li>Collector says: "I only want fields a,c,e." 
+  <li>Exporter says: "Fine, I am outputting fields a,c,e." To itself, it says: "And I can save some processing time by not computing the data for fields b,d."
+  </ol>
+<li>Reconnecting (negotiation has been done sometime in the past and we want to get data transferring as soon as possible): 
+  <ol>
+  <li>Collector says to Exporter: "Tell me briefly what you're exporting" 
+  <li>Exporter says: "I have fields a,b,c,d,e available but am only sending "a,c,e", as was previously agreed". 
+  <li>Collector says to Exporter: "Fine, send data please."
+  </ol>
+<li>Negotiation by multiple collectors and an exporter (reliability mode with fail-over): 
+  <ol>
+  <li>Exporter says to Collector 1: "I am outputting fields a,b,c,d,e." 
+  <li>Collector 1 says: "I only want fields a,c,e."   
+  <li>Exporter says to Collector 2: "I am outputting only fields a,c,e from the possible list of a,b,c,d,e". 
+  <li>Collector 2 says: "But I want fields a,b,c,e." 
+  <li>Exporter says to Collector 1: "I am outputting fields a,b,c,e." 
+  <li>Collector 1 says: " I only want fields a,c,e." 
+  <li>Exporter says to Collector 1: "Too bad, I'm sending fields a,b,c,e anyway." 
+  <li>Exporter says to Collector 2: "I'm sending fields a,b,c,e." 
+  </ol>
+</ol>
+
+The last scenario is a bit extreme because all the collectors should
+be configured to want the same fields. But it is a possibility, if the
+collectors are being upgraded in a "non-stop" environment and the
+configuration is being changed on the fly.
+
+<p> In the case of multiple collectors, the exporter controls the
+negotiation conversation. There is no assumption that the collectors
+can communicate with each other. The exporter can decide at any point
+to stop the discussion and dictate what fields will be transmitted,
+thus ensuring that the conversation terminates.
+
+<p> As you can see, the simplest scenario (#1) requires almost no work
+on the part of the implementer. The exporter replies to any
+negotiation request with "no" and always sends everything.
+
+<p> 
+The primary advantages of template negotiation are:
+<ol>
+<li>Self-describing data.     
+<li>Configuration of the data is part of the protocol; but it can also be done by other configuration (CLI or SNMP).  
+<li>Configuration of the receiver can be done using the protocol.  
+<li>Bandwidth is conserved if there is data that the collector doesn't want. 
+<li>The exporter can save CPU if it doesn't need to export some data.
+</ol>
+
+Now, to tie the scenarios above to the CRANE commands.
+<ul>
+<li>At configuration time, the Collector sends GET TMPL to find all the fields, in their long form.
+<li>The Exporter sends GET TMPL RSP, with all the details.
+</ul>
+
+The CRANE protocol is used in two stages:
+<ol>
+<li>Receiver installation and initial configuration (choosing the fields and mapping them to what the back-end systems require). 
+<li>Data receiving (which also allows dynamic change of configuration).
+</ol>
+
+This needs a bit of elaboration. For comparison, consider receiving
+data by RADIUS, with Vendor-Specific-Attributes (VSAs). To handle
+these VSAs, a receiver needs a separate dictionary, typically in a
+text file. With CRANE, the equivalent information can be transmitted
+by the protocol, so that when the receiver is installed, it can
+request the kinds of data and can display them in a GUI, for
+configuration. With RADIUS, you would find out that a change has
+occurred when an unexpected VSA appears ... this is robust (if
+unpleasant); but at the cost of overhead of attribute IDs in the data
+transmission. With a compact binary format such as CRANE's, mismatch
+of record layouts might go undetected until somebody notices that
+strange values are being received.
+
+ 
+After initial configuration, there is no need for all field names and
+descriptions; the CRANE messages only contain the field id#, its type,
+and whether the field is enabled or not. This information is
+transmitted every time a connection is started, so it is easy for the
+receiver to verify that it is getting the kinds of data that it
+expects (that is, nobody has changed the template or field identifiers
+on the exporter - very important for a compact binary data transfer).
+
+<br>
+<hr align="right" width="50%">
+<div align="right">$Id: TemplateNegotiation.html,v 1.1.1.1 2005/02/17 15:34:02 michaeld Exp $</div>
+</body>
+</html>

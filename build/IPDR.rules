@@ -1,0 +1,133 @@
+# -*-Makefile-*-
+
+# $Id: IPDR.rules,v 1.2 2004/12/13 17:30:31 dmitryk Exp $
+
+# $(warning in IPDR.rules debug=$(DEBUG_MODE) opt=$(OPTIMIZE_MODE) purify=$(PURIFY_MODE) system=$(SYSTEM) platform=$(PLATFORM))
+
+LDFLAGS += -L$(IPDR_LIB)
+
+# Always gener position-independent code, because the
+# portability layer is used by the server also.
+# ifeq ($(TARGET_TYPE), shared)
+CFLAGS += $(PIC_FLAG)
+CXXFLAGS += $(PIC_FLAG)
+# endif
+
+OBJS := $(patsubst %.c, %.o, $(filter %.c, $(SRC))) \
+	$(patsubst %.C, %.o, $(filter %.C, $(SRC))) \
+	$(patsubst %.cpp, %.o, $(filter %.cpp, $(SRC)))
+OBJS := $(addprefix $(PLATFORM)/, $(OBJS))
+
+DEPS := $(patsubst %.c, %.d, $(filter %.c, $(SRC))) \
+	$(patsubst %.C, %.d, $(filter %.C, $(SRC))) \
+	$(patsubst %.cpp, %.d, $(filter %.cpp, $(SRC)))
+DEPS := $(addprefix $(PLATFORM)/, $(DEPS))
+
+$(PLATFORM)/%.o: %.c ; $(MKDIR) -p $(PLATFORM) && echo In directory `pwd` && $(CC) -c $(CFLAGS) -o $@ $<
+$(PLATFORM)/%.o: %.C ; $(MKDIR) -p $(PLATFORM) && echo In directory `pwd` && $(CXX) -c $(EXTRA_CXXFLAGS) $(CXXFLAGS) -o $@ $<
+$(PLATFORM)/%.o: %.cpp ; $(MKDIR) -p $(PLATFORM) && echo In directory `pwd` && $(CXX) -c $(EXTRA_CXXFLAGS) $(CXXFLAGS) -o $@ $<
+
+$(PLATFORM)/%.d: %.c	
+	$(MKDIR) -p $(PLATFORM)
+	echo In directory `pwd`
+	$(RM) $@.temp
+	$(MAKE_DEP) $(CFLAGS) $< >$@.temp
+	$(SED) -e "s/\(.*\)\.o[: ]*/$(PLATFORM)\/\1\.o: /g" < $@.temp > $@
+	$(RM) $@.temp
+
+$(PLATFORM)/%.d: %.cpp
+	$(MKDIR) -p $(PLATFORM)
+	echo In directory `pwd`
+	$(RM) $@.temp
+	$(MAKE_DEP) $(CXXFLAGS) $< >$@.temp
+	$(SED) -e "s/\(.*\)\.o[: ]*/$(PLATFORM)\/\1\.o: /g" < $@.temp > $@
+	$(RM) $@.temp
+
+$(PLATFORM)/%.d: %.C
+	$(MKDIR) -p $(PLATFORM)
+	echo In directory `pwd`
+	$(RM) $@.temp
+	$(MAKE_DEP) -M $(CXXFLAGS) $< >$@.temp
+	$(SED) -e "s/\(.*\)\.o[: ]*/$(PLATFORM)\/\1\.o: /g" < $@.temp > $@
+	$(RM) $@.temp
+
+.PHONY: $(DEPENDENCIES) $(EXT_DEPENDENCIES)
+
+ifeq ($(TARGET_TYPE), archive)
+SUB_ARCHIVES := $(addprefix $(IPDR_LIB)/lib, $(SUB_ARCHIVES))
+SUB_ARCHIVES := $(addsuffix .a, $(SUB_ARCHIVES))
+ifdef TARGET_DIR
+TARGET := $(TARGET_DIR)/lib$(TARGET_NAME).a
+TARGET_DIRECTORY := $(TARGET_DIR)
+else
+TARGET := $(IPDR_LIB)/lib$(TARGET_NAME).a
+TARGET_DIRECTORY := $(IPDR_LIB)
+endif
+ifdef SUB_ARCHIVES
+$(TARGET): $(DEPENDENCIES) $(EXT_DEPENDENCIES) $(SUB_ARCHIVES) $(OBJS)
+	$(MKDIR) -p $(TARGET_DIRECTORY) 
+	echo In directory `pwd`
+	$(AR) rv $(TARGET) $(OBJS) $(PLATFORM).tmp/*.o
+	$(RM) $(PLATFORM).tmp
+.PHONY: $(SUB_ARCHIVES)
+$(SUB_ARCHIVES):
+	$(MKDIR) -p $(PLATFORM).tmp 
+	echo In directory `pwd`
+	cd $(PLATFORM).tmp && $(AR) xv $@
+else
+$(TARGET): $(DEPENDENCIES) $(EXT_DEPENDENCIES) $(OBJS)
+	$(MKDIR) -p $(IPDR_LIB)
+	echo In directory `pwd`
+	$(AR) rv $(TARGET) $(OBJS)
+endif
+clean: $(DEPENDENCIES) $(EXT_DEPENDENCIES)
+	$(RM) $(PLATFORM)/*.o $(PLATFORM)/*.d
+	$(RM) $(TARGET)
+endif
+
+ifeq ($(TARGET_TYPE), shared)
+LIBS := $(addprefix -l, $(LIBS))
+ifdef TARGET_DIR
+TARGET := $(TARGET_DIR)/lib$(TARGET_NAME).so
+TARGET_DIRECTORY := $(TARGET_DIR)
+else
+TARGET := $(IPDR_LIB)/lib$(TARGET_NAME).so
+TARGET_DIRECTORY := $(IPDR_LIB)
+endif
+$(TARGET): $(DEPENDENCIES) $(EXT_DEPENDENCIES) $(OBJS)
+	$(MKDIR) -p $(TARGET_DIRECTORY)
+	echo In directory `pwd` for link-shared
+	$(CXX) -o $@ $(LINK_SHARED) $(LDFLAGS) $(OBJS) $(LIBS) $(SYS_LIBS)
+
+clean: $(DEPENDENCIES) $(EXT_DEPENDENCIES)
+	$(RM) $(PLATFORM)/*.o $(PLATFORM)/*.d
+	$(RM) $(TARGET)
+endif
+
+ifeq ($(TARGET_TYPE), bin)
+LIBS := $(addprefix -l, $(LIBS))
+TARGET = $(IPDR_BIN)/$(TARGET_NAME)
+$(TARGET): $(DEPENDENCIES) $(OBJS)
+	$(MKDIR) -p $(IPDR_BIN) && echo In directory `pwd` && $(LD) -o $(TARGET) $(LDFLAGS) $(OBJS) $(LIBS) $(SYS_LIBS)
+clean: $(DEPENDENCIES)
+	$(RM) $(PLATFORM)/*.o $(PLATFORM)/*.d
+	$(RM) $(TARGET)
+endif
+
+ifeq ($(TARGET_TYPE), none)
+all: $(DEPENDENCIES) $(EXT_DEPENDENCIES)
+clean: $(DEPENDENCIES) $(EXT_DEPENDENCIES)	
+endif
+
+$(DEPENDENCIES):
+	$(MAKE) -C $(IPDR_SRC)/$@ $(MAKECMDGOALS)
+
+$(EXT_DEPENDENCIES):
+	$(MAKE) -C $(IPDR_ROOT)/$@ $(MAKECMDGOALS)
+
+ifneq ($(MAKECMDGOALS), clean)
+ifdef DEPS
+# $(warning in IPDR.rules dependency files: $(DEPS))
+include $(DEPS)
+endif
+endif

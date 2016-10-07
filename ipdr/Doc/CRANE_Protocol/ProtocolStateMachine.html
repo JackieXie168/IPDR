@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>State transitions for CRANE client and server</title>
+</head>
+<body bgcolor=ivory>
+
+<font face="trebuchet ms,tahoma,verdana,helvetica">
+<br>  
+<br>Copyright &copy; 1997-2003 XACCT Technologies, Ltd.
+<br><hr width="70%" align="left">
+
+<h1>State transitions for CRANE client and server</h1>
+<p>
+This document gives extra explanation of the
+CRANE protocol states.
+
+<h2>CRANE Protocol States</h2>
+
+The CRANE protocol defines the following states corresponding to a CRANE session.
+<table border=0>
+<tr valign=top><td>DISCONNECTED</td>
+    <td>The CRANE Server is not connected to the CRANE client on both the transport layer and the CRANE protocol layer.</td>
+</tr>
+<tr valign=top><td>CONNECTED</td>
+    <td>The CRANE Server is connected to the CRANE client on the transport layer.</td>
+</tr>
+<tr valign=top><td>STARTED</td>
+    <td>The CRANE Server is connected to the CRANE client on both the transport layer and the CRANE protocol layer; the templates for the session have not been determined.</td>
+</tr>
+<tr valign=top><td>STOPPED</td>
+    <td>The CRANE Server has signaled the CRANE client to stop sending "DATA" messages.</td>
+</tr>
+<tr valign=top><td>READY</td>
+    <td>The CRANE Server has the correct templates for the session, and ready to receive "DATA" messages from the CRANE Client.</td>
+</tr>
+<tr valign=top><td>ACTIVE</td>
+    <td>The CRANE Server is ready to receive "DATA" messages from the CRANE Client, and is also the designated Primary Server for the session.</td>
+</tr>
+<tr valign=top><td>PAUSED (Client Only)</td>
+    <td>The CRANE Server has signaled the CRANE client to temporarily pause sending "DATA" messages.</td>
+</tr>
+</table>
+
+<h2>The CRANE State Machines</h2>
+
+The operation of the CRANE Client and Server are modeled as state
+machines, which is described by the following state transition tables.
+Any implementation of a CRANE Client or Server <em>must</em> conform
+to the procedures specified by the table. The table does not
+exhaustively show all the state transitions that may occur at a CRANE
+Client or server, but the major transitions are outlined.
+
+<h3>The CRANE Client (Transmitter) State Machine</h3>
+
+<table border=1>
+<tr valign=top><th align=left>From State</th><th align=left>Events</th><th align=left>Conditions/Actions</th><th align=left>To State</th></tr>
+<tr valign=top><th align=left rowspan=1>DISCONNECTED</th>
+<td>E.1: The Client receives the "CONNECT" message from the Server.</td>
+<td>C.1: The Client establishes the session information for the Server.</td><td>CONNECTED</td></tr>
+
+<tr valign=top><th align=left rowspan=2>CONNECTED</th>
+<td>E.2: The Client receives a transport layer INDICATION that the transport layer connection for the CRANE session has been terminated.</td>
+<td>C.2: The Client disconnects to the Server, and cleans up the state information corresponding to the session.</td><td>DISCONNECTED</td></tr>
+<tr><td>E.3: The Client receives the "START" message from the Server.</td>
+<td>C.3: The Client sends the "TMPL DATA" message to the server.</td><td>STARTED</td></tr>
+
+<tr valign=top><th align=left rowspan=2>STARTED</th>
+<td>E.4: The Client receives the "TMPL DATA ACK" message from the Server, which contains changes to the template sets (keys and their status).</td>
+<td>C.4: The Client determines the final template sets, and sends the "FINAL TMPL DATA" message. </td><td>STARTED</td></tr>
+<tr><td>E.5: The Client receives the "FINAL TMPL DATA ACK" message from a Server. </td>
+<td>C.5: The Client determines the final template sets.</td><td>READY</td></tr>
+
+<tr valign=top><th align=left rowspan=2>READY</th>
+<td rowspan=2>E.6: The Client has received the "FINAL TMPL DATA ACK" message from all the Servers that participate in the session.</td>
+<td>C.6: The Server is selected as the Primary Server.</td><td>ACTIVE</td></tr>
+<tr><td>C.6.1: The Server is marked as an Available Server. </td><td>READY</td></tr>
+
+<tr valign=top><th align=left rowspan=6>ACTIVE</th>
+<td>E.7: The Client receives the "DATA ACK" message from the Server.</td>
+<td>C.7: The Client sends the "DATA" messages when data records are available, and update the sender window.</td><td>ACTIVE</td></tr>
+<tr><td>E.8: The Client receives the "DATA NACK" message from the Server.</td>
+<td>C.8: The Client retransmits the records that are not positively acknowledged, and update the sender window.</td><td>ACTIVE</td></tr>
+<tr><td>E.9: The Client has data records to send.</td>
+<td>C.9: The Client sends the "DATA" message when the sender window is not reached.</td><td>ACTIVE</td></tr>
+<tr><td>E.10: The unacknowledged data records have reached the send window size at the Client.</td>
+<td>C.10: The Client starts the Timer-transition.</td><td>PAUSED</td></tr>
+<tr><td>E.11: The Client receives the "STOP" message from the Server.</td>
+<td>C.11: The Client marks the Server as Unavailable, and selects the next highest priority server as the Primary Server.</td><td>STOPPED</td></tr>
+<tr><td>E.12: The Client receives a transport layer INDICATION that the transport layer connection for the CRANE session has been terminated.</td>
+<td>C.12: The Client disconnects to the Server, and cleans up the state information corresponding to the session.</td><td>DISCONNECTED</td></tr>
+
+<tr valign=top><th align=left rowspan=2>PAUSED</th>
+<td>E.13: The Client receives the "DATA ACK" message from the Active Server.</td>
+<td>C.13: The Client sends "DATA" messages if records are available, and update the sender window.</td><td>ACTIVE</td></tr>
+<tr><td>E.14: The Timer-transition expires before any "DATA ACK" message is received.</td>
+<td>C.14: The Client the Server as unavailable, and selects the next highest priority server as the active Server.</td><td>STOPPED</td></tr>
+
+<tr valign=top><th align=left rowspan=1>STOPPED</th>
+<td>E.15: The Client receives the "START" message from the Server.</td>
+<td>C.15: The Client marks the Server as Available.</td><td>READY</td></tr>
+
+</table>
+
+<h3>The CRANE Server (Receiver) State Machine</h3>
+
+<table border=1>
+<tr valign=top><th align=left>From State</th><th align=left>Events</th><th align=left>Conditions/Actions</th><th align=left>To State</th></tr>
+<tr valign=top><th align=left rowspan=1>DISCONNECTED</th>
+<td>E.1: The Server receives an upper layer REQUEST to establish a CRANE session</td>
+<td>C.1: The Server initiates a transport layer connection request to the Client, and executes the transport layer protocol to establish a transport layer connection. Upon successfully establishing the transport layer connection, the Server then sends the "CONNECT" followed by the "START" messages to the Client.</td><td>CONNECTED</td></tr>
+
+<tr valign=top><th align=left rowspan=2>CONNECTED</th>
+<td>E.2: The Server receives an upper layer REQUEST to terminate a CRANE session.</td>
+<td>C.2: The Server initiates a transport layer disconnect request to the Client, and executes the transport layer protocol to terminate a transport layer connection, and issues RESPONSE to the upper layer.</td><td>DISCONNECTED</td></tr>
+<tr valign=top>
+<td>E.3: The Server receives the "START ACK" message from the Client.</td>
+<td>C.3: The Server establishes the CRANE session.</td><td>STARTED</td></tr>
+
+<tr valign=top><th align=left rowspan=2>STARTED</th>
+<td>E.4: The Server receives the "TMPL DATA" message from the Client.</td>
+<td>C.4: The Server sends either the "TMPL DATA ACK" message containing changes to the templates and/or their status to the Client, or the "FINAL TMPL DATA ACK" message without proposing any changes to the Client.</td><td>STARTED</td></tr>
+<tr valign=top>
+<td>E.5: The Server receives the "FINAL TMPL DATA" message from the Client.</td>
+<td>C.5: The Server sends the "FINAL TMPL DATA ACK" message to the Client if it has not done so.  </td><td>READY</td></tr>
+
+<tr valign=top><th align=left rowspan=1>READY</th>
+<td>E.6: The Server receives the "DATA" message from the Client. </td>
+<td>C.6: The Server starts the Timer-DataAck.    </td><td>ACTIVE</td></tr>
+
+<tr valign=top><th align=left rowspan=3>ACTIVE</th>
+<td>E.7: The Server receives the "DATA" messages from the Client.</td>
+<td>C.7: The Server sends the "DATA ACK" message to the Client, and restarts the Timer-DataAck.</td><td>ACTIVE</td></tr>
+<tr valign=top>
+<td>E.8: The Server receives the upper layer REQUEST to become Unavailable.</td>
+<td>C.8: The Server sends the "STOP" message to the Client.</td><td>STOPPED</td></tr>
+<tr valign=top>
+<td>E.9: The Server receives the upper layer REQUEST to terminate the CRANE session.</td>
+<td>C.9: The Server initiates a transport layer disconnect request to the Client, and executes the transport layer protocol to terminate a transport layer connection, and issues RESPONSE to the upper layer.</td><td>DISCONNECTED</td></tr>
+
+<tr valign=top><th align=left rowspan=1>STOPPED</th>
+<td>E.10: The Server receives the upper layer REQUEST to become Standby.</td><td>C.10: The Server sends the "START" message to the Client.</td><td>READY</td></tr>
+
+</table>
+
+
+<br>
+<hr align="right" width="50%">
+<div align="right">$Id: ProtocolStateMachine.html,v 1.1.1.1 2005/02/17 15:34:02 michaeld Exp $</div>
+</body>
+</html>

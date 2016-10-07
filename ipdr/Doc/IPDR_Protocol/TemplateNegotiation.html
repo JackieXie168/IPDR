@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>State transitions for CRANE client</title>
+	</head>
+	<body>
+		<font face="trebuchet ms,tahoma,verdana,helvetica">
+			<br>
+			<br>
+			Copyright (2005)© Amdocs, All Rights Reserved
+			<br>
+			<hr width="70%" align="left">
+			<h1>The IPDR Template Negotiation</h1>
+			<p>
+			An IPDR Exporter may initate the template negotiation process when it is in 
+			SESSION INITIATION state. In order to start the template negotiation, the 
+			Exporter must send a "TEMPLATE DATA" message to the Collector, setting its 
+			"negotiable" bit on.
+			<P>
+			The Collector may then respond with either "FINAL TEMPLATE DATA ACKNOWLEDGE", 
+			which would mean accepting the templates, or with "MODIFY TEMPLATE" message. 
+			The Exporter will reply with "MODIFY TEMPLATE RESPONSE" message, on which the 
+			collector must send "FINAL TEMPLATE DATA ACKNOWLEDGE".
+			<P>
+			A&nbsp;IPDR&nbsp;Collector may initiate the template negotiation process when 
+			it is in the&nbsp;ACTIVE SESSION&nbsp;state. It is initiated in response to an 
+			upper layer request. The&nbsp;IPDR Collector MUST then complete all pending 
+			operations in its current state, and send the "START NEGOTIATION" message to 
+			the Exporter.&nbsp;If the Exporter allows re-negotiation, it is up to it to 
+			terminate the session with a "SESSION STOP" message and initiate the 
+			negotiation as described above.
+			<P>
+				Otherwise, the Exporter must respond with "START NEGOTIATION REJECT".
+				<h2>Example of Template Negotiation</h2>
+				Presented below is the message interaction involved in template negotiation in 
+				a series of more complex scenarios. Each one of these scenarios is a conforming 
+				implementation of the IPDR protocol.
+				<OL>
+					<li>
+				No negotiation by collector:
+				<ol>
+					<li>
+					Exporter says: "I am outputting fields a,b,c,d,e."
+					<li>
+						Collector says: "I agree; please send everything."</li>
+				</ol>
+				<li>
+					No negotiation by exporter:
+					<ol>
+				<li>
+				Exporter says: "I am outputting fields a,b,c,d,e."
+				<li>
+				Collector says: "I only want fields a,c,e."
+				<li>
+				Exporter says: "Too bad, I'm sending all fields anyway."
+				<li>
+					Collector replies "OK" and says to itself: "Oh well, I can just throw away what 
+					I don't need".</li>
+				</ol>
+				<li>
+					Negotiation by collector and exporter:
+					<ol>
+				<li>
+				Exporter says: "I am outputting fields a,b,c,d,e."
+				<li>
+				Collector says: "I only want fields a,c,e."
+				<li>
+					Exporter says: "Fine, I am outputting fields a,c,e." To itself, it says: "And I 
+					can save some processing time by not computing the data for fields b,d."</li>
+				</ol>
+				<li>
+					Reconnecting (negotiation has been done sometime in the past and we want to get 
+					data transferring as soon as possible):
+					<ol>
+				<li>
+				Collector says to Exporter: "Tell me briefly what you're exporting"
+				<li>
+				Exporter says: "I have fields a,b,c,d,e available but am only sending "a,c,e", 
+				as was previously agreed".
+				<li>
+					Collector says to Exporter: "Fine, send data please."</li>
+				</ol>
+				<LI>
+					Re-negotiating&nbsp;(acknowledged)
+					<ol>
+				<li>
+				Collector says to Exporter (while sending data): "I would like to re-negotiate 
+				the fields".
+				<LI>
+				Exporter says to Collector: "Okay, here is some more data. Now stop the 
+				session. I have fields a,b,c,d,e available but am only sending "a,c,e", as was 
+				previously agreed"
+				<LI>
+				Collector says to Exporter: "From now, send me a,c,d only".
+				<LI>
+				Exporter says to Collector: "Okay, outputting only fields a,c,d".
+				<LI>
+					Collector says to Exporter: "Fine, send data please."</LI>
+			</ol> </LI> </OL>
+			<p>
+			As you can see, the simplest scenario (#1) requires almost no work on the part 
+			of the implementer. The exporter replies to any negotiation request with "no" 
+			and always sends everything.
+			<p>
+				The primary advantages of template negotiation are:
+				<ol>
+					<li>
+					Self-describing data.
+					<li>
+					Configuration of the data is part of the protocol; but it can also be done by 
+					other configuration (CLI or SNMP).
+					<li>
+					Configuration of the receiver can be done using the protocol.
+					<li>
+					Bandwidth is conserved if there is data that the collector doesn't want.
+					<li>
+						The exporter can save CPU if it doesn't need to export some data.</li>
+				</ol>
+				The IPDR protocol is used in two stages:
+				<ol>
+					<li>
+					Receiver installation and initial configuration (choosing the fields and 
+					mapping them to what the back-end systems require).
+					<li>
+						Data receiving (which also allows dynamic change of configuration).</li>
+				</ol>
+				<hr align="right" width="50%">
+				<div align="right">$Id: TemplateNegotiation.html 2.100 2003/03/29 19:03:22 [release 
+					2.1.2 2003-04-15T21-36-38Z] $</div>
+		</font>
+	</body>
+</html>

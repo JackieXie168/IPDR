@@ -1,0 +1,52 @@
+# -*-Makefile-*-
+
+# $Id: linux.defs,v 1.5 2005/05/17 10:19:29 dmitryk Exp $
+
+ARCH_FLAG := -DLINUX
+
+MT_SUPPORT := 1
+
+CFLAGS += -Wall -DPTHREADS_SUPPORT $(ARCH_FLAG) -static -static-libgcc
+CXXFLAGS += -Wall -DPTHREADS_SUPPORT $(ARCH_FLAG)
+
+LDFLAGS := -lstdc++ -lrt
+CC := gcc
+CXX := g++
+LD := gcc
+AR := ar
+RM := /bin/rm -rf
+MKDIR := mkdir
+SED := sed
+MAKE_DEP := g++ -M
+
+LINK_SHARED := -shared -export-dynamic
+PIC_FLAG := -fpic
+SYS_LIBS := -lpthread
+
+ifeq ($(USE_WINDOWSIZE), 1)
+CFLAGS += -DUSE_WINDOWSIZE
+CXXFLAGS += -DUSE_WINDOWSIZE
+LDFLAGS += -DUSE_WINDOWSIZE
+endif
+
+ifeq ($(SNMP_SUPPORT), 1)
+CFLAGS += -DSNMP_SUPPORT
+CXXFLAGS += -DSNMP_SUPPORT
+LDFLAGS += -DSNMP_SUPPORT -lnetsnmpagent -lnetsnmpmibs -lnetsnmphelpers -lnetsnmp -ldl -lcrypto -lm -lrpm #-L/home/dmitryk/net-snmp-5.2.1/agent/.libs -L/home/dmitryk/net-snmp-5.2.1/apps/.libs #-L/home/dmitryk/net-snmp-5.2.1/snmplib/.libs -L/home/dmitryk/net-snmp-5.2.1/agent/helpers/.libs
+endif
+
+ifeq ($(DEBUG_MODE), 1)
+CFLAGS += -g -DDEBUG_MODE
+CXXFLAGS += -g -DDEBUG_MODE
+LDFLAGS += -g
+endif
+
+ifeq ($(OPTIMIZE_MODE), 1)
+CFLAGS += -O2
+CXXFLAGS += -O2
+endif
+
+ifeq ($(MT_SUPPORT), 1)
+CFLAGS += -DMT_SUPPORT
+CXXFLAGS += -DMT_SUPPORT
+endif

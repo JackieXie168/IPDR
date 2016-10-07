@@ -1,0 +1,11 @@
+for arg in 192.168.9.87 192.168.8.88 192.168.9.84
+do
+  echo === $arg ===
+  ( echo 'set_debug_level Platform 0'; \
+    echo 'set_debug_level Memory 0';   \
+    echo 'set_debug_level TCP 0';      \
+    echo 'set_debug_level Client 0';   \
+    echo 'set_debug_level Protocol 0'; \
+    echo 'get_debug_level'; sleep 2 )  \
+    | telnet $arg 40000
+done

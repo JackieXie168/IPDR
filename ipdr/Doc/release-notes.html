@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o><HEAD><TITLE>Release notes for IPDR (31 May 2005)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1255">
+<META content=False name=vs_snapToGrid>
+<META content=False name=vs_showGrid>
+<META content="MSHTML 6.00.2800.1491" name=GENERATOR></HEAD>
+<BODY dir=ltr style="FONT-FAMILY: trebuchet ms,tahoma,verdana,helvetica" 
+bgColor=ivory>
+<H1>Release notes for IPDR (31 May&nbsp;2005)</H1>
+<P>This document contains notes on the changes and limitations&nbsp;that apply 
+to the IPDR exporter (client) and collector (server). These notes are current as 
+of&nbsp;May, 31, 2005. </P>
+<P>The most recent specification for IPDR streaming protocol can be found at <A 
+href="http://www.ipdr.org/download-docs/protocol.html">http://www.ipdr.org/download-docs/protocol.html</A> 
+</P>
+<P>There is also an IETF RFC for CRANE (<A 
+href="./CRANE_Protocol/rfc3423.txt">RFC 
+3423</A>), the previous version of the protocol, which is included with the 
+sources. Some minor errata are in file <A 
+href="./CRANE_Protocol/rfc3423-errata.txt">rfc3423-errata.txt</A>. 
+</P>
+<P>You can run the IPDR collector stand-alone. Instructions are in the "Test" 
+class included with the (IPDR collector sources). </P>
+<P>If you wish to unpack and build exporter from a command line, you can do the 
+following (assume that the sources are in IPDR_distribution_2002-21-04.tar.gz, 
+and that you're running ksh or bash and have GNU make and gcc): </P><XMP>   gunzip -c IPDR_distribution_21042005.tar.gz | tar xf -
+   cd IPDR_distribution_21042005
+   export IPDR_ROOT=`pwd`
+   export PLATFORM=solaris # or linux for Linux machines
+   export IPDR_PLATFORM=$PLATFORM
+   export USE_GCC=1
+   cd ipdr/src/Simulators/IPDRSim
+   make
+</XMP>To build collector, do: <XMP>   cd IPDR_distribution_21042005
+   cd ipdr/Collector
+   make collector
+</XMP>The default location of the JDK is /usr/j2se, use <XMP>	make collector JSDK_ROOT=<another location></XMP>&nbsp;if it is placed 
+elsewhere on your system. To run collector, use<XMP>	    
+	make run
+	</XMP>
+<P>You can also run the collector with the following shell command (JDK location 
+is assumed the same as above):</P><XMP>	java -classpath ipdrapi.jar:collector.jar:jdom.jar:.:/usr/j2se/jre/lib/rt.jar org.ipdr.collector.Test <arguments></XMP>
+<P>The syntax of collector command line is as follows: </P><XMP>Test <debug level ([D]ebug | [I]nfo | [W]arn | [E]rror | [F]atal)> <collector config file> <CRANE legacy config file> <output type> <output file (CSV) or output prefix(IPDRXML)><IPDR XML config file (IPDR XML only)></XMP>
+<P>The parameters may only be omitted from the end of the command line, in which 
+case the following default values will be used: 
+<TABLE cellSpacing=0 border=1>
+  <TBODY>
+  <TR>
+    <TH>Parameter</TH>
+    <TH>Default value</TH></TR>
+  <TR>
+    <TD>debug level </TD>
+    <TD>[D]ebug</TD></TR>
+  <TR>
+    <TD>collector config file</TD>
+    <TD>config.xml</TD></TR>
+  <TR>
+    <TD>CRANE legacy config file</TD>
+    <TD>CRANEConfig.xml</TD></TR>
+  <TR>
+    <TD>output type</TD>
+    <TD>xml</TD></TR>
+  <TR>
+    <TD>output file or output prefix</TD>
+    <TD>IPDRXMLOutput</TD></TR>
+  <TR>
+    <TD>IPDR XML config file</TD>
+    <TD>IPDR35XMLOutputConfig.xml</TD></TR></TBODY></TABLE></P>
+<P>The collector accepts up to four arguments, which can be ommitted from end: 
+configuration file, template configuration, output file, CRANE legacy 
+configuration file. The default values for the files are, correspondingly, 
+config.xml, templates.xml, output.txt, CRANEConfig.xml. </P>
+<P>The following is the list of issues and limitations that apply to the 
+software. </P>
+<H2>Common&nbsp;notes</H2>
+<UL>
+  <LI>As both Exporter and Collector may initiate connections between 
+  themselves, setting both ends of the connections to active type may cause 
+  connections to open and close franticly. Users are advised to pay attention to 
+  avoid this.</LI></UL>
+<H2>Exporter notes</H2>
+<UL>
+  <LI>Platforms that are currently supported by the exporter are:&nbsp; 
+  SPARC/Solaris, INTEL/Linux.&nbsp; Specifically, the provided code was compiled 
+  and tested on SunOS 5.8 (Solaris 8), GCC 3.3.2 and on RedHat Linux 9 
+  (2.4.20-8), GCC 3.3.3. 
+  <LI>The Exporter allows large degree of flexibility with regard to template 
+  management. However, certain limitations do apply to its session and template 
+  management capabilities. In particular, creating two templates with different 
+  fields but identical ids in different sessions of a single Exporter may cause 
+  unexpected results and even a crash. 
+  <LI>Before you run <TT>IPDRSimple</TT> implementation, open 
+  <TT>IPDRSimple.c</TT> file, go to line 356 and change the <TT>makeIP(10, 1, 
+  100, 81)</TT> expression to the IP address of your actual collector. 
+  <LI>When passing document id, make sure you pass 16 bytes of data. If you pass 
+  an array which is shorter&nbsp;than 16 in&nbsp;length, garbled data will 
+  result. If you pass a longer array, only first 16 bytes will be used. 
+  <LI>In order to maintain API backward compatibility, former CRANE functions 
+  were changed to macros. The following table summarizes changes that were made 
+  in order to&nbsp;emulate those CRANE functions for which the above change was 
+  not possible. Also check <A 
+  href="./IPDR_Client/d9/d3e/_c_r_a_n_e_8h.html">CRANE.h</A> 
+  for specific details</LI></UL>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>Crane function</TH>
+    <TH>IPDR implementation</TH></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_AddServer</SPAN></TD>
+    <TD>
+      <P class=MsoNormal>Call IPDR_AddCollector(ClientHandle, Name, Addr, Port, 
+      0) <o:p></o:p></P>
+      <P class=MsoNormal>Call <SPAN 
+      style="LAYOUT-GRID-MODE: both; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA; mso-no-proof: yes">IPDR_AssocCollectorSession</SPAN>(ClientHandle, 
+      SessionHanldle,&nbsp; <SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">CollectorHandle, 
+      Priority)</SPAN></P></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_RemoveServer</SPAN></TD>
+    <TD>
+      <P class=MsoNormal>Call <SPAN 
+      style="LAYOUT-GRID-MODE: both; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-fareast-language: JA; mso-no-proof: yes">IPDR_RemoveCollectorFromSession 
+      for </SPAN>all the Sessions <o:p></o:p></P><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Call 
+      </SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">IPDR_RemoveCollector</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_CreateTemplate</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Call 
+      </SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">IPDR_CreateTemplate 
+      for all the Sessions</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_CreateStatusTemplate</SPAN></TD>
+    <TD>Not implemented</TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_GetTemplate</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      IPDR_GetTemplate for each Session. Return first template with such a 
+      Handle found</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_DeleteTemplate</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      IPDR_DeleteTemplate for each Session</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_AddKey</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      IPDR_AddKey for each Session</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_RemoveKey</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      IPDR_RemoveKey for each Session</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_ApplyTemplates</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      </SPAN><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">IPDR_ApplyTemplates 
+      for each Session</SPAN></TD></TR>
+  <TR>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-US; mso-fareast-language: JA; mso-bidi-language: HE; mso-no-proof: yes">CRANE_SendData</SPAN></TD>
+    <TD><SPAN 
+      style="FONT-SIZE: 10pt; LAYOUT-GRID-MODE: line; FONT-FAMILY: Tahoma; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">Calls 
+      IPDR_SendData for each Session</SPAN></TD></TR></TBODY></TABLE>
+<UL>
+  <LI>The complete list of all Exporter parameters can be found <A 
+  href="./IPDR_Client/d2/dd9/group___i_p_d_r__configuration__values.html">here</A>. 
+  These parameters are also accesible via console <TT>parameters</TT> command 
+  and by SNMP. </LI></UL>
+<H2>Collector notes</H2>
+<UL>
+  <LI>Legacy CRANE configuration is stored in <TT>CRANEConfig.xml</TT> file. In 
+  order to disable CRANE collector, set supportCRANE attribute of Collector 
+  element in <TT>config.xml</TT> to false. 
+  <LI>Please make sure you edit the supplied <TT>config.xml</TT> file before you 
+  run the collector. The elements <TT>Exporter</TT> and <TT>Collector</TT> 
+  contain IP addresses that would probably not work in your configuration. 
+  <LI>Please note that all field types are decimal and not hexadecimal. For your 
+  convenience, here is a conversion table:<BR>
+  <TABLE border=1>
+    <TBODY>
+    <TR>
+      <TH>Type</TH>
+      <TH>Hexadecimal</TH>
+      <TH>Decimal</TH></TR>
+    <TR>
+      <TD>int</TD>
+      <TD>0x21</TD>
+      <TD>33</TD></TR>
+    <TR>
+      <TD height=25>unsigned int</TD>
+      <TD height=25>0x22</TD>
+      <TD height=25>34</TD></TR>
+    <TR>
+      <TD>long</TD>
+      <TD>0x23</TD>
+      <TD>35</TD></TR>
+    <TR>
+      <TD>unsigned long</TD>
+      <TD>0x24</TD>
+      <TD>36</TD></TR>
+    <TR>
+      <TD>float</TD>
+      <TD>0x25</TD>
+      <TD>37</TD></TR>
+    <TR>
+      <TD>double</TD>
+      <TD>0x26</TD>
+      <TD>38</TD></TR>
+    <TR>
+      <TD>base 64 binary</TD>
+      <TD>0x27</TD>
+      <TD>39</TD></TR>
+    <TR>
+      <TD>hex binary</TD>
+      <TD>0x27</TD>
+      <TD>39</TD></TR>
+    <TR>
+      <TD>string</TD>
+      <TD>0x28</TD>
+      <TD>40</TD></TR>
+    <TR>
+      <TD>boolean</TD>
+      <TD>0x29</TD>
+      <TD>41</TD></TR>
+    <TR>
+      <TD>byte</TD>
+      <TD>0x2a</TD>
+      <TD>42</TD></TR>
+    <TR>
+      <TD>unsigned byte</TD>
+      <TD>0x2b</TD>
+      <TD>43</TD></TR>
+    <TR>
+      <TD>short</TD>
+      <TD>0x2c</TD>
+      <TD>44</TD></TR>
+    <TR>
+      <TD>unsigned short</TD>
+      <TD>0x2d</TD>
+      <TD>45</TD></TR>
+    <TR>
+      <TD>date/time</TD>
+      <TD>0x122</TD>
+      <TD>290</TD></TR>
+    <TR>
+      <TD>date/time msec</TD>
+      <TD>0x224</TD>
+      <TD>548</TD></TR>
+    <TR>
+      <TD>IPv4 address</TD>
+      <TD>0x322</TD>
+      <TD>802</TD></TR>
+    <TR>
+      <TD>IPv6 address</TD>
+      <TD>0x427</TD>
+      <TD>1063</TD></TR>
+    <TR>
+      <TD>UUID</TD>
+      <TD>0x527</TD>
+      <TD>1319</TD></TR>
+    <TR>
+      <TD>date/time usec</TD>
+      <TD>0x623</TD>
+      <TD>1571</TD></TR>
+    <TR>
+      <TD>MAC address</TD>
+      <TD>0x723</TD>
+      <TD>1827</TD></TR></TBODY></TABLE></LI></UL>
+<UL>
+  <LI>In order to build the collector, enter its top directory and run <TT>make 
+  collector</TT> command. Note that the provided make file is only suitable for 
+  GNU make utility. . 
+  <LI>In order to run the collector, enter its top directory and run <TT>make 
+  run </TT>command.</LI></UL>
+<H2>Collector API additions</H2>
+<UL>
+  <LI>public interface ConnectInfo<BR>The 
+  interface&nbsp;encapsulates&nbsp;connectioninformation. An instance of this 
+  interface is passed to a state machine listener whenever an Exporter connects 
+  to the Collector. 
+  <LI>public interface DisconnectInfo<BR>The interface encapsulates 
+  disconnection information. An instance of this interface is passed to a state 
+  machine listener whenever an Exporter disconnects&nbsp;from the Collector and 
+  a DISCONNECT message arrives or is sent. 
+  <LI>public interface FlowStartInfo<BR>The interface encapsulates FLOW_START 
+  message information. An instance of this interface is passed to a state 
+  machine listener whenever the Collector sends a FLOW_START message to an 
+  Exporter. 
+  <LI>public interface FlowStopInfo<BR>The 
+  interface&nbsp;encapsulates&nbsp;FLOW_STOP message information. An instance of 
+  this interface is passed to a state machine listener whenever the Collector 
+  sends a FLOW_STOP message to an Exporter. 
+  <LI>public interface SessionStartInfo<BR>The interface encapsulates 
+  SESSION_START message information.An instance of this interface is passed to a 
+  state machine listener whenever an Exporter sends a&nbsp;SESSION_START message 
+  to the Collector. 
+  <LI>public interface SessionStopInfo<BR>The interface encapsulates 
+  SESSION_STOP message information.An instance of this interface is passed to a 
+  state machine listener whenever an Exporter sends a&nbsp;SESSION_STOP message 
+  to the Collector. 
+  <LI>public interface ConnectionController<BR>The interface allows&nbsp;more 
+  precise control over Collector state machine. It is queried by Collector 
+  before an attempt to initiate&nbsp;connection is made. It is also queried by 
+  Collector before each flow is started. 
+  <LI>public interface ConnectionControllerFactory -<BR>This interface priovides 
+  Collector with a factory for ConnectionControllers.</LI></UL>
+<H2>Collector API changes</H2>
+<P>Changes to the collector's API were made to enable recognition of the 
+connecting exporter's internal IP address within its LAN.<BR>When a connect 
+message is received (by the IPDR state machine) through one of the connection 
+threads (configured to a specific exporter) the following takes place:</P>
+<UL>
+  <LI>in exporterAddressKnown method (from the IncomingConnectionHandler 
+  interface implemented by CollectorManager): 
+  <UL>
+    <LI>finds the dispaching exporter in the collector's configured exporters 
+    list. 
+    <LI>finds the related connection thread in the connection thread list. 
+    <LI>adds the connection thread to the exporter's connections list. 
+    <LI>removes the connection thread from the collector manager connection 
+    threads list. 
+    <LI>completes the initialization of the connection thread by initializaing 
+    connection configuration and exporter handler. </LI></UL>
+  <LI>Completes initialization of IPDR state machine by creating instances of 
+  the outputter and template negotiator from their factories. </LI></UL>
+<P>These changes are possible due to the following additions:</P>
+<UL>
+  <LI>public class CollectorManager implements IncomingConnectionHandler<BR>New 
+  parameters:<BR>
+  <UL>
+    <LI>protected ArrayList connectionThreads = new ArrayList() -<BR>Holds 
+    connection threads of all incoming/outgoing connections. 
+    <LI>protected ConnectionControllerFactory connectionControllerFactory 
+    -<BR>Holds instance of connection controller factory. 
+    <LI>private ProbingListener probingListener -<BR>Holds instance of probing 
+    listener. </LI></UL>New methods:<BR>
+  <UL>
+    <LI>public ConnectionConfigI exporterAddressKnown(InetAddress 
+    exportersAddress, ConnectionThread thread) -<BR>Holds connection threads of 
+    all incoming/outgoing connections. 
+    <LI>protected ConnectionControllerFactory connectionControllerFactory 
+    -<BR>Tries to relate the exporter's IP to an exsiting exporterHandler. 
+    <LI>public void setProbingListener(ProbingListener probingListener) 
+    -<BR>Sets the probing listener of the collector manager and all its 
+    registered exporter handlers. </LI></UL>
+  <LI>public class ConnectionThread extends Thread<BR>New parameters:<BR>
+  <UL>
+    <LI>protected IncomingConnectionHandler connectionHandler -<BR>Stores 
+    interface for handling incoming connections. 
+    <LI>protected ConnectionController connectionController -<BR>The interface 
+    allows to control the ability of establishing flow start state in a 
+    connection. 
+    <LI>private ProbingListener probingListener -<BR>Probing for specified 
+    sessions in a specified exporter. 
+    <LI>protected OutputterFactory outputterFactory -<BR>Stores an instance of 
+    an Outputter factory. 
+    <LI>protected TemplateNegotiatorFactory negotiatorFactory -<BR>Stores an 
+    instance of template negotiator factory. </LI></UL>New methods:<BR>
+  <UL>
+    <LI>public void completeThread(ExporterHandler parent, ConnectionConfigI 
+    config) -<BR>Completes the work done in the passive connection connection 
+    thread constructor. 
+    <LI>public void setProbingListener(ProbingListener probingListener) -<BR>Set 
+    class parameter probingListener. 
+    <LI>public void stopFlow(byte sessionId) -<BR>stop flow with specified 
+    session. </LI></UL></LI></UL>
+<H2>Additional collector changes</H2>
+<P>templates.xml is no more in use.<BR>Enabling field negotiation in each of the 
+collector's configured templates is done via config.xml<BR>Under the XML element 
+tag "TemplateConfig" each template field is identified with the element tag 
+"FieldConfig" by the attribute tag "keyId". The enable/disable property of each 
+template field is determined by the attribute tag "fieldUsed". Configurating 
+"fieldUsed" with a "true"("false") value enables(disables) the field negotiation 
+by the collector. </P>
+<H2>Exporter additions</H2>
+<P>A couple of callback function were added:</P>
+<UL>
+  <LI>The following function sets the callback which is called whenever the 
+  configuration ID changes:<BR>IPDR_API 
+  IPDR_SetConfigurationIDChangedCallback(IPDR_ExporterHandle 
+  ExporterHandle,<BR>IPDR_ConfigurationIDChangedCallback Callback,void 
+  *Arg);<BR>The type definition of the callback function itself which is passed 
+  as the "Callback" parameter is:<BR>typedef void 
+  (*IPDR_ConfigurationIDChangedCallback)(unsigned char SessionID,<BR>unsigned 
+  short NewConfigurationID,void *Arg);<BR>
+  <LI>The ability to set a callback which will be called the first time 
+  configuration ID is set can be done via:<BR>IPDR_API 
+  IPDR_SetNewConfigurationIDCallback(IPDR_ExporterHandle 
+  ExporterHandle,<BR>IPDR_NewConfigurationIDCallback Callback,void *Arg);<BR>The 
+  type definition of the callback function itself which is passed as the 
+  "Callback" parameter is:<BR>typedef void 
+  (*IPDR_NewConfigurationIDCallback)(unsigned char SessionID,<BR>unsigned short* 
+  NewConfigurationID,void *Arg); </LI></UL>
+<H2>Issues fixed</H2>
+<UL>
+  <LI>Duplicate flag in DATA message was fixed.
+  <LI>IPDR_StopSession behavior was changed to more reasonable, that is, it now 
+  stops session always, disregarding queue drain. 
+  <LI>CsvOutputter now prints out the document id in hexadecimal format. 
+  <LI>IPDR_EnableKey during active session was fixed. 
+  <LI>In IPDRsim, it is no longer possible to send data on a bogus (not 
+  configured) template. 
+  <LI>CsvOutputter now prints config Id and duplicate flag. 
+  <LI>NullOutputter was added to collector implementation. 
+  <LI>Collector now respects "strict templates" parameter. 
+  <LI>CsvOutputter&nbsp;prints value separators correctly. 
+  <LI>64-bit values are now handled correctly in both Exporter and Collector. 
+  <LI>Compilation warnings were completely eliminated. 
+  <LI>All C files were converted to Unix format. 
+  <LI>IPDR_SendData_All and IPDR_EnableKey_All were fixed. 
+  <LI>All IPDR_TYPE_* constants were removed from the code 
+  <LI>C data types were defined for each XDR type 
+  <LI>IPDRsimTemplates.cpp was updated with new C data types. 
+  <LI>IPDR_GetCollectorInSessionList function was fixed. 
+  <LI>IPDR_SetDocumentID now resets DSN. 
+  <LI>ACCESS_BY_FUNCTION now handles lengths of string correctly. 
+  <LI>IPDR_RemoveCollectorFromSession succeeds when a session is stopped via an 
+  API function call. 
+  <LI>Changing exporter's debugging level is operational. 
+  <LI>Exporter sends error to the connected collector on session delete. 
+  <LI>MIB support is fixed and supported by exporter. 
+  <LI>MIB command line works the same as is Command Line Interface. 
+  <LI>IPDR_GetServerStatisticsAndState is implemented. 
+  <LI>Exporter sets the duplicate flag on data messages it sends. </LI></UL>
+<H2>Known issues</H2>
+<UL>
+  <LI>Collector's configuration file, <TT>config.xml</TT>, requires a mandatory 
+  attribute, <TT>count</TT>, to be added to every <TT>Connection</TT> element. 
+  This attribute is unused and should always be set to 1. 
+  <LI>While in IPDR_SendData, the exporter cannot process incoming data 
+  acknowledges. This happens for example when there is a large amount of records 
+  in a bulk.&nbsp; </LI></UL><FONT face="trebuchet ms,tahoma,verdana,helvetica">
+<HR>
+
+<ADDRESS><!-- <a href="mailto:peter.ludemann@xacct.com">Peter Ludemann</a> -->$Id: 
+release-notes.html,v 1.2 2005/01/25 18:19:55 ilyad Exp 
+$<BR></ADDRESS></FONT></BODY></HTML>

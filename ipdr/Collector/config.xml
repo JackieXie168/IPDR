@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IPDRcollectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Collector IP="10.17.38.244" templateNegotiation="false" supportDiscovery="true" port="4737" startInterval="30" protocolVersion="2" vendor="IPDR" acceptTimeout="30" strictTemplates="false" udpDiscoveryTimeout="3" udpDiscoveryPort="4737" supportCRANE="false"/>
+	<Exporters>
+		<Exporter IP="204.20.32.1">
+			<Connection type="active" count="1" connectTimeOut="100" keepAlive="20" port="4737">
+				<Description>Connection's description</Description>
+				<Sessions>
+					<Session id="1" name="mySession1">
+						<Description>Session's description1</Description>
+						<TemplateRefs>
+							<TemplateRef ref="1">
+								<TemplateConfig>
+									<FieldConfig keyId="101" fieldUsed="false"/>
+									<FieldConfig keyId="102" fieldUsed="true"/>
+									<FieldConfig keyId="103" fieldUsed="true"/>
+									<FieldConfig keyId="104" fieldUsed="true"/>
+									<FieldConfig keyId="105" fieldUsed="false"/>
+									<FieldConfig keyId="106" fieldUsed="false"/>
+								</TemplateConfig>
+							</TemplateRef>
+						</TemplateRefs>
+					</Session>
+
+				</Sessions>
+			</Connection>
+		</Exporter>
+	</Exporters>
+	<Templates>
+		<Template globalRef="111" id="1">
+			<Description>Template's description 1</Description>
+			<Fields>
+				<Field keyId="101" fieldUsed="true" keyName="counter" keyTypeId="33"></Field>
+				<Field keyId="102" fieldUsed="true" keyName="counter2" keyTypeId="33"></Field>
+				<Field keyId="103" fieldUsed="true" keyName="name" keyTypeId="40"></Field>
+				<Field keyId="104" fieldUsed="true" keyName="unsigned32" keyTypeId="34"></Field>
+				<Field keyId="105" fieldUsed="true" keyName="unsigned32_2" keyTypeId="34"></Field>
+				<Field keyId="106" fieldUsed="true" keyName="unsigned64" keyTypeId="36"></Field>
+			</Fields>
+		</Template>
+		<Template globalRef="655" id="13">
+			<Description>Template's description 2</Description>
+			<Fields>
+				<Field keyId="136" fieldUsed="false" keyName="myKey2" keyTypeId="4"></Field>
+			</Fields>
+		</Template>
+		<Template globalRef="656" id="15">
+			<Description>Template's description 3</Description>
+			<Fields>
+				<Field keyId="137" fieldUsed="true" keyName="myKey3" keyTypeId="5"></Field>
+			</Fields>
+		</Template>
+	</Templates>
+</IPDRcollectorConfiguration>
