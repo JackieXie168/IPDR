@@ -1,0 +1,233 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/SM"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+         xmlns:SM = "http://www.ipdr.org/namespaces/SM"
+	 version = "3.5-A.0"
+	 elementFormDefault = "qualified"
+	 attributeFormDefault = "unqualified">
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+	<element name = "subscriberID" type = "string">
+		<annotation>
+			<documentation>
+
+                             Identifies a unique subscriber in the system.
+                             Ip address, account number etc
+                        </documentation>
+		</annotation>
+	</element>
+	<element name = "destAddress" type = "ipdr:ipV4Addr">
+		<annotation>
+			<documentation>
+
+                              IP address of streaming destination.
+
+                         </documentation>
+		</annotation>
+	</element>
+	<element name = "serviceProviderID" type = "string">
+		<annotation>
+			<documentation>
+				Service provider of streaming service.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "sourceAddress" type = "ipdr:ipV4Addr">
+		<annotation>
+			<documentation>
+				IP address of streaming server
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "startTime" type = "ipdr:dateTimeMsec">
+		<annotation>
+			<documentation>
+				Time instant the stream starts playing.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "endTime" type = "ipdr:dateTimeMsec">
+		<annotation>
+			<documentation>
+				Time instant the stream stops playing.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "timeZoneOffset" type = "int">
+		<annotation>
+			<appinfo>
+				<ipdr:units>minutes</ipdr:units>
+			</appinfo>
+			<documentation>
+
+                              Number of minutes ahead (+) or behind (-) UMT of the local time zone in which the service is consumed.
+
+                        </documentation>
+		</annotation>
+	</element>
+	<element name = "terminationStatus">
+		<annotation>
+			<documentation>
+				Indication of the nature of termination of the session.
+				</documentation>
+		</annotation>
+		<simpleType>
+			<restriction base = "integer">
+				<enumeration value = "1">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>Normal</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+				<enumeration value = "2">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>Client Failure</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+				<enumeration value = "3">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>Server Failure</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+				<enumeration value = "4">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>Connection Failure</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name = "streamName" type = "string">
+		<annotation>
+			<documentation>
+				Descriptive name of stream
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "streamID" type = "string">
+		<annotation>
+			<documentation>
+				Unique id of stream. This id is used to uniquely identify the stream where the name does not provide a unique value.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "charge" type = "float">
+		<annotation>
+			<documentation>
+				Monetary amount to be charged.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "chargeCurrency" type = "string">
+		<annotation>
+			<appinfo>
+				<ipdr:reference>http://www.iso.ch</ipdr:reference>
+			</appinfo>
+			<documentation>
+				Currency unit of charge amount.
+				Encoded using ISO 4217:2001.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "codec" type = "string">
+		<annotation>
+			<documentation>
+				Codec used for video stream.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "numAudioStreams" type = "int">
+		<annotation>
+			<documentation>
+				Count of audio streams.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "numVideoStreams" type = "int">
+		<annotation>
+			<documentation>
+				Count of video streams.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "averageBandwidth" type = "long">
+		<annotation>
+			<appinfo>
+				<ipdr:units>bps</ipdr:units>
+			</appinfo>
+			<documentation>
+				Average bandwidth used for stream.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "totalVolume" type = "long">
+		<annotation>
+			<appinfo>
+				<ipdr:units>bytes</ipdr:units>
+			</appinfo>
+			<documentation>
+				Total volume used for stream.
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "qosRequested" type = "int">
+		<annotation>
+			<documentation>
+				Requested QoS corresponding to the SLA or dynamic QoS request
+				0..255
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "qosDelivered" type = "int">
+		<annotation>
+			<documentation>
+				Pre-calculated indicator representing the delivered / negotiated QoS. Physical attributes such as latency or error rates are weighted and combined into one value.
+				0..255
+			</documentation>
+		</annotation>
+	</element>
+	<element name = "qosMeasurement" type = "string">
+		<annotation>
+			<documentation>
+				QoS measurement such as delay, jitter or other parameter.
+			</documentation>
+		</annotation>
+	</element>
+	<complexType name = "IPDR-SM-Type">
+		<complexContent>
+			<extension base = "ipdr:IPDRType">
+				<sequence>
+					<element ref = "SM:subscriberID"/>
+					<element ref = "SM:destAddress"/>
+					<element ref = "SM:serviceProviderID"/>
+					<element ref = "SM:sourceAddress"/>
+					<element ref = "SM:startTime"/>
+					<element ref = "SM:endTime"/>
+					<element ref = "SM:timeZoneOffset"/>
+					<element ref = "SM:terminationStatus"/>
+					<element ref = "SM:streamName"/>
+					<element ref = "SM:streamID"/>
+					<element ref = "SM:charge" minOccurs = "0"/>
+					<element ref = "SM:chargeCurrency" minOccurs = "0"/>
+					<element ref = "SM:codec" minOccurs = "0"/>
+					<element ref = "SM:numAudioStreams" minOccurs = "0"/>
+					<element ref = "SM:numVideoStreams" minOccurs = "0"/>
+					<element ref = "SM:averageBandwidth" minOccurs = "0"/>
+					<element ref = "SM:totalVolume" minOccurs = "0"/>
+					<element ref = "SM:qosRequested" minOccurs = "0"/>
+					<element ref = "SM:qosDelivered" minOccurs = "0"/>
+					<element ref = "SM:qosMeasurement" minOccurs = "0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

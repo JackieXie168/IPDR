@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2000/10/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/ipdr"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/ipdr"
+	 version = "3.0-A.0"
+	 elementFormDefault = "qualified"
+	 attributeFormDefault = "unqualified">
+	<include schemaLocation = "IPDRDoc3.0.xsd"/>
+	<element name = "clientGroupID" type = "string"/>
+	<element name = "destinationGroupID" type = "string"/>
+	<element name = "sourceAddress" type = "ipdr:ipV4Addr"/>
+	<element name = "subscriberID" type = "string" />
+	<element name = "destAddress" type = "ipdr:ipV4Addr"/>
+	<element name = "startTime" type = "dateTime"/>
+	<element name = "endTime" type = "dateTime"/>
+	<element name = "voiceSessions" type = "int"/>
+	<element name = "mediaSessions" type = "int"/>
+	<element name = "retransmittedPackets" type = "int"/>
+	<element name = "numPackets" type = "int"/>
+	<element name = "numBytes" type = "int"/>
+	<element name = "qosRequested" type = "int"/>
+	<element name = "qosDelivered" type = "int"/>
+	<complexType name = "IPDR-WS-Type">
+		<complexContent>
+			<extension base = "ipdr:IPDRType">
+				<sequence>
+					<element ref = "ipdr:clientGroupID"/>
+					<element ref = "ipdr:destinationGroupID" minOccurs="0"/>
+					<element ref = "ipdr:sourceAddress"/>
+					<element ref = "ipdr:subscriberID" minOccurs="0"/>
+					<element ref = "ipdr:destAddress"/>
+					<element ref = "ipdr:startTime"/>
+					<element ref = "ipdr:endTime"/>
+					<element ref = "ipdr:voiceSessions" minOccurs="0"/>
+					<element ref = "ipdr:mediaSessions" minOccurs="0"/>
+					<element ref = "ipdr:retransmittedPackets"  minOccurs="0"/>
+					<element ref = "ipdr:numPackets" minOccurs="0"/>
+					<element ref = "ipdr:numBytes"/>
+					<element ref = "ipdr:qosRequested" minOccurs = "0"/>
+					<element ref = "ipdr:qosDelivered" minOccurs = "0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+<element name = "listName" type = "string"/>
+<element name = "subscriber" type = "string"/>
+<complexType name="subscriberListEvent">
+  <sequence> 
+    <element ref="listName"/> 
+     <element ref="subscriber" maxoccurs="unbounded" /> 
+  </sequence> 
+</complexType>
+<element name="subscriberList" type="subscriberListEvent"/>
+<complexType name="IPDR-ArrayWithinStructure-Type"> 
+  <complexContent> 
+    <extension base="ipdr:IPDRType"> 
+      <sequence>
+         <element ref="subscriberList" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+</schema>

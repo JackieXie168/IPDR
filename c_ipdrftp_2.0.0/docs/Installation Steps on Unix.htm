@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Linux Build</title>
+                                         
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+  <body>
+           
+<h1>Linux Build Instruction for gcc Compilation of the IPDR File Transfer
+ Protocol Libraries</h1>
+          
+<h2>Dependent Libraries</h2>
+     The reference libraries were built and tested using version 7.9.3 of 
+libcurl   for URL implementation and version 1.95.2 of Expat for the XML parser.
+&nbsp;It is also dependent on the base IPDR library.<br>
+         
+<h3>Expat (v1.95.2)</h3>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="http://www.jclark.com/xml/expat.html">http://www.jclark.com/xml/expat.html&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation
+  Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="http://expat.sourceforge.net">http://expat.sourceforge.net</a><br>
+         
+<h3>Libcurl (v7.9.3)</h3>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="http://curl.haxx.se">http://curl.haxx.se</a><br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation
+  Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="http://curl.haxx.se/docs/install.html">http://curl.haxx.se/docs/install.html</a><br>
+   
+<h3>c_ipdrbase (v1.0.0)</h3>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="http://curl.haxx.se">http://sourceforge.net/projects/ipdr</a><br>
+   <br>
+       
+<h2>Build Instructions</h2>
+    Below are more detailed steps for compilation on the Linux platform.
+&nbsp;Other   Unix flavors should be similar.<br>
+ <br>
+ <b>Note:</b> if you have built the c_ipdrbase on the same system, then steps 
+1 and 2 a. can be skipped.<br>
+           
+<ol>
+        <li>After downloading and unpacking curl and expat, you'll still
+need   to configure make, build and install each. &nbsp;For each library:</li>
+                   
+  <ol type="a">
+         <li>execute the config script</li>
+         <li>run make</li>
+         <li>(possibly as root) run make install to populate the target directories 
+  with the compiled libraries. &nbsp;By default on Linux this will be /usr/local/*. 
+  &nbsp;Both libs and header files will be moved.<br>
+         </li>
+                   
+  </ol>
+           <li>To work with the default makefile for IPDRFTP you will need 
+to:<br>
+       </li>
+                       
+  <ol type="a">
+          <li>copy the expat header file from /usr/local/include/expat.h
+to  a  subdirectory, creating /usr/local/include/expat/expat.h<br>
+         </li>
+         <li>Specify the path of ipdrlibs(conversion library) folder in file 
+&#8220;makefile.mk&#8221; by modifying IPDRLIBSROOTPATH variable in the file.This ipdrlibs 
+folder contain include directory, which in turn has directories named common, 
+xdr, xml, utils. This is required by test scripts ConsumerIT.c and ProducerIT.c.<br>
+     </li>
+     <li>Run the shell script to set some environment variables:<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; . ./setcpath.sh</li>
+         <li>create a subdirectory under the &lt;ipdrftp&gt;directory for 
+&lt;ipdrftp&gt;/libs<br>
+         </li>
+          <li>run make at the &lt;ipdrftp&gt; directory<br>
+          </li>
+                       
+  </ol>
+              <li>Modify your classpath add the ipdrftp/test directory. &nbsp;This 
+  will allow you to simply execute the IPDRReadTest or IPDRWriteTest from 
+any  directory.</li>
+        
+  <ul>
+                       
+  </ul>
+           
+</ol>
+           
+<h2>Documentation<br>
+     </h2>
+         
+<h3>API Documentation</h3>
+     API Documentation built using Doxygen can be found in <a
+ href="doxygen/html/index.html">C API Documentation</a>         
+<h3></h3>
+         
+<h3>Integration test cases<br>
+     </h3>
+     Integration Test Cases are described in <a
+ href="Readme%20for%20Integration%20test%20cases.htm">Integration   Test
+Cases</a>. The test data for the test cases can be found under test/testdata.zip.<br>
+       
+<h2></h2>
+   
+<ul>
+           
+</ul>
+           
+<h2></h2>
+   
+<ul>
+           
+</ul>
+           
+<hr width="100%" size="2"><i>Jeff Meyer &nbsp;June 10, 2003</i><br>
+      <br>
+     <br>
+    <br>
+   <br>
+  <br>
+ <br>
+</body>
+</html>

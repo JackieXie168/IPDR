@@ -1,0 +1,5 @@
+AUTOMAKE_OPTIONS = foreign no-dependencies
+CFLAGS=-c
+INCLUDES = -I./../../include/
+lib_LIBRARIES=libXML.a
+libXML_a_SOURCES = IPDRXMLDocEndHelper.c  IPDRXMLRecordHelper.c  XMLUnMarshaller.c IPDRXMLHeaderHelper.c  XMLMarshaller.c

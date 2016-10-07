@@ -1,0 +1,4 @@
+primitiveTypes.xsd,,,,,,,,,,,,
+http://www.ipdr.org/namespaces/IPDR,,,,,,,,,,,,
+myInt,myUnsignedInt,myLong,myUnisgnedLong,myFloat,myDouble,myHexBinary,myString,myBoolean,myByte,myUnisgnedByte,myShort,myUnsignedShort
+666,2147483649,111222333444,111222333444,1.3333,7777.1111,sample byte array,sample string,false,-1,1111,7777,33000

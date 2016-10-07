@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  Ant build script for packaging the C IPDR FTP library.  The scritp does not do
+   any compilation of objects, use the VisualC++ DSW files or the UNIX make utilities.
+   
+     Ant is being used for packaging since packaging can be done on any platform
+   and is typically done by IPDR developers, who are also maintaining the 
+   Java libraries.
+   
+     Feel free to contribute alternate packaging makefiles if you wish -->
+
+<project name="org.ipdr.base" default="build.zips" basedir=".">
+
+	<property name="bootclasspath" value=""/>
+	<property name="ws" value="win32"/>
+	<property name="os" value="win32"/>
+	<property name="arch" value="x86"/>
+
+	<target name="init">
+		<property name="plugin" value="c_ipdrftp"/>
+		<property name="version.suffix" value="_1.0.0"/>
+		<property name="full.name" value="${plugin}${version.suffix}"/>
+		<property name="temp.folder" value="${basedir}/temp.folder"/>
+		<property name="plugin.destination" value="${basedir}"/>
+		<property name="build.result.folder" value="${basedir}"/>
+	</target>
+
+
+	<target name="gather.sources" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/${full.name}"/>
+		<copy todir="${destination.temp.folder}/${full.name}">
+			<fileset dir="." includes="source/**/*" excludes="**/*.o,**/*.obj,**/*.pch,**/*.pdb,**/*.exe,**/*.dll"/>
+			<fileset dir="." includes="include/**/*" excludes="**/*.o,**/*.obj,**/*.pch,**/*.pdb,**/*.exe,**/*.dll"/>
+			<fileset dir="." includes="example/**/*" excludes="**/*.o,**/*.obj,**/*.pch,**/*.pdb,**/*.exe,**/*.dll"/>
+			<fileset dir="." includes="ipdrftp/**/*" excludes="**/*.o,**/*.obj,**/*.pch,**/*.pdb,**/*.exe,**/*.dll"/>
+			<fileset dir="."
+			 includes="build.xml,doxygen.cfg,install-sh,makefile,makefile.mk,setcpath.sh"/>
+			<fileset dir="." includes="LICENSE.HTML"/>
+		</copy>
+	</target>
+
+	<target name="gather.docs" depends="doxygen" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/${full.name}/docs"/>
+		<copy todir="${destination.temp.folder}/${full.name}/docs">
+			<fileset dir="docs" includes="**/*"/>
+		</copy>
+	</target>
+
+	<target name="gather.tests" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/${full.name}/docs"/>
+		<copy todir="${destination.temp.folder}/${full.name}/test">
+			<fileset dir="test"/>
+		</copy>
+	</target>
+
+	<target name="refresh" depends="init" if="eclipse.running">
+		<eclipse.refreshLocal resource="${plugin}" depth="infinite"/>
+	</target>
+
+        <target name="doxygen" depends="init">
+		<mkdir dir="docs/doxygen" />
+		<exec executable="doxygen">
+		   <arg value="doxygen.cfg"/>
+		</exec>
+	</target>
+		
+	<target name="build.zips" depends="init">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="gather.sources">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<antcall target="gather.docs">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<antcall target="gather.tests">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<zip zipfile="${plugin.destination}/${full.name}.zip" basedir="${temp.folder}" filesonly="true"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+</project>

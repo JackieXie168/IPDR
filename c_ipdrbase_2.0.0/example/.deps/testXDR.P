@@ -1,0 +1,135 @@
+testXDR.o: testXDR.c /usr/include/stdio.h /usr/include/features.h \
+  /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h \
+  /usr/lib/gcc-lib/i386-redhat-linux/2.96/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h /usr/include/libio.h /usr/include/_G_config.h \
+  /usr/include/wchar.h /usr/include/bits/wchar.h /usr/include/gconv.h \
+  /usr/lib/gcc-lib/i386-redhat-linux/2.96/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/stdio.h \
+  ../include/curl/curl.h /usr/include/sys/types.h /usr/include/time.h \
+  /usr/include/endian.h /usr/include/bits/endian.h \
+  /usr/include/sys/select.h /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h /usr/include/bits/time.h \
+  /usr/include/sys/sysmacros.h /usr/include/sys/time.h \
+  ../include/curl/types.h ../include/curl/easy.h \
+  ../include/common/IPDRDocWriter.h ../include/utils/IPDRCommon.h \
+  /usr/include/stdlib.h /usr/include/alloca.h \
+  ../include/utils/hashtable.h ../include/utils/dynamicArray.h \
+  ../include/utils/errorCode.h ../include/utils/utils.h \
+  /usr/include/ctype.h /usr/include/malloc.h /usr/include/string.h \
+  /usr/include/bits/string.h /usr/include/bits/string2.h \
+  /usr/include/math.h /usr/include/bits/huge_val.h \
+  /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+  /usr/include/bits/mathinline.h /usr/include/sys/timeb.h \
+  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
+  /usr/include/getopt.h ../include/utils/IPDRMemory.h \
+  ../include/utils/errorHandler.h ../include/common/IPDRHeader.h \
+  ../include/xdr/IPDRXDRHeaderHelper.h \
+  ../include/xdr/NameSpaceInfoHelper.h ../include/xdr/XDRMarshaller.h \
+  ../include/xdr/XDRUnMarshaller.h ../include/common/FNFType.h \
+  ../include/common/FNFData.h ../include/common/schema.h \
+  ../include/common/descriptor.h ../include/utils/serialize.h \
+  ../include/common/getFile.h ../include/expat/expat.h \
+  ../include/utils/schemaUtil.h ../include/xdr/IPDRStreamElementHelper.h \
+  ../include/xdr/RecordDescriptorHelper.h \
+  ../include/xdr/AttributeDescriptorHelper.h \
+  ../include/xdr/IPDRXDRRecordHelper.h ../include/xdr/FNFDataHelper.h \
+  ../include/xdr/IPDRRecord.h ../include/xdr/IPDRXDRDocEndHelper.h \
+  ../include/xml/IPDRXMLHeaderHelper.h ../include/xml/XMLMarshaller.h \
+  ../include/xml/XMLUnMarshaller.h ../include/xml/IPDRXMLRecordHelper.h \
+  ../include/xml/IPDRXMLDocEndHelper.h ../include/common/IPDRDocReader.h \
+  ../include/utils/UUIDUtil.h ../include/utils/sysdep.h \
+  /usr/include/sys/sysinfo.h /usr/include/linux/kernel.h \
+  ../include/utils/global.h ../include/utils/md5.h \
+  ../include/utils/uuid.h
+testXDR.c :
+/usr/include/stdio.h :
+/usr/include/features.h :
+/usr/include/sys/cdefs.h :
+/usr/include/gnu/stubs.h :
+/usr/lib/gcc-lib/i386-redhat-linux/2.96/include/stddef.h :
+/usr/include/bits/types.h :
+/usr/include/bits/pthreadtypes.h :
+/usr/include/bits/sched.h :
+/usr/include/libio.h :
+/usr/include/_G_config.h :
+/usr/include/wchar.h :
+/usr/include/bits/wchar.h :
+/usr/include/gconv.h :
+/usr/lib/gcc-lib/i386-redhat-linux/2.96/include/stdarg.h :
+/usr/include/bits/stdio_lim.h :
+/usr/include/bits/stdio.h :
+../include/curl/curl.h :
+/usr/include/sys/types.h :
+/usr/include/time.h :
+/usr/include/endian.h :
+/usr/include/bits/endian.h :
+/usr/include/sys/select.h :
+/usr/include/bits/select.h :
+/usr/include/bits/sigset.h :
+/usr/include/bits/time.h :
+/usr/include/sys/sysmacros.h :
+/usr/include/sys/time.h :
+../include/curl/types.h :
+../include/curl/easy.h :
+../include/common/IPDRDocWriter.h :
+../include/utils/IPDRCommon.h :
+/usr/include/stdlib.h :
+/usr/include/alloca.h :
+../include/utils/hashtable.h :
+../include/utils/dynamicArray.h :
+../include/utils/errorCode.h :
+../include/utils/utils.h :
+/usr/include/ctype.h :
+/usr/include/malloc.h :
+/usr/include/string.h :
+/usr/include/bits/string.h :
+/usr/include/bits/string2.h :
+/usr/include/math.h :
+/usr/include/bits/huge_val.h :
+/usr/include/bits/mathdef.h :
+/usr/include/bits/mathcalls.h :
+/usr/include/bits/mathinline.h :
+/usr/include/sys/timeb.h :
+/usr/include/sys/stat.h :
+/usr/include/bits/stat.h :
+/usr/include/unistd.h :
+/usr/include/bits/posix_opt.h :
+/usr/include/bits/confname.h :
+/usr/include/getopt.h :
+../include/utils/IPDRMemory.h :
+../include/utils/errorHandler.h :
+../include/common/IPDRHeader.h :
+../include/xdr/IPDRXDRHeaderHelper.h :
+../include/xdr/NameSpaceInfoHelper.h :
+../include/xdr/XDRMarshaller.h :
+../include/xdr/XDRUnMarshaller.h :
+../include/common/FNFType.h :
+../include/common/FNFData.h :
+../include/common/schema.h :
+../include/common/descriptor.h :
+../include/utils/serialize.h :
+../include/common/getFile.h :
+../include/expat/expat.h :
+../include/utils/schemaUtil.h :
+../include/xdr/IPDRStreamElementHelper.h :
+../include/xdr/RecordDescriptorHelper.h :
+../include/xdr/AttributeDescriptorHelper.h :
+../include/xdr/IPDRXDRRecordHelper.h :
+../include/xdr/FNFDataHelper.h :
+../include/xdr/IPDRRecord.h :
+../include/xdr/IPDRXDRDocEndHelper.h :
+../include/xml/IPDRXMLHeaderHelper.h :
+../include/xml/XMLMarshaller.h :
+../include/xml/XMLUnMarshaller.h :
+../include/xml/IPDRXMLRecordHelper.h :
+../include/xml/IPDRXMLDocEndHelper.h :
+../include/common/IPDRDocReader.h :
+../include/utils/UUIDUtil.h :
+../include/utils/sysdep.h :
+/usr/include/sys/sysinfo.h :
+/usr/include/linux/kernel.h :
+../include/utils/global.h :
+../include/utils/md5.h :
+../include/utils/uuid.h :

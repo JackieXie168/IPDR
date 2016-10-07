@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<CapabilityRsp>
+<supportedProtocolList>
+<supportedProtocolItem version="3.0" protocolMapping="File" encoding="XML">
+<primitiveList>
+<primitiveItem>Pull</primitiveItem>
+</primitiveList>
+<extension>
+<groupInfoList>
+<groupInfoItem>
+<groupId>Voip</groupId>
+<controlFileDirectory>file://172.21.19.68/home/girishmd/c_ipdrftp_1.0.0/test/Voip/</controlFileDirectory>
+<controlFilePrefix>Voip-</controlFilePrefix>
+<controlFileNamePolicy>NNNN</controlFileNamePolicy>
+<controlFileSuffix>.ctrl</controlFileSuffix>
+</groupInfoItem>
+<groupInfoItem>
+<groupId>GSM</groupId>
+<controlFileDirectory>file://172.21.19.68/home/girishmd/c_ipdrftp_1.0.0/test/GSM/</controlFileDirectory>
+<controlFilePrefix>GSM</controlFilePrefix>
+<controlFileNamePolicy>NNN</controlFileNamePolicy>
+<controlFileSuffix>.ctrl</controlFileSuffix>
+<BRRecord>
+<homeServiceProviderType>	1	</homeServiceProviderType>
+<homeServiceProvider>	homeServiceProvider	</homeServiceProvider>
+<homeServiceProviderName>	homeServiceProviderName	</homeServiceProviderName>
+<accessProviderType>	2	</accessProviderType>
+<accessProvider>	accessProvider	</accessProvider>
+<accessProviderName>	accessProviderName	</accessProviderName>
+<contractReference>	contractReference	</contractReference>
+<businessRelationshipID>	businessRelationshipID	</businessRelationshipID>
+<summaryXchgHrs>	3	</summaryXchgHrs>
+<settlementXcghDays>	settlementXcghDays	</settlementXcghDays>
+<netPosXchgDays>	netPosXchgDays	</netPosXchgDays>
+<effectiveDateTime>	effectiveDateTime	</effectiveDateTime>
+<response>	6	</response>
+<xchgProtocol>	7	</xchgProtocol>
+<xchgSLA>	8	</xchgSLA>
+<xchgEncoding>	9	</xchgEncoding>
+<disputeResolution>	10	</disputeResolution>
+<locationInfo>	locationInfo	</locationInfo>
+<BRContactName>	BRContactName	</BRContactName>
+<rejectReturn>	11	</rejectReturn>
+<frequencyOfAuditReconciliation>	12	</frequencyOfAuditReconciliation>
+<xchgCurrencyType>	xchgCurrencyType	</xchgCurrencyType>
+<unitOfMeasure>	13	</unitOfMeasure>
+<chargeableUnit>	14	</chargeableUnit>
+<ratePerChargeableUnit>	15	</ratePerChargeableUnit>
+<clearingIntermediaryName>	clearingIntermediaryName	</clearingIntermediaryName>
+<billingIntermediaryName>	billingIntermediaryName	</billingIntermediaryName>
+<sendingServiceProviderDisposition>	16	</sendingServiceProviderDisposition>
+<lastChangedDateTime>	lastChangedDateTime	</lastChangedDateTime>
+<fileRetentionDays>	17	</fileRetentionDays>
+</BRRecord>
+</groupInfoItem>
+</groupInfoList>
+</extension>
+</supportedProtocolItem>
+<supportedProtocolItem version="3.0" protocolMapping="File" encoding="XML">
+<primitiveList>
+<primitiveItem>Pul</primitiveItem>
+</primitiveList>
+<extension>
+<groupInfoList>
+<groupInfoItem>
+<groupId>V</groupId>
+<controlFileDirectory>file://172.21.19.68/home/girishmd/c_ipdrftp_1.0.0/test/Voip/</controlFileDirectory>
+<controlFilePrefix>Voip-</controlFilePrefix>
+<controlFileNamePolicy>N</controlFileNamePolicy>
+<controlFileSuffix>.ctrl</controlFileSuffix>
+</groupInfoItem>
+<groupInfoItem>
+<groupId>GS</groupId>
+<controlFileDirectory>file://172.21.19.68/home/girishmd/c_ipdrftp_1.0.0/test/GSM/</controlFileDirectory>
+<controlFilePrefix>GSM</controlFilePrefix>
+<controlFileNamePolicy>NNN</controlFileNamePolicy>
+<controlFileSuffix>.ctrl</controlFileSuffix>
+</groupInfoItem>
+</groupInfoList>
+</extension>
+</supportedProtocolItem>
+</supportedProtocolList>
+</CapabilityRsp>

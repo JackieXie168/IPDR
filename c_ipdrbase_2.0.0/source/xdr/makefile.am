@@ -1,0 +1,5 @@
+AUTOMAKE_OPTIONS = foreign no-dependencies
+CFLAGS=-c
+INCLUDES = -I./../../include/
+lib_LIBRARIES=libXDR.a
+libXDR_a_SOURCES = AttributeDescriptorHelper.c  IPDRXDRDocEndHelper.c  RecordDescriptorHelper.c FNFDataHelper.c  IPDRXDRHeaderHelper.c  XDRMarshaller.c IPDRRecord.c IPDRXDRRecordHelper.c  XDRUnMarshaller.c IPDRStreamElementHelper.c   NameSpaceInfoHelper.c

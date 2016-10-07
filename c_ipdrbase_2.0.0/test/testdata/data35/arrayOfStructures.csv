@@ -1,0 +1,6 @@
+test/data35/arrayOfStructures.xsd,,,
+http://www.ipdr.org/namespaces/IPDR,,,
+startTime,endTime,movieTitle,( qosVolumeEvent[ qosLevel;startTime;endTime ] )
+991847488,991847533,Shrek 2,([255;991847489;991847503];[128;991847489;991847532])
+991847592,991847692,Star Wars,([255;991847589;991847691])
+991847718,991847890,Spider-Man 2,([10;991847719;991847722];[255;991847722;991847880];[128;991847880;991847889])

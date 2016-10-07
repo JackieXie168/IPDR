@@ -1,0 +1,1025 @@
+
+Schema Validation is ON, Calling setSchemaData
+
+
+
+Printing Schema Element 1
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$IPDRCreationTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 2
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$seqNum
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 3
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$subscriberID
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 4
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$hostname
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 5
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$ipAddress
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = ipV4Addr
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 6
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$startTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 7
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$endTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 8
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$timeZoneOffset
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 9
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$callCompletionCode
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 10
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$originalDestinationId
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 11
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$uniqueCallId
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 12
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$imsiIngress
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 13
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$esnIngress
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 14
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$callProgressState
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 15
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$disconnectReason
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 16
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$destinationId
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 17
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$thirdPartyId
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 18
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$ani
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 19
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$oLIiiDigit
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 20
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$iiDigits
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 21
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$dnis
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 22
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$pin
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 23
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$serviceConsumerType
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 24
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$startAccessTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 25
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$endAccessTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 26
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$callSetupDuration
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 27
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$callDuration
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 28
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$totalDuration
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 29
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$tearDownDuration
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 30
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$averagePacketLatency
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 31
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$type
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 32
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$paymentType
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 33
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$feature
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 34
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$codec
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 35
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$silenceCompressionMode
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 36
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$modem
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 37
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$supplementaryService
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 38
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$extendedReasonCode
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 39
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$disconnectLocation
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 40
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$proprietaryErrorCode
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 41
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$unitsConsumed
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 42
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$inboundByteCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 43
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$outboundByteCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 44
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$inboundPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 45
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$outboundPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 46
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$inboundLostPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 47
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$outboundLostPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 48
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$inboundRxmtPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 49
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$outboundRxmtPacketCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 50
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$subscribedQoSClasses
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 51
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$callClarityIndex
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 52
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$voiceQualityIndex
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 53
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$transmissionRatingRFactor
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = The E-Model Quality Rating Factor, per ITU-T Recommendation 
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 54
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$userPerceivedRFactor
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = Alternative user perceived R factor derived from E-Model
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 55
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$faxPerformanceMetric
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 56
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$faxPageTxCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 57
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$faxPageRxCount
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 58
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$packetLossPercentage
+pSchemaElement->attributeType_ = FLOAT
+pSchemaElement->derivedType_ = FLOAT
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 59
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$outOfSequencePackets
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 60
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$correctSequencePackets
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 61
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$packetDelayVariation
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 62
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$ipAddressIngressDevice
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 63
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$ipAddressEgressDevice
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 64
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$portNumber
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 65
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$imsiEngress
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 66
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$esnEgress
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 67
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$homeLocationIngress
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 68
+pSchemaElement->attributeName_ = IPDR-VoIP-Type$http://www.ipdr.org/namespaces/ipdr$homeLocationIdEgress
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+Return value from setSchemaData = 0The descriptorID is in addDescriptor : 1
+The string is in addDescriptor : IPDR-VoIP-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$hostname*UTF8_ARRAY*<null>*UTF8_ARRAY$ipAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$timeZoneOffset*INTEGER*<null>*INTEGER$callCompletionCode*UTF8_ARRAY*<null>*UTF8_ARRAY$originalDestinationId*UTF8_ARRAY*<null>*UTF8_ARRAY$uniqueCallId*UTF8_ARRAY*<null>*UTF8_ARRAY$disconnectReason*UTF8_ARRAY*<null>*UTF8_ARRAY$ani*UTF8_ARRAY*<null>*UTF8_ARRAY$startAccessTime*HYPER*<null>*HYPER$callSetupDuration*INTEGER*<null>*INTEGER$callDuration*INTEGER*<null>*INTEGER$totalDuration*INTEGER*<null>*INTEGER$homeLocationIdEgress*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[0]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[1]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[2]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[3]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[4]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[5]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[6]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[7]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[8]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[9]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[10]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[11]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[12]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[13]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[14]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[15]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[16]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[17]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[18]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[19]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[20]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[21]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[22]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[23]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[24]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[25]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[26]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[27]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[28]	[29]
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 1
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 2
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 3
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 4
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 5
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 6
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 7
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 8
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 9
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 10
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 11
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 12
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 13
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 14
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 15
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 16
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 17
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 18
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 19
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 20
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 21
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 22
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 23
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 24
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 25
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 26
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 27
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 28
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 29
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 30
+ Document decoded Successfully

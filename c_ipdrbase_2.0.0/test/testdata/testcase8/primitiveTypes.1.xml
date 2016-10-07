@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<IPDRDoc xmlns="http://www.ipdr.org/namespaces/ipdr"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="primitiveTypes.xsd" 
+docId="09c81132-1dd2-11b2-a03b-af1c144d619b"
+creationTime="2004-11-17T16:16:29.352Z"
+IPDRRecorderInfo="IPDRDocTest"
+version="3.5">
+ <IPDR xsi:type="IPDR-PrimitiveTypes-Type">
+<IPDRCreationTime>2004-11-17T16:16:29.353Z</IPDRCreationTime>
+<seqNum>1</seqNum>
+<myInt>666</myInt>
+<myUnsignedInt>2147483649</myUnsignedInt>
+<myLong>111222333444</myLong>
+<myUnisgnedLong>111222333444</myUnisgnedLong>
+<myFloat>1.333300</myFloat>
+<myDouble>7777.111100</myDouble>
+<myHexBinary>sample byte array</myHexBinary>
+<myString>sample string</myString>
+<myBoolean>false</myBoolean>
+<myByte>-1</myByte>
+<myUnisgnedByte>1111</myUnisgnedByte>
+<myShort>7777</myShort>
+<myUnsignedShort>33000</myUnsignedShort>
+</IPDR>
+<IPDRDoc.End
+count="1" endTime="2004-11-17T16:16:29.353Z"></IPDRDoc.End>
+</IPDRDoc>

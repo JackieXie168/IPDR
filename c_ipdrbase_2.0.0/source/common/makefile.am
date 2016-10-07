@@ -1,0 +1,5 @@
+AUTOMAKE_OPTIONS = foreign no-dependencies
+CFLAGS=-c
+INCLUDES = -I./../../include/
+lib_LIBRARIES=libIPDR.a
+libIPDR_a_SOURCES = descriptor.c  FNFData.c  FNFType.c  getFile.c  IPDRDocReader.c  IPDRDocWriter.c  IPDRHeader.c  schema.c  

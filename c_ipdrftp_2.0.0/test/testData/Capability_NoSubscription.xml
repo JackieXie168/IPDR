@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="us-ascii" ?><CapabilityRsp><supportedProtocolList><supportedProtocolItem version="3.0" protocolMapping="File" encoding="XML"><primitiveList><primitiveItem>Pull</primitiveItem></primitiveList><extension></extension></supportedProtocolItem></supportedProtocolList></CapabilityRsp>

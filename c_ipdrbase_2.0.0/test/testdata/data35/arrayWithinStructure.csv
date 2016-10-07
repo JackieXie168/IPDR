@@ -1,0 +1,6 @@
+test/data35/arrayWithinStructure.xsd,
+http://www.ipdr.org/namespaces/IPDR,
+subscriberList[ listName;( subscriber ) ]
+[Tier 1 Customers;( A\(c\)me; Trident; Soaring \;Inc.)]
+[Tier 2 Customers;( Po \[Dunk\] Inc.)]
+[Tier 3 Customers;( Ma and Pa Inc; Grandma Jane's Pies; YMI Doing This)]

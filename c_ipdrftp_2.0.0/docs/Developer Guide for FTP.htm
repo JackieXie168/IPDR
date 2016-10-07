@@ -1,0 +1,2942 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Developer%20Guide%20for%20FTP_files/filelist.xml">
+<title>TABLE OF CONTENTS</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>vishal_garg</o:Author>
+  <o:LastAuthor>vishal_garg</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1741</o:TotalTime>
+  <o:Created>2002-03-07T18:37:00Z</o:Created>
+  <o:LastSaved>2002-03-07T18:37:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>3696</o:Words>
+  <o:Characters>21071</o:Characters>
+  <o:Lines>175</o:Lines>
+  <o:Paragraphs>42</o:Paragraphs>
+  <o:CharactersWithSpaces>25876</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:HideSpellingErrors/>
+  <w:HideGrammaticalErrors/>
+  <w:ActiveWritingStyle Lang="EN-US" VendorID="64" DLLVersion="131077"
+   NLCheck="1">1</w:ActiveWritingStyle>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:553679495 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Tahoma;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h3
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l4 level3 lfo1;
+	tab-stops:list .5in;
+	font-size:12.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:3.5in;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:82646398;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-842995932 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:135921986;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-41884560 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:255983756;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1035923432 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:472870101;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-207030756 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:487936690;
+	mso-list-template-ids:-1017991028;}
+@list l4:level1
+	{mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l4:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l4:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%2%1\.2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l4:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l4:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l4:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l4:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l4:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l4:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l5
+	{mso-list-id:506209933;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1870276508 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:535242982;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1631610944 67698699 67698703 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6:level2
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:568198647;
+	mso-list-type:hybrid;
+	mso-list-template-ids:797201940 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:608240089;
+	mso-list-type:hybrid;
+	mso-list-template-ids:280779408 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:686760396;
+	mso-list-type:hybrid;
+	mso-list-template-ids:319718960 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l10
+	{mso-list-id:746460065;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1642163550 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:824198773;
+	mso-list-type:hybrid;
+	mso-list-template-ids:611630262 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:849759733;
+	mso-list-type:hybrid;
+	mso-list-template-ids:910834678 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:983512637;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1024986802 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14
+	{mso-list-id:999427948;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1802447530 -183574036 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l15
+	{mso-list-id:1000737616;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1604610982 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l16
+	{mso-list-id:1192379001;
+	mso-list-type:hybrid;
+	mso-list-template-ids:220499634 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l16:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l17
+	{mso-list-id:1267730932;
+	mso-list-type:hybrid;
+	mso-list-template-ids:849222980 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:1279602234;
+	mso-list-type:hybrid;
+	mso-list-template-ids:449071734 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l18:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l19
+	{mso-list-id:1306275518;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-360415616 495765720 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l19:level1
+	{mso-level-start-at:2;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20
+	{mso-list-id:1338264810;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-784324092 67698703 -901348458 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20:level2
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l21
+	{mso-list-id:1464076964;
+	mso-list-type:hybrid;
+	mso-list-template-ids:11186516 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l21:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l21:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l22
+	{mso-list-id:1491947470;
+	mso-list-template-ids:1706751002;}
+@list l22:level1
+	{mso-level-style-link:"TOC 1";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.1in;
+	text-indent:-.1in;}
+@list l22:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.2in;
+	mso-level-number-position:left;
+	margin-left:.2in;
+	text-indent:-.4in;}
+@list l22:level3
+	{mso-level-reset-level:level1;
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l22:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.6in;}
+@list l22:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.7in;}
+@list l22:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.8in;}
+@list l22:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.9in;}
+@list l22:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-1.0in;}
+@list l22:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-1.1in;}
+@list l23
+	{mso-list-id:1611426120;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1414295506 495765720 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l23:level1
+	{mso-level-start-at:2;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l24
+	{mso-list-id:1662352308;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-33401632 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l24:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l25
+	{mso-list-id:1745295347;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-375458180 67698699 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l26
+	{mso-list-id:1827822088;
+	mso-list-type:hybrid;
+	mso-list-template-ids:68080896 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l26:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoToc1><a name="_Toc2621676"></a><a name="_Toc3014466"></a><a
+name="_Toc3014555"></a><a name="_Table_of_Contents"></a><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'>Table of Contents</span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='text-transform:none;font-weight:normal'><span style="mso-spacerun:
+yes"> </span>TOC \o &quot;1-3&quot; \h \z <span style='mso-element:field-separator'></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><a href="#_Toc3309389"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Goal of Reference Libraries</span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309389 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300380039000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><a href="#_Toc3309390"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Using the C Libraries</span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309390 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300390030000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><a href="#_Toc3309391"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Data Structures</span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309391 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300390031000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><a href="#_Toc3309392"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Using FTP C Library for Producer Application</span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309392 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300390032000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><a href="#_Toc3309393"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Using FTP C Library for Consumer Application</span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309393 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300390033000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 431.5pt'><span style='mso-bookmark:
+_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:
+_Toc3014555'></span></span></span><a href="#_Toc3309394"><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'>Appendix- Some other API’s defined in FTP C
+Library</span></span></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'>   </span></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-begin'></span><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc3309394 \h </span></span></span></span><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;text-decoration:
+none;text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000C0000005F0054006F00630033003300300039003300390034000000</w:data>
+</xml><![endif]--></span></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span></a><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='mso-bidi-font-size:12.0pt;
+font-family:"Times New Roman";text-transform:none;font-weight:normal'><o:p></o:p></span></span></span></span></p>
+
+<p class=MsoNormal><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'></span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'></span></span></span><span style='mso-element:
+field-end'></span><![endif]--><span style='mso-bookmark:_Toc2621676'><span
+style='mso-bookmark:_Toc3014466'><span style='mso-bookmark:_Toc3014555'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></p>
+
+<h1><span style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></h1>
+
+<h1><span style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></span></span></span></h1>
+
+<h1><span style='mso-bookmark:_Toc2621676'><span style='mso-bookmark:_Toc3014466'><span
+style='mso-bookmark:_Toc3014555'><a name="_Toc3309389"><span style='font-size:
+12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Goal
+of Reference Libraries</span></a></span></span></span><span style='font-size:
+12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The objective
+of the file sharing<span style="mso-spacerun: yes">  </span>library is to
+provide software implementers of the IPDR standards with libraries and tools to
+reduce construction cost, increase quality, and increase interoperability of
+their IPDR facilities.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>These
+libraries simplifes the task of file sharing for an IPDR Producer<span
+style="mso-spacerun: yes">  </span>and IPDR Consumer. This library obviates
+need of request/response based </span><span style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>communication
+channel between Producer and Consumer applications.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The
+libraries are available in ANSI C and Java and currently support NDM-U version
+3.0<o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-tab-count:8'>                                                                                                </span><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:2'>                      </span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><a href="#_Table_of_Contents">Index</a><span
+style='mso-tab-count:2'>                      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style="mso-spacerun:
+yes">                                    </span><span style="mso-spacerun:
+yes">                                                                  </span></p>
+
+<h1><a name="_Toc2621677"></a><a name="_Toc3014467"></a><a name="_Toc3014556"></a><a
+name="_Toc3309390"><span style='mso-bookmark:_Toc3014556'><span
+style='mso-bookmark:_Toc3014467'><span style='mso-bookmark:_Toc2621677'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+Tahoma'>Using the C Libraries</span></span></span></span></a><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+Tahoma'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The
+File based transfer protocol C library can be used by Producer and Consumer
+services.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A
+Producer creates IPDR documents (abbreviated as IPDRDocs) and places them in
+files, with one IPDRDoc per file.<span style="mso-spacerun: yes">  </span>The
+IPDR Producer sorts each IPDRDoc into one or more groups.<span
+style="mso-spacerun: yes">   </span>IPDRDocs will often be grouped by service
+type, by customer name, or by a combination of the two, though the IPDR
+Producer is also allowed to use any other useful policy to sort IPDRDocs into
+groups. These groups are referred to as subscription groups to match the
+terminology used in the transfer protocol. The Producer makes an entry for each
+Subscription Group in a Capability File, which contains the details of the
+Control File for that Subscription Group. IPDRDoc locations are added to these
+Control Files. If only the name of the document is present then the IPDRDocs
+will be in the same directory as the control file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A
+Consumer reads the IPDRDocs related to a particular Subscription Group by using
+the Capability file, Control files and Range files. The Consumer reads the
+Capability file to get the location of Control files for a Subscription group.
+The Range file indicates the sequence numbers of Control files that a Consumer
+has to read. The Consumer gets the names of the Control file and reads them
+sequentially. It then reads the IPDRDocs indicated by the location specified in
+the Control file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'>A sample Capability File is as shown below:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'>&lt;?xml version=&quot;1.0&quot;
+encoding=&quot;us-ascii&quot; ?&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'>&lt;CapabilityRsp&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">   
+</span>&lt;supportedProtocolList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">       
+</span>&lt;supportedProtocolItem version=3.0 protocolMapping=”File”
+encoding=”XML”&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">           
+</span>&lt;primitiveList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                </span>&lt;primitiveItem&gt;Pull&lt;/primitiveItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">           
+</span>&lt;/primitiveList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">           
+</span>&lt;extension&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                </span>&lt;groupInfoList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                    </span>&lt;groupInfoItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                        </span>&lt;groupId&gt;sm&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                        </span>&lt;controlFileDirectory&gt;
+http://www.best.com/sm&lt;/controlFileDirectory&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                 </span><span style="mso-spacerun:
+yes">       </span>&lt;controlFilePrefix&gt;sm-&lt;/controlFilePrefix&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                       
+</span>&lt;controlFileNamePolicy&gt;NNNNNNNN&lt;/controlFileNamePolicy&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                       
+</span>&lt;controlFileSuffix&gt;-control&lt;/controlFileSuffix&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                        </span>&lt;controlFileDirectoryURL&gt;http://192.168.122.11/ipdr/sm/&lt;/controlFileDirectoryURL&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                    </span>&lt;/groupInfoItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                    </span>&lt;groupInfoItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                        </span>&lt;groupId&gt;voip&lt;/groupId&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes">                        </span></span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>&lt;controlFileDirectory&gt;file://C/IPDR/voip/&lt;/controlFileDirectory&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                       
+</span>&lt;controlFilePrefix&gt;voip_IT1_&lt;/controlFilePrefix&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                       
+</span>&lt;controlFileNamePolicy&gt;NNNNNN&lt;/controlFileNamePolicy&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                       
+</span>&lt;controlFileSuffix&gt;.log&lt;/controlFileSuffix&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                    </span>&lt;/groupInfoItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun:
+yes">                </span>&lt;/groupInfoList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">          
+</span>&lt;/extension&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">       
+</span>&lt;/supportedProtocolItem&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><span style="mso-spacerun: yes">   
+</span>&lt;supportedProtocolList&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'>&lt;CapabilityRsp&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>where,
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>groupInfoItem:
+refers to a SubscriptionGroup<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>groupId:
+The &lt;groupId&gt; element must contain the name of the subscription group
+described by this &lt;groupInfoItem&gt; element.<span style="mso-spacerun:
+yes">   </span>It should be a non-zero length string of allowable
+characters.<span style="mso-spacerun: yes">  </span>Some examples might
+include: “voip”, ”email-1”, and “best-hosting-co”.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFileDirectory:<span
+style="mso-spacerun: yes">  </span>&lt;controlFileDirectory&gt; contains the
+path of the directory containing the control files and the range file for the
+subscription group.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFilePrefix:
+The &lt;controlFilePrefix&gt; element contains a string of allowable characters
+that denotes the first part of the name of all of the control files in the
+subscription groups.<span style="mso-spacerun: yes">  </span>Some possible
+examples include: “voip-”, “internet-access_”, and “best.com.”<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFileNamePolicy:
+The &lt;controlFileNamePolicy&gt; element must contain one or more ‘N’
+characters, where the number of ‘N’ characters denotes the number of digits in
+the sequence number embedded in the name of all control files for this
+subscription group.<span style="mso-spacerun: yes">  </span>Some examples
+include: “NNNNNN”, and “NNNNNNNNNN”.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFileSuffix:
+The &lt;controlFileSuffix&gt; element contains a string of allowable characters
+that denotes the last part of the name of all of the control files in the
+subscription groups.<span style="mso-spacerun: yes">  </span>Some possible
+examples include: “.log”, “-control” and “”.<o:p></o:p></span></p>
+
+<p class=MsoBodyText2>controlFileDirectoryURL: The
+&lt;controlFileDirectoryURL&gt; contains the URL that points to the directory
+containing the control files and the range file for the subscription
+group.<span style="mso-spacerun: yes">  </span>A URL is required here so that
+Consumer applications are able to access the files. The URL can either be a
+“file:”, ”ftp:” or an “http:”.<span style="mso-spacerun: yes">  </span>Some
+examples might include:</p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+color:blue'><span style="mso-spacerun: yes"> </span>“<a
+href="file://192.168.122.11/C/IPDR/voip1/"><span style='text-decoration:none;
+text-underline:none'>file://192.168.122.11/C/IPDR/voip1/</span></a>”, “<a
+href="http://www.best.com/voip1"><span style='text-decoration:none;text-underline:
+none'>http://www.best.com/voip1</span></a>”.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Specifying a URL:<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText2>The URL of any file can be specified in three ways. These
+ways correspond to the protocols being used for accessing the URL:</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in;text-indent:-.25in;mso-list:
+l15 level1 lfo27;tab-stops:list .25in'><![if !supportLists]>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>For
+HTTP:</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>The URL to a file or to a
+directory can be specified using the following syntax.</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="http://%3Chostname%3E/%3CdirectoryStructure"><span
+style='text-decoration:none;text-underline:none'>http://&lt;hostname&gt;/&lt;directoryStructure</span></a>&gt;<o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>e.g. For specifying the URL to
+a directory ipdr/Voip/ (where ipdr islying in the root directory for HTTP
+access) on a host specified by the name <a href="http://www.ipdr.com/"><span
+style='color:windowtext;text-decoration:none;text-underline:none'>www.ipdr.com</span></a>,
+use</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="http://www.ipdr.com/ipdr/Voip/"><span
+style='text-decoration:none;text-underline:none'>http://www.ipdr.com/ipdr/Voip/</span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>In case, IP Address is there,
+then specify<span style='color:blue'> <a href="http://%3Cipaddress%3E/ipdr/Voip/"><span
+style='text-decoration:none;text-underline:none'>http://&lt;IPAddress&gt;/ipdr/Voip/</span></a></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in;text-indent:-.25in;mso-list:
+l15 level1 lfo27;tab-stops:list .25in'><![if !supportLists]>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>For
+FTP:</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>The URL to a file or to a
+directory can be specified, for FTP, using the following syntax.</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'>ftp://<a
+href="http://%3Chostname%3E/%3CdirectoryStructure"><span style='text-decoration:
+none;text-underline:none'>&lt;hostname&gt;/&lt;directoryStructure</span></a>&gt;</span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>In case, the user name and
+password are also required, then the URL string should be:</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a
+href="ftp://%3Cusername%3E:%3Cpassword%3E@%3Chostname%3E/%3Cdirectorystructure"><span
+style='text-decoration:none;text-underline:none'>ftp://&lt;username&gt;:&lt;password&gt;@&lt;hostname&gt;/&lt;directorystructure</span></a>&gt;<o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>e.g. So, URL for a directory
+ipdr/Voip/ (ipdr is lying in the ftp root directory) on <a
+href="ftp://ftp.ipdr.com/"><span style='color:windowtext;text-decoration:none;
+text-underline:none'>ftp.ipdr.com</span></a>, will be </p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="ftp://ftp.ipdr.com/ipdr/Voip/"><span
+style='text-decoration:none;text-underline:none'>ftp://ftp.ipdr.com/ipdr/Voip/</span></a></span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>or for a user “ipdr” and
+password “ipdr”, URL will be:</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="ftp://ipdr:ipdr@ftp.ipdr.com/ipdr/Voip/"><span
+style='text-decoration:none;text-underline:none'>ftp://ipdr:ipdr@ftp.ipdr.com/ipdr/Voip/</span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText2><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in;text-indent:-.25in;mso-list:
+l15 level1 lfo27;tab-stops:list .25in'><![if !supportLists]>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]>For
+FILE:</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>This is the protocol that is
+used to access files located on local machine.</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>The URL to a file or directory
+located on the local machine is specified as :</p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>In case of Windows:</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="\ipdr\Voip\"><span style='text-decoration:
+none;text-underline:none'>file://localhost/ipdr/Voip/</span></a> or as <a
+href="..\Voip\"><span style='text-decoration:none;text-underline:none'>file:///c:/ipdr/Voip/</span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>In case of Linux, Solaris or
+HPUX:</p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman";color:blue'><a href="\home\ipdrftp\ipdr\Voip\"><span
+style='text-decoration:none;text-underline:none'>file://localhost/home/ipdrftp/ipdr/Voip/</span></a>
+or <a href="\home\ipdrftp\ipdr\Voip\"><span style='text-decoration:none;
+text-underline:none'>file:///home/ipdrftp/ipdr/Voip/</span></a></span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'> <o:p></o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-left:.25in'>where, ipdrftp is the user
+name.</p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:10'>                                                                                                                        </span></span><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><a href="#_Table_of_Contents">Index</a><o:p></o:p></span></p>
+
+<h2><span style='font-weight:normal'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h2>
+
+<h1><a name="_Toc2621678"></a><a name="_Toc3014468"></a><a name="_Toc3014557"></a><a
+name="_Toc3309391"><span style='mso-bookmark:_Toc3014557'><span
+style='mso-bookmark:_Toc3014468'><span style='mso-bookmark:_Toc2621678'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>Data Structures</span></span></span></span></a><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Before
+using the API’s it is important for the developer to understand all the data
+structures and input parameters to various library calls.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText2>Before using the API’s it is important for the developer
+to understand all the data structures and input parameters to various library
+calls.</p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<table border=1 cellspacing=0 cellpadding=0 style='border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  background:#E5E5E5;mso-shading:windowtext;mso-pattern:gray-10 auto;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Structure
+  Name<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;background:#E5E5E5;
+  mso-shading:windowtext;mso-pattern:gray-10 auto;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='mso-bidi-font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Description<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubscriptionGroup<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure contains all subscription group members namely
+  groupId,controlFilePrefix,contrilFileDirectory,controlFileSuffix,<o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFileNamePolicy,controlFileDirectoryURL.</span><span
+  style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;
+  mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubscriptionGroupList<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This is used
+  to create linked list of subscription groups.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>CapabilityFile<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure contains capabilityFileURL and subscription group linked list.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ControlFile<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure contains control file information i.e.URL ,location ,document count
+  ,number of versions and control file pointer .<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ListGroupID<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure is used to create linked list of groupIds of all the subscription
+  groups.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ErrorStructure<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure is used for error handling and contains function name in which
+  error occurred,error message and error code.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ListErrorStructure<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This is used
+  to create linked list of error structures and is an input parameter to all
+  the library API’s.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=162 valign=top style='width:121.35pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>CapabilityXMLInfo<o:p></o:p></span></p>
+  </td>
+  <td width=429 valign=top style='width:321.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+  10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This
+  structure is passed as an input parameter to parse capability xml file and is
+  populated with the subscription group information.<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:11'>                                                                                                          </span></span><span
+style='font-size:10.0pt'><a href="#_Table_of_Contents">Index</a><o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1><a name="_Toc3309392"><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Using FTP C
+Library for Producer Application</span></a><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+method newListErrorStructure() to instantiate ListErrorStructure.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.
+: ListErrorStructure* pErrorList = newListErrorStructure();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note:The
+developer should always call this method in the beginning of consumer/producer
+flow<span style="mso-spacerun: yes">  </span>as pErrorlist is passed as an
+argument to all library API’s.<o:p></o:p></span></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+readCapabilityFile() method to parse xml capability file at remote location.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>CapabilityFile*
+readCapabilityFile(ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes"> </span>char* capabilityFileXML);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList is used internally by the
+library for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>capabilityFileXML is the URI of
+the<span style="mso-spacerun: yes">  </span>xml capability file to be parsed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.
+: CapabilityFile* capabilityFile =<span style="mso-spacerun: yes"> 
+</span>readCapabilityFile(pErrorList , capabilityFileXML);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The developer
+should call this method otherwise when capability file URL is not available or
+not to be used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+newCapabilityFile() method<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>CapabilityFile*
+newCapabilityFile(pErrorList);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList is used internally by the
+library for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.
+: CapabilityFile* capabilityFile =<span style="mso-spacerun: yes"> 
+</span>newCapabilityFile(pErrorList );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A
+SubscriptionGroup can be added to the CapabilityFile by calling addGroup()
+method.This is a two step process.You need to initialize the subscription group
+to be added.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>newSubscriptionGroup(ListErrorStructure*
+pErrorList,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* groupID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* controlFileDirectory,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* controlFilePrefix,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* controlFileNamePolicy,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* controlFileSuffix,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">  </span>char* controlFileDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>groupID is the subscription groupId.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>controlFileDirectory is the control
+file directory on subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>controlFilePrefix is the control file
+prefix in subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>controlFileNamePolicy is the control
+file naming policy in subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>controlFileSuffix is the control file
+name suffix in subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>controlFileDirURL is the control file
+directory URL in subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.:
+SubscriptionGroup* subscriptionGroup = <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>newSubscriptionGroup(pErrorList,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes">                                     </span>“Voip”,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:3'>                                    </span><span
+style="mso-spacerun: yes">           </span>“./home/John/Voip/”,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes">                      </span><span style='mso-tab-count:
+2'>              </span><span style="mso-spacerun:
+yes">           </span>“Voip-“,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">                        </span>“NNNN”,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:3'>                                    </span><span
+style="mso-spacerun: yes">         </span><span style="mso-spacerun:
+yes">  </span>“.ctrl”,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes">                         </span><span
+style='mso-tab-count:2'>                       </span><span
+style="mso-spacerun:
+yes">           </span>“http://192.168.122.208/share/Capability.xml”);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Then
+Call addGroup() method<span style='mso-tab-count:8'>                                                                                          </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>            </span>int addGroup(ListErrorStructure*
+pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">          </span>CapabilityFile* pCapabilityFile ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">          </span>SubscriptionGroup*
+pSubscriptionGroup);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList used internally by library
+for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pCapabilityFile is the instance of<span
+style="mso-spacerun: yes">  </span>CapabilityFile structure to which the
+subscription group is added.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l17 level1 lfo15;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pSubscriptionGroup is the subscription
+group to be added.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g
+: result = addGroup(pErrorList, pCapabilityFile, pSubscriptionGroup);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note:
+If the<span style="mso-spacerun: yes">  </span>value of result is ‘0’ then the
+call is successful else some error occurred.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>‘result’
+will be used through this document to tell the status of the call.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                                </span><span
+style="mso-spacerun: yes">   </span><span style='mso-tab-count:1'>         </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>A<span
+style="mso-spacerun: yes">  </span>subscription can be deleted by calling
+method deleteGroup().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+deleteGroup(ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes"> </span><span style='mso-tab-count:2'>                       </span><span
+style="mso-spacerun: yes">  </span>CapabilityFile* pCapabilityFile ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">  </span>char* groupID );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo17;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList used internally by library
+for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo17;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pCapabilityFile is the instance of<span
+style="mso-spacerun: yes">  </span>CapabilityFile structure from which the
+subscription group is deleted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo17;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>groupID is the groupId of the
+subscription group to be deleted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+method getAllGroups ().This will return a linked list of subscription groups.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+getAllGroups (ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">  </span>CapabilityFile* pCapabilityFile ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">  </span>SubscriptionGroupList*
+pSubscriptionGroupList);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo18;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList used internally by library
+for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo18;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pCapabilityFile is the instance of<span
+style="mso-spacerun: yes">  </span>CapabilityFile structure from which the
+subscription group is deleted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l3 level1 lfo18;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pSubscriptionGroupList <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.:SubscriptionGroupList*
+pSubscriptionGroupList=<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span>(SubscriptionGroupList*)malloc(sizeof(SubscriptionGroupList));<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getAllGroups ( pErrorList ,pCapabilityFile<span style="mso-spacerun: yes"> 
+</span>,pSubscriptionGroupList);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note
+: The calling application should have populated ‘pErrorList’ and
+‘pCapabilityFile’<span style="mso-spacerun: yes">  </span>before <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>calling
+this method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>To
+get subscription group call method getGroup().This way you can do all get and
+set operations on subscription group fields.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+getGroup(ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes"> </span>CapabilityFile* pCapabilityFile, <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes"> </span>char* groupID, <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes"> </span>SubscriptionGroup** pSubscriptionGroup);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo19;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList used internally by library
+for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo19;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pCapabilityFile is the instance of<span
+style="mso-spacerun: yes">  </span>CapabilityFile structure from which the
+subscription group is deleted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo19;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>groupId is the groupId of subscription
+group to retrieve.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo19;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pSubscriptionGroupList<span
+style="mso-spacerun: yes">  </span>will be populated if the call is successful.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.:
+SubscriptionGroup* pSubscriptionGroup;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes"> </span>result = getGroup(pErrorList ,pCapabilityFile
+,groupID, &amp;pSubscriptionGroup);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Individual
+attributes of a subscription group can be obtained by calling the get methods
+on the subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getGroupID (pErrorList ,pSubscriptionGroup,groupId);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileDirectory(pErrorList ,pSubscriptionGroup,controlFileDir);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFilePrefix (pErrorList ,pSubscriptionGroup,ctrlPrefix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileNamePolicy (pErrorList ,pSubscriptionGroup,ctrlNamePolicy);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileSuffix (pErrorList ,pSubscriptionGroup,ctrlSuffix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileDirectoryURL (pErrorList ,pSubscriptionGroup,ctrlDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Individual
+attributes of a subscription group can be set to other values by calling the
+set methods on that subscription group .<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setGroupId (pErrorList , pSubscriptionGroup , groupId);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setControlFileDirectory (pErrorList , pSubscriptionGroup , controlFileDir);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setControlFilePrefix (pErrorList , pSubscriptionGroup , ctrlPrefix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setControlFileNamePolicy (pErrorList , pSubscriptionGroup , ctrlNamePolicy);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setControlFileSuffix (pErrorList , pSubscriptionGroup , ctrlSuffix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setControlFileDirectoryURL (pErrorList , pSubscriptionGroup , ctrlDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note
+: All the above ‘set’ and ‘get’ functions on subscription group attributes have
+same signatures as following.In ‘get’ methods the third argument will be
+populated with corresponding value and in ‘set’ functions the third argument
+string will be copied to corresponding attribute of subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+&lt;functionName &gt;(ListErrorStructure* , SubscriptionGroup* , char* );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>To
+get all subscription groupIds call method getGroupIDs().This will return a
+linked list of groupIds.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+getGroupIDs(ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">  </span>CapabilityFile* pCapabilityFile,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span><span
+style="mso-spacerun: yes">  </span>ListGroupID* groupIDs);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo20;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList used internally by library
+for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo20;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pCapabilityFile is the instance of<span
+style="mso-spacerun: yes">  </span>CapabilityFile structure from which the
+subscription group is deleted.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in;mso-list:l7 level1 lfo20;
+tab-stops:list .5in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>groupIds will be pointing to likned
+list of groupIds if the call is successful.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g.:<span
+style="mso-spacerun: yes">      </span>ListGroupID groupIDs;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getGroupIDs(pErrorList, pCapabilityFile ,&amp;groupIDs);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>After
+getting a subscription group, call getRangeFileName() method to get the range
+file name.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getRangeFileName(pErrorList , pSubscriptionGroup , rangeFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the range file location by appending control file directory with the range file
+name<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcpy
+(rangeFileLocation , controlFileDir);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcat
+(rangeFileLocation , rangeFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>12.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the last or first sequence number from rangefile by calling corresponding
+methods.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getLastSequenceNbr(pErrorList , rangeFileLocation ,lastSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Similarly,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getFirstSequenceNbr(pErrorList , rangeFileLocation ,firstSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>13.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>In
+case the lastSeqNbr string is not blank the increment the sequence number by
+one to get sequence number for next control file name else set it to some
+value.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>if(strlen(lastSeqNbr)==0){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>      </span>long sequenceNbr = atol(lastSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>      </span>result = incrementSequence(pErrorList ,
+pSubscriptionGroup , &amp; sequenceNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>else<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>      </span>long sequenceNbr = 0;<span
+style="mso-spacerun: yes">        </span>/*Or set it to some other value*/<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>14.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+control file name for this sequence number ny calling getControlFileName()
+method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileName(pErrorList , pSubscriptionGroup ,controlFileName , <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in;mso-layout-grid-align:
+none'><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>sequenceNbr );<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:.5in;mso-layout-grid-align:
+none'><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>15.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the control file location by appending the control file directory with the
+control file name. Get a file object for the control file .Then instantiate
+ControlFileStructure by calling method<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>controlFileFromLocation();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcpy(controlFileLocation
+, controlFileDir);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcat(controlFileLocation
+, controlFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ControlFile*
+pControlFile = controlFileFromLocation(pErrorList , controlFileLocation);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>16.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Set
+the last sequence number (Sequence number corresponding to the last file
+created)<span style="mso-spacerun: yes">  </span>in the Range file by calling
+the setLastSequenceNbr() method .Before that you need to convert sequence
+number into policy based sequence number.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getSequenceBasedOnPolicy(pErrorList , pSubscriptionGroup , sequenceNbr ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:5'>                                                      </span>policyBasedSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= setLastSequenceNbr(pErrorList , rangeFileLocation , policyBasedSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>17.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>To
+write a control file call writeStart() method and then addDocName() to write
+document names.The Producer will decide time to roll over and when it is time
+to roll over call writeEnd() method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= writeStart(pErrorList , pControlFile);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>do{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.25in;mso-layout-grid-align:
+none'><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>result = addDocName(pErrorList , pControlFile ,docName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}while(notTimeToRoll);<span
+style="mso-spacerun: yes">    </span>/*time to roll will be decided by Producer
+depending upon its policy*/<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= writeEnd(pErrorList , pControlFile);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l24 level1 lfo14;
+tab-stops:list .25in;mso-layout-grid-align:none'><![if !supportLists]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>18.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>To
+generate XML string for CapabilityFile call method toXML().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>int
+toXML(ListErrorStructure* pErrorList ,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>            </span><span style="mso-spacerun:
+yes">      </span>CapabilityFile* pCapabilityFile,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>            </span><span style="mso-spacerun:
+yes">      </span>char*<span style="mso-spacerun: yes"> 
+</span>capabilityFileXMLString);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>capabilityFileXMLString
+will contain the xml string after the call is successful.The Producer can use
+this string to create a new xml capability file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:11'>                                                                                                                                    </span></span><span
+style='font-size:10.0pt'><a href="#_Table_of_Contents">Index</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><a name="_Toc3309393"><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Using FTP C
+Library for Consumer Application</span></a><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+method newListErrorStructure() to instantiate ListErrorStructure.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ListErrorStructure*
+pErrorList = newListErrorStructure();<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+readCapabilityFile() method to parse xml capability file at remote location.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>CapabilityFile*
+capabilityFile =<span style="mso-spacerun: yes"> 
+</span>readCapabilityFile(pErrorList , capabilityFileXML);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call
+method getAllGroups ().This will return a linked list of subscription groups.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubscriptionGroupList*
+pSubscriptionGroupList=<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                        </span>(SubscriptionGroupList*)malloc(sizeof(SubscriptionGroupList));<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getAllGroups ( pErrorList ,pCapabilityFile<span style="mso-spacerun: yes"> 
+</span>,pSubscriptionGroupList);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>To
+get subscription group call method getGroup().This way you can do all get and
+set operations on subscription group fields.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>SubscriptionGroup*
+pSubscriptionGroup;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getGroup(pErrorList ,pCapabilityFile ,groupID, &amp;pSubscriptionGroup);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><span style='font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Individual
+attributes of a subscription group can be obtained by calling the get methods
+on the subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getGroupID (pErrorList ,pSubscriptionGroup,groupId);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileDirectory(pErrorList ,pSubscriptionGroup,controlFileDir);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFilePrefix (pErrorList ,pSubscriptionGroup,ctrlPrefix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileNamePolicy (pErrorList ,pSubscriptionGroup,ctrlNamePolicy);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileSuffix (pErrorList ,pSubscriptionGroup,ctrlSuffix);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getControlFileDirectoryURL (pErrorList ,pSubscriptionGroup,ctrlDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>After
+getting a subscription group, call getRangeFileName() method to get the range
+file name.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getRangeFileName(pErrorList , pSubscriptionGroup , rangeFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the range file URL by appending control file directory<span
+style="mso-spacerun: yes">  </span>URL with the range file name<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcpy
+(rangeFileURL , controlFileDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcat
+(rangeFileURL , rangeFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the last and first sequence number from rangefile by calling corresponding
+methods.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getLastSequenceNbr(pErrorList , rangeFileURL,lastSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Similarly,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result
+= getFirstSequenceNbr(pErrorList , rangeFileURL,firstSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;mso-layout-grid-align:none'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Get
+the maximum sequence number for the subscription group by calling
+getMaxSequenceNumber().<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result =
+getMaxSequenceNumber(pErrorList , pSubscriptionGroup ,maxSequenceNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>In
+case, first sequence number is smaller than the last sequence number then start
+reading the control files with sequence number starting from first sequence
+number till the control file with the sequence number as the last sequence
+number.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>In case, first
+sequence number is greater than<span style="mso-spacerun: yes">  </span>the
+last sequence number then start reading the control files with sequence number
+starting from first sequence number till the control file with maximum sequence
+number. Then again starting from 0 (zero) till the last sequence number. In
+case , first sequence number is equal to the last sequence number than read
+only one control file with the sequence number as first/last sequence number.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Call isEnd() method
+to check the end of a control file and getDocName() method to get document name
+from control file.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>sequenceNbr =
+atol(firstSeqNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>while(sequenceNbr !=
+atol(lastSeqNbr)){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result =
+getControlFileName(pErrorList, pSubscriptionGroup,<span style="mso-spacerun:
+yes">                                                                                     
+</span><span style="mso-spacerun: yes">                 </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style="mso-spacerun: yes"> </span><span style='mso-tab-count:4'>                                               </span>controlFileName,sequenceNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcpy(controlFileURL,controlFileDirURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>strcat(controlFileURL,controlFileName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>ctrlFile =
+controlFileFromURL(pErrorList,controlFileURL);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>while(isEnd(errorList,ctrlFile)!=1){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:2'>                        </span>if((result=getDocName(pErrorList,ctrlFile,docName))!=0)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>break;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>            </span>if(strcmp(docName,&quot;NULL&quot;)==0)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>refreshControlFile(pErrorList,ctrlFile);<span
+style="mso-spacerun: yes">         </span><a href="#_Appendix-_Some_other">Appendix</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:2'>                        </span>else<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>puts(docName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>result =
+incrementSequence(pErrorList, pSubscriptionGroup,&amp;sequenceNbr);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>if(strcmp(firstSeqNbr,
+lastSeqNbr)==0){<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>while(isEnd(errorList,ctrlFile)!=1){<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:2'>                        </span>if((result=getDocName(pErrorList,ctrlFile,docName))!=0)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>break;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>            </span>if(strcmp(docName,&quot;NULL&quot;)==0)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>refreshControlFile(pErrorList,ctrlFile);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:2'>                        </span>else<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><span style='mso-tab-count:3'>                                    </span>puts(docName);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note : The above flow
+can be modified depending upon requirements of Consumer.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l16 level1 lfo21;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Repeat
+steps 4-10 for each of the subscription group.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:5.0in;text-indent:.5in'><span
+style='font-size:10.0pt'><a href="#_Table_of_Contents">Index</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1><a name="_Toc3309394"></a><a name="_Appendix-_Some_other"></a><span
+style='mso-bookmark:_Toc3309394'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Appendix- Some
+other API’s defined in FTP C Library</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l10 level1 lfo24;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>refreshControlFile()
+method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This method refreshes
+local copy of the control file<span style="mso-spacerun: yes">  </span>so that
+updated contents can be read.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>However the records
+are read<span style="mso-spacerun: yes">  </span>from the line next to the one
+that has been already read from the control file. This is required so that a
+Consumer can see the updated contents of a control file being updated by a
+Producer. The next getDocName() call will return the next IPDRDoc name if
+anything new has been added to the control file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Note :- The Consumer
+will need to call this method if getDocName() method returns “NULL” as document
+name.This indicates that it hasn’t encountered “Version 2” string at the end of
+control file and might be the Producer has updated it at remote location.So to
+continue reading updated control file the consumer may call
+refreshControlFile().<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent3 style='tab-stops:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l10 level1 lfo24;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>getFileStreamFromURL
+() method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>The library provides
+it as a utility function.This method retrieves file from remote URI and make a
+local copy at specified local path.It opens the local copy in read mode and
+returns the file stream to the calling application.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>FILE*
+getFileStreamFromURL(ListErrorStructure* pErrorList,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                          </span>char*
+remoteURL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:4'>                                          </span>char*
+localPath)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l25 level1 lfo25;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>pErrorList is used for error handling.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l25 level1 lfo25;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>remoteURL is the URI of file to be
+retrieved.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l25 level1 lfo25;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+mso-bidi-font-family:"Times New Roman"'>localPath is the path where local copy
+is to be created.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g : FILE* stream =
+getFileStreamFromURL(pErrorList , remoteURL , localPath);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l10 level1 lfo24;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>printLastError()
+method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This method can be
+invoked if the value of ‘result’ variable after any library call is ‘1’ or if
+the API’s that return pointer variable return NULL.It will print the last
+occurred error details with function name where it occurred and some error
+message.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g : if((result =
+&lt;library API call&gt;)!=0)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:2'>                  </span>printLastError(pErrorList);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l10 level1 lfo24;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>printAllErrors()
+method.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This method can be
+called by the calling application to print all the errors that have occurred
+during execution of consumer or producer flow.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'>e.g :
+printAllErrors(pErrorList);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+style='mso-tab-count:11'>                                                                                                                              </span></span><span
+style='font-size:10.0pt'><a href="#_Table_of_Contents">Index</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+test/data35/structureWithinStructure.xsd,
+http://www.ipdr.org/namespaces/IPDR,
+subscriber[ name;address[ street;city ] ]
+[John\; Doe;[111 East \[Main\] Street; Springfield \(Illinois\)]]
+[Jane Smith;[P.O. Box 21; Jackson \\Mississippi]]
