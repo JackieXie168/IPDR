@@ -1,0 +1,108 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+	<element name = "myIPAddr" type = "ipdr:ipAddr"/>
+	<element name = "myDateTimeUSec" type = "ipdr:dateTimeUsec"/>
+	<element name = "myHexBinary" type = "hexbinary"/>
+	<element name = "myString" type = "string"/>
+	<element name = "myEnumeration">
+		<simpleType>
+			<restriction base = "integer">
+				<enumeration value = "1">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>one</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+				<enumeration value = "2">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>two</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+				<enumeration value = "3">
+					<annotation>
+						<documentation>
+							<ipdr:enumMeaning>three</ipdr:enumMeaning>
+						</documentation>
+					</annotation>
+				</enumeration>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name = "myBoolean" type = "boolean"/>
+	<element name = "myByte" type = "byte"/>
+	<element name = "myUnisgnedByte" type = "unsignedByte"/>
+	<element name = "myShort" type = "short"/>
+	<element name = "myUnsignedShort" type = "unsignedShort"/>
+	<element name = "movieTitle" type = "string"/>
+	<element name = "movieName" type = "string"/>
+	<element name = "startTime" type = "ipdr:dateTimeMsec"/>
+	<element name = "endTime" type = "ipdr:dateTimeMsec"/>
+	<element name = "qosLevel" type="integer"/>
+	<complexType name = "qosVolumeEvent" >
+		  <sequence>
+		    <element ref = "startTime" />
+		    <element ref = "endTime" />
+		    <element ref = "qosLevel" />
+		  </sequence>
+	</complexType>
+	<element name="qosVolume" type="qosVolumeEvent"/>
+	<element name = "listName" type = "string"/>
+	<element name = "subscriberName" type = "string"/>
+	<complexType name="subscriberListEvent">
+	  <sequence> 
+	    <element ref="listName"/> 
+	     <element ref="subscriberName" maxoccurs="unbounded" /> 
+	  </sequence> 
+	</complexType>
+	<element name="subscriberList" type="subscriberListEvent"/>
+	<element name = "street" type = "string"/>
+	<element name = "city" type = "string"/>
+	<complexType name="addressEvent">
+	  <sequence> 
+	    <element ref="street"/> 
+	    <element ref="city"/> 
+	  </sequence> 
+	</complexType> 
+	<element name = "name" type = "string"/>
+	<element name="address" type="addressEvent"/>
+	<complexType name="subscriberEvent">
+	  <sequence>
+	    <element ref="name"/> 
+	    <element ref="address"/> 
+	  </sequence> 
+	</complexType> 
+	<element name="subscriber" type="subscriberEvent"/>
+	<complexType name = "IPDR-Upgrade-35-Type">
+		<complexContent>
+			<extension base = "ipdr:IPDRType">
+				<sequence>
+					<element ref = "myIPAddr"/>
+					<element ref = "myDateTimeUSec"/>
+					<element ref = "myHexBinary" />
+					<element ref = "myString" />
+					<element ref = "myEnumeration" />
+			        <element ref = "movieTitle" maxOccurs="5"/>
+			        <element ref = "movieName" maxOccurs="unbounded"/>
+			        <element ref = "qosVolume" />
+   			        <element ref = "subscriberList" />
+   			        <element ref = "subscriber" />
+   			        <element ref = "qosVolumeEvent" maxOccurs="unbounded"/>
+					<element ref = "myBoolean" />
+					<element ref = "myByte" />
+					<element ref = "myUnisgnedByte" />
+					<element ref = "myShort" />
+					<element ref = "myUnsignedShort" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

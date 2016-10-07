@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+	 <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+	     schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+	 <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+<element name = "myIPAddr" type = "ipdr:ipAddr"/>
+<element name = "myIPv4Addr" type = "ipdr:ipV4Addr"/>
+<element name = "myIPv6Addr" type = "ipdr:ipV6Addr"/>
+<element name = "myDateTime" type = "dateTime"/> 
+<!-- date time needs to be treated as a primitive datatype, 
+	 hence it dosent have a 'ipdr:' in the type -->
+<element name = "myDateTimeMSec" type = "ipdr:dateTimeMsec"/>
+<element name = "myDateTimeUSec" type = "ipdr:dateTimeUsec"/>
+<element name = "myUUID" type = "ipdr:UUID"/>
+<complexType name="IPDR-DerivedTypes-Type"> 
+  <complexContent> 
+    <extension base="ipdr:IPDRType"> 
+      <sequence>
+		<element ref="myIPAddr" />
+		<element ref="myIPv4Addr" />
+		<element ref="myIPv6Addr" />
+		<element ref="myDateTime" />
+		<element ref="myDateTimeMSec" />
+		<element ref="myDateTimeUSec" />
+		<element ref="myUUID" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+</schema>

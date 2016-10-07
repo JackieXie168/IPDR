@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>WinBuild</title>
+                           
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+  <body>
+       
+<h1>Windows Build Instruction for VisualC++ Compilation of the IPDR Libraries</h1>
+       
+<h2>Dependent Libraries</h2>
+   The reference libraries were built and tested using version 7.9.3 of libcurl 
+ for URL implementation and version 1.95.2 of Expat for the XML parser.  &nbsp;It
+is also dependent on the base IPDR library.<br>
+     
+<h3>Expat (v1.95.2)</h3>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <a href="http://www.jclark.com/xml/expat.html">http://www.jclark.com/xml/expat.html&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation 
+ Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <a href="http://expat.sourceforge.net">http://expat.sourceforge.net</a><br>
+     
+<h3>Libcurl (v7.9.3)</h3>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <a href="http://curl.haxx.se">http://curl.haxx.se</a><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation 
+ Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <a href="http://curl.haxx.se/docs/install.html">http://curl.haxx.se/docs/install.html</a><br>
+    
+<h3>c_ipdrbase (v1.0.0)</h3>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <a href="http://curl.haxx.se">http://sourceforge.net/projects/ipdr</a><br>
+  <br>
+     
+<h2>Build Instructions</h2>
+       
+<ol>
+      <li>After downloading curl and expat, you'll still need to build libcurl.
+  &nbsp;Expat packages the compiled lib, so you won't need to build it. &nbsp;Note
+  the current tested versions are older ones. &nbsp;For libcurl, you will
+need  to pick the "older releases" to find a copy of the version used.</li>
+      <li>Curl provides a .dsw (workspace) file at lib/curllib.dsw. &nbsp;Open
+  this with VisualC++ and do the build.</li>
+      <li>To work with the default .dsw packaged with ipdrftp, move the following
+  files:</li>
+               
+  <ul>
+        <li>copy curl's lib/Debug/libcurl.lib built in step 2 to ipdrftp's
+libs   directory</li>
+        <li>copy curl's include/curl directory and its contents to ipd's
+include   area, creating an include/curl subdirectory.</li>
+        <li>copy expat's libs/expat.lib to ipdrftp's lib directory.</li>
+        <li>copy the header file from expat's source/lib/expat.h to the directry
+  include/expat in the ipdrftp project.</li>
+    <li>copy the header file directories from the base IPDR project to subdirectories
+to the ipdrftp include area.<br>
+    </li>
+               
+  </ul>
+      <li>Open the IPDRFTP .dsw (workspace) file at lib/ipdrftp.dsw and build.</li>
+      <li>Open the IPDRFTP test .dsw file at testWin32.dsw and build both
+the various consumer and producer projects</li>
+      <li>Create a bin directory in IPDRFTP. &nbsp;Copy the ipdrftp.dll  file
+ to this directory, finally copy the libcurl.dll and expat.dll to this  directory.<br>
+      </li>
+      <li>Modify your classpath add the ipdrftp/bin directory. &nbsp;This
+will  allow you to simply execute the various consumer and producer test.</li>
+      <li>Test the program by doing the following:</li>
+               
+  <ul>
+        <li>Get a DOS prompt.</li>
+        <li>cd &lt;ipdrinstalldir&gt;/test</li>
+                       
+  </ul>
+       
+</ol>
+       
+<h2>Documentation<br>
+   </h2>
+     
+<h3>API Documentation</h3>
+   API Documentation built using Doxygen can be found in <a
+ href="C_Lib_Doc/index.html">C API Documentation</a><br>
+     
+<h3>Test Tool Usage<br>
+   </h3>
+   Test Tool usage can be found in <a href="TestToolC.htm">Test Tool Usage</a><br>
+     
+<h3>Integration test cases<br>
+   </h3>
+   Integration Test Cases are described in <a
+ href="Integration%20Test%20Cases.htm">Integration Test Cases</a>. The test 
+ data for the test cases can be found under test/testdata.zip<br>
+    <br>
+     
+<h2></h2>
+ 
+<ul>
+       
+</ul>
+       
+<hr width="100%" size="2"><i>Jeff Meyer &nbsp;June 10, 2003</i><br>
+    <br>
+   <br>
+  <br>
+ <br>
+</body>
+</html>

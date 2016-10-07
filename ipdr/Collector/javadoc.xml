@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc destdir="doc" access="private" use="true" notree="false" nonavbar="false" noindex="false" splitindex="true" author="false" version="false" nodeprecatedlist="false" nodeprecated="false" packagenames="com.xacct.CRANE.collector,org.ipdr.protocol,org.ipdr.api.log,org.ipdr.utility,org.ipdr.collector.configuration,org.ipdr.api,org.ipdr.collector,org.ipdr.api.configuration,org.ipdr.collector.log" sourcefiles="org/ipdr/IPDRSessionState.java,org/ipdr/DiscoveryHandler.java,org/ipdr/ExporterHandler.java,org/ipdr/IncomingConnectionHandler.java,org/ipdr/IPDRStateMachine.java,org/ipdr/ListeningSocketHandler.java,org/ipdr/IPDRConnectionState.java,org/ipdr/ProtocolStateMachine.java,org/ipdr/ConnectionDynamic.java" sourcepath="." classpath="jdom.jar" overview="C:\Documents and Settings\ilyad\My Documents\Projects\WSAD Workspace\IPDR\overview.html"/>
-    </target>
-</project>

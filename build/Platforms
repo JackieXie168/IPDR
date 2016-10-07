@@ -1,5 +1,0 @@
-; conversion file between OS name returned by uname and crane platform
-SunOS solaris
-Linux linux
-CYGWIN_NT-5.0 cygwin
-CYGWIN_NT-5.1 cygwin

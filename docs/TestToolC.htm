@@ -1,0 +1,1535 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./TestToolC_files/filelist.xml">
+<link rel=Edit-Time-Data href="./TestToolC_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Test Tools</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Vinay</o:Author>
+  <o:LastAuthor>Vinay</o:LastAuthor>
+  <o:Revision>28</o:Revision>
+  <o:TotalTime>113</o:TotalTime>
+  <o:Created>2002-04-21T09:16:00Z</o:Created>
+  <o:LastSaved>2002-06-21T07:14:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1386</o:Words>
+  <o:Characters>7903</o:Characters>
+  <o:Lines>65</o:Lines>
+  <o:Paragraphs>15</o:Paragraphs>
+  <o:CharactersWithSpaces>9705</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Courier;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Courier-Bold;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Courier-Oblique;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l3 level1 lfo2;
+	tab-stops:list .3in;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l3 level2 lfo2;
+	tab-stops:list .4in;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l3 level3 lfo2;
+	tab-stops:list .5in;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l3 level4 lfo2;
+	tab-stops:list .6in;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l3 level5 lfo2;
+	tab-stops:list .7in;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l3 level6 lfo2;
+	tab-stops:list .8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l3 level7 lfo2;
+	tab-stops:list .9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l3 level8 lfo2;
+	tab-stops:list 1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l3 level9 lfo2;
+	tab-stops:list 1.1in;
+	font-size:11.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:50.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:70.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-.25in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:491801307;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1946282848 1348526832 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:2.25in;
+	mso-level-number-position:right;
+	margin-left:2.25in;
+	text-indent:-9.0pt;}
+@list l1
+	{mso-list-id:965895368;
+	mso-list-type:hybrid;
+	mso-list-template-ids:700608386 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:76.5pt;
+	mso-level-number-position:left;
+	margin-left:76.5pt;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:112.5pt;
+	mso-level-number-position:left;
+	margin-left:112.5pt;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:148.5pt;
+	mso-level-number-position:left;
+	margin-left:148.5pt;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.5in;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	margin-left:3.5in;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	margin-left:4.0in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1957711677;
+	mso-list-type:hybrid;
+	mso-list-template-ids:735895838 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:2100058278;
+	mso-list-template-ids:67698725;}
+@list l3:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l3:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l3:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l3:level4
+	{mso-level-style-link:"Heading 4";
+	mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l3:level5
+	{mso-level-style-link:"Heading 5";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l3:level6
+	{mso-level-style-link:"Heading 6";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l3:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l3:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l3:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoToc1 align=center style='text-align:center;tab-stops:20.0pt right 431.5pt'><span
+style='font-size:14.0pt'>test tool usage<o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes"> </span>TOC \o &quot;1-4&quot; \h \z <span style='mso-element:field-separator'></span><![endif]--><span
+class=MsoHyperlink><a href="#_Toc12425517">1<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Documentation Conventions<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12425517 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500310037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425518">2<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Overview<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>   </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12425518 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500310038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425519">3<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Write Tool<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12425519 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500310039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425520">3.1<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Input csv File Format<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'> </span><span
+style='mso-field-code:"PAGEREF _Toc12425520 \\h"'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500320030000000</w:data>
+</xml><![endif]--></span></span></a></span><span style='font-size:12.0pt;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425521">3.2<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Command Line Options<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'>  </span><span
+style='mso-field-code:"PAGEREF _Toc12425521 \\h"'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500320031000000</w:data>
+</xml><![endif]--></span></span></a></span><span style='font-size:12.0pt;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425522">3.3<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Sample Tool Usage Scenarios<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'>  </span><span
+style='mso-field-code:"PAGEREF _Toc12425522 \\h"'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500320032000000</w:data>
+</xml><![endif]--></span></span></a></span><span style='font-size:12.0pt;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425523">4<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Read Tool<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12425523 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500320033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12425524">4.1<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Command Line Options<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1'>  </span><span
+style='mso-field-code:"PAGEREF _Toc12425524 \\h"'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320035003500320034000000</w:data>
+</xml><![endif]--></span></span></a></span><span style='font-size:12.0pt;
+font-weight:normal'><o:p></o:p></span></p>
+
+<h1 style='margin-left:0in;text-indent:0in;mso-list:none;tab-stops:.5in'><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h1>
+
+<h1><a name="_Toc12425517"><![if !supportLists]>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Documentation Conventions</a></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The following documentation
+conventions are used throughout this document.<o:p></o:p></span></p>
+
+
+<div class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Convention <span
+style='mso-tab-count:2'>                </span>Item<o:p></o:p></span></b></p>
+
+
+<div class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>boldface text <span
+style='mso-tab-count:2'>              </span></span></b><span style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt'>Indicates terms defined in the glossary.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Ctrl+Tab <span
+style='mso-tab-count:2'>                     </span>Indicates that you must
+press two or more keys simultaneously.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>italics<span
+style='mso-tab-count:3'>                           </span></span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Indicates emphasis or book
+titles.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'>monospace text</span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates code samples, commands and their options,
+data <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>structures and their members, data types, directories, and filenames <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>and their extensions. Monospace text also indicates text that you <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>must enter from the keyboard.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Example</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>s:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier;mso-bidi-font-family:Arial'>#include &lt;iostream.h&gt;
+void main ( ) the pointer pszchmod u+w *<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'><span style='mso-tab-count:
+1'>     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>\tux\data\ap<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>.doc<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>tux.doc<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>BITMAP<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>float<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'>monospace<span style='mso-tab-count:2'>     </span></span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Identifies significant words
+in code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'>boldface<span style='mso-tab-count:2'>      </span></span></b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Exampl</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'>text<span style='mso-tab-count:3'>          </span></span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'>void </span><b><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Bold;mso-bidi-font-family:Arial'>commit
+</span></b><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:
+Courier;mso-bidi-font-family:Arial'>( )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'>monospace<span style='mso-tab-count:2'>     </span></span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Identifies variables in code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'>italic<span style='mso-tab-count:2'>        </span></span></i><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Exampl</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'>text<span style='mso-tab-count:3'>          </span></span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'>String </span><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;mso-bidi-font-family:Arial'>expr<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>UPPERCASE<span
+style='mso-tab-count:2'>              </span>Indicates device names,
+environment variables, and logical <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>TEXT<span style='mso-tab-count:
+3'>                           </span>operators.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><span style='mso-tab-count:
+3'>                                    </span><i>Exampl</i>es:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>LPT1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>SIGNON<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>OR<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>{ } <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates a set of choices in a syntax line. The
+braces themselves <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>[ ] <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates optional items in a syntax line. The
+brackets themselves <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Exampl</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier'>buildobjclient [-v] [-o name ] [-f </span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'>[-l </span><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>| <span
+style='mso-tab-count:3'>            </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Separates mutually exclusive choices in a syntax
+line. The symbol <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>itself
+should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>... <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates one of the following in a command line:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>That
+an argument can be repeated several times in a command line<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>That
+the statement omits additional optional arguments<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>That
+you can enter additional parameters, values, or other information<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>The ellipsis itself should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Exampl</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'>buildobjclient [-v] [-o name ] [-f </span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Oblique'>lis</span></i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'>[-l </span><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<span
+style='mso-tab-count:3'>             </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates the omission of items from a code example
+or from a <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>syntax line.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<span
+style='mso-tab-count:3'>             </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>The vertical ellipsis itself should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<o:p></o:p></span></p>
+
+<h1 style='margin-left:0in;text-indent:0in;mso-list:none;tab-stops:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></h1>
+
+<h1><a name="_Toc12425518"><![if !supportLists]>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Overview</a></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Command line test tools are
+provided to test the reference libraries. The write tool can be used to
+generate NDM 3.5 compliant XML and XDR documents using a simple comma separated
+file (csv) as input. Options are provided in the write tools to generate
+documents from multiple service specifications as well as generate a specified
+load. The read tool can be used to read NDM 3.5 compliant XML and XDR documents
+and write these down to a csv file. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The read and write tools
+internally link to the reference libraries. Hence they provide a useful way to
+run a quick test on the libraries and validate any changes.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h1><a name="_Toc12425519"><![if !supportLists]>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Write Tool</a></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none'><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The write tool uses a simple
+comma separated file as input to generate XML and XDR documents. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><a name="_Toc12425520"><![if !supportLists]>3.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Input csv File Format</a></h2>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+1'>            </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;mso-list:l1 level1 lfo6;tab-stops:list .75in 76.5pt'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Each
+csv file can contain data corresponding to one service specification only.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;mso-list:l1 level1 lfo6;tab-stops:list .75in 76.5pt'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+first line of the csv file contains the location of the schema file for which
+the csv file contains data. This location is a URL and support http, ftp and
+file. An example of the URL for each of these protocols is as follows<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:130.5pt;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="http://192.168.122.121/nested/VoIP.xsd">http://192.168.122.121/nested/VoIP.xsd</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:130.5pt;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="ftp://192.168.122.121/nested/BestVendorSM.xsd">ftp://192.168.122.121/nested/BestVendorSM.xsd</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:130.5pt;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="..\..\..\..\..\..\..\Documents%20and%20Settings\divya_narayan\My%20Documents\ipdrlibs\SM203.0-A.0.xsd">file://localhost/c:/ipdrlibs/SM203.0-A.0.xsd</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;mso-list:l1 level1 lfo6;tab-stops:list .75in 76.5pt'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+second line of the csv file contains the nameSpaceURI prefixed with nameSpaceID
+as nameSpaceID$nameSpaceURI. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun:
+yes">                                  </span>e.g. </span><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>bestvendorIPDR$http://www.bestvendor.com/ipdr/namespace<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style='mso-tab-count:1'>            </span><span
+style="mso-spacerun: yes">        </span>If the namespace is the default
+namespace then only the namespace should be specified.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;mso-list:l1 level1 lfo6;tab-stops:list .75in 76.5pt'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The
+third line of the csv file contains all the attribute names in the exact order
+as specified in schema.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-indent:
+-.25in;mso-list:l1 level1 lfo6;tab-stops:list .75in 76.5pt'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Subsequent
+lines contain records to be written in the IPDRDoc in XDR or XML format. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><a name="_Toc12425521"><![if !supportLists]>3.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Command Line Options</a></h2>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>IPDRWriteTool –doctype
+{XDR|XML} </span></b><b><i><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:"Courier New"'>inputfile1.csv</span></i></b><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style="mso-spacerun:
+yes">  </span>. . . –outfile <i>outputF</i></span></b><b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>ileName</span></i></b><b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'> </span></i></b><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>[–recordcount </span></b><b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>recordcount</span></i></b><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>] [–roundrobin] {-ipdrversion 3.1/3.5 | -schemavalidation}<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Where:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-doctype<span
+style='mso-tab-count:1'>          </span>This is a mandatory argument that is
+used to specify the type of IPDR document to be generated. The argument for
+this option can have a value of of XML or XDR only.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+2'>                        </span>e.g. –doctype XDR<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Input csv files<span
+style='mso-tab-count:1'>    </span>This is a mandatory argument specifying
+input csv <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>files containing data for
+the write tool. Atleast one input csv file should be specified. Multiple csv
+files can be specified by separating by blank spaces.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>e.g. Inputfile1.csv
+Inputfile2.csv<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-outfile<span
+style='mso-tab-count:1'>              </span>This is a mandatory argument that
+takes an argument specifying the output file. This argument can contain the
+full path of the output file. If the complete path is not specified the current
+directory is assumed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-recordcount <span
+style='mso-tab-count:1'>   </span>This is an optional argument that indicates
+the number of records to be written to the IPDRDoc.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>e.g. –recordcount 1000<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-roundrobin<span
+style='mso-tab-count:1'>      </span>This flag is specified is valid only if
+more than one input file is specified. When roundrobin is specified records
+from the multiple csv files are written to the IPDR Document in a round robin
+fashion. In the absence of this argument the csv files are written sequentially
+in the order they are listed on the command line.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-schemavalidation<span
+style='mso-tab-count:1'>          </span>This is a mandatory argument, if -ipdrversion is not present. This
+argument is used to specify whether data will be validated against the schema.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-ipdrversion 3.1/3.5<span
+style='mso-tab-count:1'>          </span>This is a mandatory argument, if -schemavalidation is not present. This argument is
+used to specify the version.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h2><a name="_Toc12425522"><![if !supportLists]>3.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Sample Tool Usage Scenarios</a></h2>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><b><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
+-.25in;mso-list:l0 level1 lfo8;tab-stops:list .25in 1.25in'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Both
+–recordcount and –roundrobin options are not present<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>In this case records of the
+csv files will be written in the same order as given in the usage. e.g.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun: yes">      </span><o:p></o:p></span></p>
+
+<p class=Code align=left style='text-align:left'>IPDRWriteTool –doctype XML
+testSM.csv testVOIP.csv testWS.csv –outfile IPDRDoc -schemavalidation</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun: yes">             
+</span><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'>In this case, records of testSM.csv will be written first followed by
+records<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'>of testVOIP.csv<span style="mso-spacerun: yes">  </span>followed by
+records of testWS.csv.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
+-.25in;mso-list:l0 level1 lfo8;tab-stops:list .25in 1.25in'><![if !supportLists]><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>–recordcount option is present and –roundrobin option is off <b><u><o:p></o:p></u></b></span></p>
+
+<p class=MsoBodyTextIndent3 style='text-indent:0in'>-recordcount is the number
+of records to be written in IPDRXMLDoc.xml.<span style="mso-spacerun: yes"> 
+</span>Hence the tool<span style="mso-spacerun: yes">  </span>keeps iterating
+sequentially through the files till the specified number of records are written
+out. e.g.</p>
+
+<p class=MsoBodyTextIndent3 style='text-indent:0in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=Code style='margin-left:.25in'>IPDRWriteTool –doctype XDR testSM.csv
+testVOIP.csv testWS.csv -outfile IPDRDoc -schemavalidation –recordcount 320</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun: yes">             </span><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify;text-indent:0in'><span
+style='font-size:12.0pt'>If testSM.csv contains 30 records, testVOIP.csv
+contains 40 records and testWS.csv contains 30<span style="mso-spacerun: yes"> 
+</span>the tool will go through each file 3 times and then write 20 records
+from testSM.csv to write a total of 320 records.<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='margin-left:.25in;text-align:justify;
+text-indent:0in'><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=Code style='mso-layout-grid-align:auto'><span style='font-family:"Times New Roman"'><span
+style="mso-spacerun: yes">                                          </span><b><u><o:p></o:p></u></b></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
+-.25in;mso-list:l0 level1 lfo8;tab-stops:list .25in 1.25in'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>–recordcount
+option is off and –roundrobin option is on<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun: yes">       </span><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>When roundrobin is specified
+records from the multiple csv files are written to the IPDR Document in a round
+robin fashion.<span style="mso-spacerun: yes">  </span>e.g. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=Code>IPDRWriteTool –doctype XDR testSM.csv testVOIP.csv testWS.csv
+–outfile IPDRDoc -schemavalidation –roundrobin</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'>In this case, first record of testSM.csv will be
+written to the IPDRDoc followed by first record of testVOIP.csv followed by
+first record of testWS.csv. Similarly, second record of testSM.csv followed by
+second record of testVOIP.csv followed by second<span style="mso-spacerun:
+yes">          </span>record of testWS.csv and so on. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><b><u><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></u></b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-indent:
+-.25in;mso-list:l0 level1 lfo8;tab-stops:list .25in 1.25in'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Both
+–recordcount and –roundrobin options are on<o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'><span style="mso-spacerun: yes">            </span>In this case records
+from the csv files will be written iteratively in a roundrobin fashion until
+recordcount number of records are written out. e.g. <o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='text-align:justify'><span style='font-size:
+12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=Code>IPDRWriteTool –doctype XDR testSM.csv testVOIP.csv testWS.csv
+–outfile IPDRDoc -schemavalidation –recordcount 320 –roundrobin</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><span style="mso-spacerun: yes">   </span><span
+style="mso-spacerun: yes">           </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'>Considering 30 number of records in testSM.csv, 40
+number of records of testVOIP.csv and 30 number of records of testWS.csv. First
+record of testSM.csv followed by first record of testVOIP.csv followed by first
+record of testWS.csv and so on. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1 style='margin-left:0in;text-align:justify;text-indent:0in;mso-list:none;
+tab-stops:.5in'><span style='font-size:12.0pt;mso-bidi-font-size:16.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></h1>
+
+<h1><a name="_Toc12425523"><![if !supportLists]>4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Read Tool</a></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The read tool is primarily
+used to convert IPDRDoc in XDR and XML format to raw data and then writing
+these out to a user friendly comma separated (csv) file format. Input to the
+Read Tool is IPDRDoc in XDR or XML format. Only one IPDRDoc can be specified as
+input to the Tool. The csv file / files generated will have the same
+characteristics as defined under the<span style="mso-spacerun: yes"> 
+</span>Write Tool.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The output csv files will be
+named according to the service type&nbsp;(complex type) present in the schema
+from which data is generated. There is no provision to&nbsp;specify the output
+file name on the command&nbsp;line. <o:p></o:p></span></p>
+
+<p class=Code style='mso-layout-grid-align:auto'><span style='font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></p>
+
+<h2><![if !supportLists]>4.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>&nbsp;<a name="_Toc12425524">Command Line Options</a></h2>
+
+<p class=Code style='mso-layout-grid-align:auto'><span style='font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-left:.4in'><b>IPDRReadTool –doctype
+{XDR|XML}</b><b><span style='font-family:"Courier New"'> <i>inputFileName</i> </span>[–outfiledir]</b><b><span
+style='font-family:"Courier New"'> <i>outputFileName</i> </span>{-ipdrversion 3.1/3.5 | –schemavalidation}<o:p></o:p></b></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.4in'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Where:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-doctype<span
+style='mso-tab-count:1'>          </span>This is a mandatory option that is
+used to specify the type of IPDR document to be generated. The argument for
+this option can have a value of of XML or XDR only.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+2'>                        </span>e.g. </span><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:"Courier New"'>–doctype XDR</span><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>inputFileName<span
+style='mso-tab-count:1'>  </span>This is a mandatory argument that specifies the
+input IPDR File. Only one file can be specified which must be in XML or XDR
+format. Directory path for input file needs to be specified. If Directory path
+is NOT specified, current directory is used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-outFileDir<span
+style='mso-tab-count:1'>        </span>This is an optional argument that specified
+the directory path in which output .csv files will be generated.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+2'>                        </span>e.g</span><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:"Courier New"'>. –outFileDir
+c:\ipdrlibs\org\ipdr\test\<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style='mso-tab-count:
+2'>                        </span>If absent the current directory is used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><span style="mso-spacerun:
+yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:2.5in;text-align:justify;text-indent:
+-1.5in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-schemavalidation<span
+style='mso-tab-count:1'>         </span>This is a mandatory argument, if -ipdrversion is not present. This
+argument is used to specify whether data will be validated against the schema.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>&nbsp;<o:p></o:p></span></p>
+
+
+<p class=MsoNormal style='margin-left:2.0in;text-align:justify;text-indent:
+-1.0in'><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>-ipdrversion 3.1/3.5<span
+style='mso-tab-count:1'>          </span>This is a mandatory argument, if -schemavalidation is not present. This
+argument is used to specify the version.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

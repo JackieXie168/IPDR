@@ -1,0 +1,1112 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Readme_files/filelist.xml">
+<title>IPDR v3.5 Conversion Libraries</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>FullPage</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.code, li.code, div.code
+	{mso-style-name:code;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.m1
+	{mso-style-name:m1;
+	color:blue;}
+span.t1
+	{mso-style-name:t1;
+	color:#990000;}
+span.b1
+	{mso-style-name:b1;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	color:red;
+	mso-text-animation:none;
+	font-weight:bold;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+span.tx1
+	{mso-style-name:tx1;
+	font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:98062077;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-268372150 -1612945986 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-start-at:9;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1652368155;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-455848354 -1612945986 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-start-at:9;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1818760188;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1067410092 67698689 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:2127654733;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1344680562 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<div>
+
+<h1>IPDR C Conversion Library</h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'>This is release 2.0.0 of the IPDR C Conversion 
+Library that is compliant with NDM-U 3.5 specifications from ipdr.org.
+This new release of the IPDR C Conversion Library now supports structures, 
+arrays, nested elements,  and derived types.  This release of the IPDR C 
+Conversion Library does NOT support either the Supplier/Partner Settlement 
+document or the IPDR Streaming Protocol.</p>
+
+<p>The latest version available from <span class=MsoHyperlink><a
+href="http://www.sourceforge.net/projects/ipdr">http://www.sourceforge.net/projects/ipdr</a></span></p>
+
+<p class=MsoBodyText>The goal of the reference libraries is to provide software
+implementers of the IPDR standards with libraries and tools to reduce
+construction cost, increase quality, and increase interoperability of their
+IPDR facilities. These libraries simplify the tasks of reading and writing IPDR
+data. The libraries will be useful to both consumers and producers of IPDR
+records who wish to encode or decode XML or XDR documents.  </p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'>These libraries are governed by the licensing terms
+mentioned in LICENSE.txt found at the top of the source code tree.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'>This release contains reference libraries written in ANSI C along with supporting documentation, sample programs as well as test tools.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<h1>Release Structure</h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'>The structure of this release is as follows</p>
+
+<h3><span class=GramE>docs</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This folder contains following documents</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.75in;text-align:justify;text-indent:-.25in'>1. <i><a
+href="Installation%20Steps%20on%20Windows.htm">Installation Steps on Windows</a></i>,
+</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.75in;text-align:justify;text-indent:-.25in'><a
+href="Installation%20Steps%20on%20Unix.htm"><span class=GramE><span
+style='color:windowtext;text-decoration:none;text-underline:none'>2. </span></span><i><span
+style='color:windowtext;text-decoration:none;text-underline:none'><span
+style='mso-field-code:"HYPERLINK \0022Installation%20Steps%20on%20Unix\.htm\0022"'><u><span
+style='color:blue'>Installation Steps on Unix</span></u></span></span></i><span
+style='color:windowtext;text-decoration:none;text-underline:none'>, </span></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.75in;text-align:justify;text-indent:-.25in'><a
+href="Integration%20Test%20Cases.htm"><span class=GramE><span style='color:
+windowtext;text-decoration:none;text-underline:none'>3. </span></span><i><span
+style='color:windowtext;text-decoration:none;text-underline:none'><span
+style='mso-field-code:"HYPERLINK \0022Integration%20Test%20Cases\.htm\0022"'><u><span
+style='color:blue'>Integration Test Cases</span></u></span></span></i><span
+style='color:windowtext;text-decoration:none;text-underline:none'>, </span></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.75in;text-align:justify;text-indent:-.25in'><a
+href="Developer%20Guide.htm"><span class=GramE><span style='color:windowtext;
+text-decoration:none;text-underline:none'>4. </span></span><i><span
+style='color:windowtext;text-decoration:none;text-underline:none'><span
+style='mso-field-code:"HYPERLINK \0022Developer%20Guide\.htm\0022"'><u><span
+style='color:blue'>Developer Guide</span></u></span></span></i><span
+style='color:windowtext;text-decoration:none;text-underline:none'>, </span></a></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.75in;text-align:justify;text-indent:-.25in'><i><a
+href="doxygen/html"><span style='color:windowtext;text-decoration:none;
+text-underline:none'>5. <span style='mso-field-code:"HYPERLINK \0022doxygen\/html\0022"'><u><span
+style='color:blue'>C API documentation</span></u></span></span></a><span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></i></p>
+
+<h3><span class=GramE>include</span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Contains header files for reference and third party packages</p>
+
+<h2><span class=GramE>source</span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Contains entire source code</p>
+
+<h3><span class=GramE>test</span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Contains test tools and test scripts to test the libraries</p>
+
+<h3><span class=GramE>example</span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Contains a sample read and write program that demonstrates producing and
+consuming an IPDR XDR and XML doc using the reference libraries.</p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>&nbsp;The
+libraries can be downloaded from <u><span style='color:blue'><a
+href="http://www.sourceforge.net/projects/ipdr">www.sourceforge.net/projects/ipdr</a></span></u></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Once
+downloaded refer to <i><u><span style='color:blue'><a
+href="Installation%20Steps%20on%20Unix.htm">Installation Steps on Unix</a></span></u></i>
+or <i><u><span style='color:blue'><a
+href="Installation%20Steps%20on%20Windows.htm">Installation Steps on Windows</a></span></u></i>
+for detailed instructions on the build process. <span class=MsoHyperlink><b><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></b></span></p>
+
+<h3><a href="Installation%20Steps%20on%20Windows.htm"></a><span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></h3>
+
+</div>
+
+<h3>Known Limitations<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></h3>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list .5in'>The <b>ReadTool</b>
+     and <b style='mso-bidi-font-weight:normal'>WriteTool</b> will fail, if the
+     elements definition and their references order in the </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.25in'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>schema</span> (e.g.:
+SM3.0-A.3.xsd) file is not matching. The ReadTool and WriteTool exits with
+“order </p>
+
+<p class=MsoNormal style='margin-left:.25in'><span
+style='mso-spacerun:yes'>      </span><span class=GramE>mismatch</span>” error,
+if it encounters this type of schema file.</p>
+
+<p class=MsoNormal style='margin-left:.25in'><span
+style='mso-spacerun:yes'>      </span>Below is an example from a Schema file:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>           </span><span
+style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>             </span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='mso-spacerun:yes'>          </span>The Valid Schema with proper order<o:p></o:p></b></p>
+
+<p class=MsoNormal style='text-indent:-24.0pt'><span style='font-size:10.0pt;
+font-family:Verdana'><span style='mso-spacerun:yes'>                </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:60.0pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>&lt;?xml</span> version =
+</span><span style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;1.0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'> encoding = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;UTF-8&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>?&gt;<br>
+</span><i><span style='font-size:10.0pt;font-family:"Courier New";color:olive'>&lt;!--Generated
+by Turbo XML 2.3.0.100. Conforms to w3c http://www.w3.org/2001/XMLSchema--&gt;</span></i><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+&lt;schema <span class=SpellE>xmlns</span> = </span><span style='font-size:
+10.0pt;font-family:"Courier New";color:#0000F0'>&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+<span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE>targetNamespace</span> = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;http://www.ipdr.org/namespaces/ipdr&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+<span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE>xmlns<span class=GramE>:ipdr</span></span> = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;http://www.ipdr.org/namespaces/ipdr&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+<span style='mso-tab-count:1'>  </span><br>
+<span style='mso-tab-count:1'>  </span><span
+style='mso-spacerun:yes'> </span>version = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;3.0-A.0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+<span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE>elementFormDefault</span> = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;qualified&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'><br>
+<span style='mso-tab-count:1'>  </span><span style='mso-spacerun:yes'> </span><span
+class=SpellE>attributeFormDefault</span> = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;unqualified&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:1'>  </span>&lt;annotation&gt;<br>
+<span style='mso-tab-count:2'>        </span>&lt;documentation&gt;<br>
+<span style='mso-tab-count:4'>                    </span>Identifies a unique
+subscriber in the system.<br>
+<span style='mso-tab-count:4'>                    </span><span class=SpellE>Ip</span>
+address, account number etc<br>
+<span style='mso-tab-count:3'>              </span><br>
+<span style='mso-tab-count:2'>        </span>&lt;/documentation&gt;<br>
+<span style='mso-tab-count:1'>  </span>&lt;/annotation&gt;<br>
+<span style='mso-tab-count:1'>  </span>&lt;include <span class=SpellE>schemaLocation</span>
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;IPDRDoc3.0.xsd&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:-24.0pt'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'><span style='mso-spacerun:yes'>       
+</span></span><span style='font-size:10.0pt;font-family:Verdana'><span
+style='mso-spacerun:yes'>          </span></span><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'>&lt;element name = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;averageBandwidth&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'> type = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;long&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;annotation&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;<span class=SpellE>appinfo</span>&gt;<br>
+<span style='mso-tab-count:4'>                        </span>&lt;<span
+class=SpellE>ipdr<span class=GramE>:units</span></span>&gt;bps&lt;/<span
+class=SpellE>ipdr:units</span>&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;/<span class=SpellE>appinfo</span>&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;documentation&gt;<br>
+<span style='mso-tab-count:4'>                        </span>Average bandwidth
+used for stream.<br>
+<span style='mso-tab-count:3'>                  </span><br>
+<span style='mso-tab-count:3'>                  </span>&lt;/documentation&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;/annotation&gt;<br>
+<span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>    
+</span>&lt;/element&gt;<br>
+<span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>    
+</span>&lt;element name = </span><span style='font-size:10.0pt;font-family:
+"Courier New";color:#0000F0'>&quot;totalVolume&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'> type = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;long&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;annotation&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;<span class=SpellE>appinfo</span>&gt;<br>
+<span style='mso-tab-count:4'>                        </span>&lt;<span
+class=SpellE>ipdr<span class=GramE>:units</span></span>&gt;bytes&lt;/<span
+class=SpellE>ipdr:units</span>&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;/<span class=SpellE>appinfo</span>&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;documentation&gt;<br>
+<span style='mso-tab-count:4'>                        </span>Total volume used
+for stream.<br>
+<span style='mso-tab-count:3'>                  </span><br>
+<span style='mso-tab-count:3'>                  </span>&lt;/documentation&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;/annotation&gt;<br>
+<span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>    
+</span>&lt;/element&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:-24.0pt'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>               </span>&lt;complexType name = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;IPDR-SM-Type&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;complexContent&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;extension base = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr<span class=GramE>:IPDRType</span></span>&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:4'>                        </span>&lt;sequence&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>           </span><span
+style='mso-spacerun:yes'>                           </span><span
+style='mso-spacerun:yes'>             </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'>&lt;element ref = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr<span class=GramE>:averageBandwidth</span></span>&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'> <span
+class=SpellE>minOccurs</span> = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>/&gt;<br>
+<span style='mso-spacerun:yes'>       </span><span
+style='mso-spacerun:yes'>                  </span>&lt;element ref = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr:totalVolume</span>&quot;</span><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'> <span class=SpellE>minOccurs</span> = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+color:black'><span style='mso-spacerun:yes'>                        </span>&lt;/sequence&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;/extension&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;/complexContent&gt;<br>
+<span style='mso-tab-count:1'>      </span><span style='mso-spacerun:yes'>    
+</span>&lt;/complexType&gt;<br>
+<span style='mso-spacerun:yes'>        </span>&lt;/schema&gt;</span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'>This schema works as written,
+however it would be unusable by the C libraries if the order of the elements in
+the ComplexType were different from the order of the elements preceding it.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'>So if we replaced the
+&lt;complexType&gt; above with this, the schema would cause the libraries to
+fail:<o:p></o:p></p>
+
+<p class=MsoNormal style='text-indent:-24.0pt'><span style='font-family:Arial;
+color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-spacerun:yes'>               </span></span><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'>&lt;complexType name = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;IPDR-SM-Type&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;complexContent&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;extension base = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr<span class=GramE>:IPDRType</span></span>&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>&gt;<br>
+<span style='mso-tab-count:4'>                        </span>&lt;sequence&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>           </span><span
+style='mso-spacerun:yes'>                           </span><span
+style='mso-spacerun:yes'>             </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'>&lt;element ref = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr<span class=GramE>:totalVolume</span></span>&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'> <span
+class=SpellE>minOccurs</span> = </span><span style='font-size:10.0pt;
+font-family:"Courier New";color:#0000F0'>&quot;0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>/&gt;<br>
+<span style='mso-spacerun:yes'>       </span><span
+style='mso-spacerun:yes'>                  </span>&lt;element ref = </span><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;<span
+class=SpellE>ipdr:averageBandwidth</span>&quot;</span><span style='font-size:
+10.0pt;font-family:"Courier New";color:black'> <span class=SpellE>minOccurs</span>
+= </span><span style='font-size:10.0pt;font-family:"Courier New";color:#0000F0'>&quot;0&quot;</span><span
+style='font-size:10.0pt;font-family:"Courier New";color:black'>/&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'><span
+style='mso-spacerun:yes'>                        </span>&lt;/sequence&gt;<br>
+<span style='mso-tab-count:3'>                  </span>&lt;/extension&gt;<br>
+<span style='mso-tab-count:2'>            </span>&lt;/complexContent&gt;<br>
+<span style='mso-spacerun:yes'>   </span>&lt;/complexType&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:"Courier New";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE>the</span>
+problem is that <span style='color:blue'>averageBandwidth</span> was defined
+before <span style='color:blue'>totalVolume</span> earlier in the schema,
+therefore libraries always expect this order to be retained in the ComplexType
+declaration<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span></p>
+
+<p class=MsoNormal><a href="Installation%20Steps%20on%20Windows.htm"></a><span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list .5in'>For <b
+     style='mso-bidi-font-weight:normal'>structure data types</b>, direct
+     reference to &lt;complexType&gt; kind of data elements cannot be made
+     inside a &lt;complexContent&gt;.Instead, an explicit <span class=GramE>declaration</span>
+     of an element which refers to this complex type needs to be made and used
+     inside the &lt;complexContent&gt;.</li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'>For e.g.: in the xml extract below:
+the qosVolumeEvent data element cannot be directly used in the
+&lt;complexContent&gt;. Hence an explicit declaration (in BOLD) needs to be
+made and used. </p>
+
+<p class=MsoPlainText style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>- &lt;complexType
+name=&quot;qosVolumeEvent&quot;&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>- &lt;sequence&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>startTime</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>endTime</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>qosLevel</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/sequence&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/complexType&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><b>&lt;element name=&quot;<span
+class=SpellE>qosVolume</span>&quot; type=&quot;qosVolumeEvent&quot; /&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></b></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;complexType
+name=&quot;IPDR-Structure-Type&quot;&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;<span class=GramE>complexContent</span>&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;extension base=&quot;<span
+class=SpellE>ipdr<span class=GramE>:IPDRType</span></span>&quot;&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;<span class=GramE>sequence</span>&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>startTime</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>endTime</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;element ref=&quot;<span
+class=SpellE>movieTitle</span>&quot; /&gt;<span class=MsoHyperlink><span
+style='color:windowtext;text-decoration:none;text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><b style='mso-bidi-font-weight:
+normal'>&lt;element ref=&quot;<span class=SpellE>qosVolume</span>&quot; /&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></b></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/sequence&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/extension&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/complexContent&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'>&lt;/complexType&gt;<span
+class=MsoHyperlink><span style='color:windowtext;text-decoration:none;
+text-underline:none'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list .5in'>The C
+     libraries&nbsp;may occasionally&nbsp;make slight&nbsp;changes to
+     the&nbsp;value of floating point numbers due to precision issues.&nbsp;
+     E.g. 2.7778 might become 2.7777975 </li>
+</ol>
+
+<p class=MsoNormal style='margin-left:.5in'>Below is an example:</p>
+
+<p class=MsoNormal style='margin-left:.5in'>The actual value in the CSV file:</p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=SpellE>SM<span
+class=GramE>:charge</span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'>4796.78</p>
+
+<p class=MsoNormal style='margin-left:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=GramE>The value in the
+generated CSV, after running the ReadTool.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span class=SpellE>SM<span
+class=GramE>:charge</span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'>4796.779785</p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='color:black;mso-list:l3 level1 lfo1;tab-stops:list .5in'>The
+     C libraries do not support the &quot;derived type&quot; encoding feature
+     in XDR, <span class=SpellE>ie</span> the C libraries do not make use of
+     the 3rd byte in XDR <span class=SpellE>typeIDs</span>&nbsp;to <span
+     class=SpellE>specifiy</span>&nbsp;the derived type, thereby conveying that
+     information in the document and removing the need to parse the XML schema
+     to get that information.&nbsp; Please refer to section 4.3.1.2 in the
+     XDR3.5.1.doc for more information on this feature<span style='font-size:
+     10.0pt;font-family:Arial'>.</span><o:p></o:p></li>
+</ol>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='mso-list:l3 level1 lfo1;tab-stops:list .5in'>The C
+     libraries do not support the <span class=SpellE>macAddress</span> derived
+     type, which was added in SSG3.5.1.doc.</li>
+</ol>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='color:black;mso-list:l3 level1 lfo1;tab-stops:list .5in'>The
+     C libraries do not support the IPDR Supplier/Partner Settlement (S/PS)
+     specification<span style='font-size:10.0pt;font-family:Arial'>.</span><o:p></o:p></li>
+</ol>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='color:black;mso-list:l3 level1 lfo1;tab-stops:list .5in'><span
+     style='color:windowtext'>The C libraries do not support the IPDR Streaming
+     specification</span><span style='font-size:10.0pt;font-family:Arial'>.</span><o:p></o:p></li>
+</ol>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:Arial;color:black'>New Features that were
+added to the libraries in this release:</span><span style='color:black'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l1 level1 lfo2;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Support for Arrays and Structures</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l1 level1 lfo2;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Support for both version 3.1 and 3.5 of the
+NDM-U (by passing 3.1 or 3.5 on the <span class=SpellE>commandline</span>, or
+reading the value from the <span class=SpellE>IPDRDoc.xsd</span> schema)</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l1 level1 lfo2;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Support for the new XDR primitive types</p>
+
+<p class=MsoNormal style='text-indent:3.0pt'><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:Arial;color:black'>Installation and
+building C-<span class=SpellE>libraires</span> on <span class=SpellE>unix/linux</span>:</span><span
+style='color:black'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>gunzip</span>
+c_ipdrbase_2.0.0.tar.gz</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>tar <span class=SpellE>xvf</span>
+c_ipdrbase_2.0.0.tar</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>cd</span> c_ipdrbase_2.0.0</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>autoconf</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>automake</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>./configure</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE>cd</span> source</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>make</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=GramE>cp</span> */*.a ../<span
+class=SpellE>libs</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span class=GramE>cd</span></span><span
+class=GramE> ..</span>/test</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo3;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>make</p>
+
+<p class=MsoNormal><span style='color:black'>&nbsp;<span
+style='mso-spacerun:yes'>         </span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><span
+style='mso-spacerun:yes'>            </span>For more details please refer the </span><i><u><span
+style='color:blue'><a href="Installation%20Steps%20on%20Unix.htm">Installation
+Steps on Unix</a></span></u></i><span style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:Arial;color:black'>Installation and
+building C-<span class=SpellE>libraires</span> on Windows:</span><span
+style='color:black'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:black'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial;
+color:black'>Use <span class=SpellE>winzip</span> to extract the
+c_ipdrbase_2.0.0.zip<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list .75in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Open the <span
+class=SpellE>ipdr</span> .<span class=SpellE>dsw</span> (workspace) file at
+c_ipdrbase_2.0.0/ipdr/ipdr.dsw and build. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list .75in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Open the test .<span
+class=SpellE>dsw</span> file at c_ipdrbase_2.0.0/test/test.dsw and build both
+the <span class=SpellE>readtest</span> and <span class=SpellE>writetest</span>
+projects <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list .75in'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='color:black'>Create a bin directory
+in IPDR. &nbsp;Copy the <span class=GramE>IPDRReadTest.exe(</span>from
+c_ipdrbase_2.0.0/ test/<span class=SpellE>IPDRReadToolDir</span>/Debug) and
+IPDRWriteTest.exe (from c_ipdrbase_2.0.0/ test/<span class=SpellE>IPDRWriteToolDir</span>/Debug)
+files to this directory. &nbsp;Also copy the ipdr.dll (from c_ipdrbase_2.0.0/ <span
+class=SpellE>libs</span>) file to this directory, finally copy the libcurl.dll
+and expat.dll to this directory.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><span
+style='mso-spacerun:yes'>            </span>For more details please refer the </span><i><u><span
+style='color:blue'><a href="Installation%20Steps%20on%20Windows.htm">Installation
+Steps on Windows</a></span></u></i><span style='color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='color:black'>&nbsp;Systems in which the libraries have been built and
+tested:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='color:black'>RedHat9.0
+Linux<span style='mso-spacerun:yes'>         </span>compilers: <span
+class=SpellE><span class=GramE>gcc</span></span><span class=GramE>(</span>version
+3.2.2)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='color:black'><span
+style='mso-spacerun:yes'>      </span>Fedora Core<span
+style='mso-spacerun:yes'>               </span>compilers: <span class=SpellE><span
+class=GramE>gcc</span></span><span class=GramE>(</span>version 3.3.2)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='color:black'><span
+style='mso-spacerun:yes'>      </span>HP-UX 11<span
+style='mso-spacerun:yes'>                  </span>compilers: <span
+class=SpellE><span class=GramE>gcc</span></span><span class=GramE>(</span>version
+3.3.2)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='color:black'><span
+style='mso-spacerun:yes'>      </span>Solaris<span
+style='mso-spacerun:yes'>                         </span>compilers: <span
+class=SpellE><span class=GramE>gcc</span></span><span class=GramE>(</span>version
+3.3.2)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='color:black'><span
+style='mso-spacerun:yes'>      </span>Windows XP<span
+style='mso-spacerun:yes'>               </span><span class=SpellE>compilers<span
+class=GramE>:Visual</span></span> C++ 6.0<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

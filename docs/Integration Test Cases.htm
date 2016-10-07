@@ -1,0 +1,1620 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Integration%20Test%20Cases_files/filelist.xml">
+<link rel=Edit-Time-Data href="Integration%20Test%20Cases_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Integration Test Cases</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Vinay</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Girish_Doddaiah</o:LastAuthor>
+  <o:Revision>31</o:Revision>
+  <o:TotalTime>30</o:TotalTime>
+  <o:Created>2002-04-21T09:45:00Z</o:Created>
+  <o:LastSaved>2004-11-04T06:12:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1072</o:Words>
+  <o:Characters>6116</o:Characters>
+  <o:Lines>50</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>7174</o:CharactersWithSpaces>
+  <o:Version>11.5703</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Courier-Bold;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Courier-Oblique;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l1 level1 lfo2;
+	tab-stops:list .3in;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l1 level2 lfo2;
+	tab-stops:list .4in;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-list:l1 level3 lfo2;
+	tab-stops:list .5in;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-list:l1 level4 lfo2;
+	tab-stops:list .6in;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	mso-list:l1 level5 lfo2;
+	tab-stops:list .7in;
+	font-size:13.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	mso-list:l1 level6 lfo2;
+	tab-stops:list .8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	mso-list:l1 level7 lfo2;
+	tab-stops:list .9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	mso-list:l1 level8 lfo2;
+	tab-stops:list 1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	mso-list:l1 level9 lfo2;
+	tab-stops:list 1.1in;
+	font-size:11.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	text-transform:uppercase;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:10.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:30.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:40.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:50.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:70.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:536551879;
+	mso-list-type:hybrid;
+	mso-list-template-ids:89294618 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1362321831;
+	mso-list-template-ids:67698725;}
+@list l1:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l1:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l1:level3
+	{mso-level-style-link:"Heading 3";
+	mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l1:level4
+	{mso-level-style-link:"Heading 4";
+	mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l1:level5
+	{mso-level-style-link:"Heading 5";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l1:level6
+	{mso-level-style-link:"Heading 6";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l1:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l1:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l1:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l2
+	{mso-list-id:1957711677;
+	mso-list-type:hybrid;
+	mso-list-template-ids:735895838 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoToc1 align=center style='text-align:center;tab-stops:20.0pt right 431.5pt'><span
+style='font-size:14.0pt'>Integration test cases<o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z <span
+style='mso-element:field-separator'></span><![endif]--><span
+class=MsoHyperlink><a href="#_Toc12426885">1<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Documentation Conventions<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12426885 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800380035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426886">2<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>Test Scenarios<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12426886 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800380036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426887">2.1<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 1<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426887 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800380037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426888">2.2<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 2<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426888 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800380038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426889">2.3<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 3<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426889 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800380039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426890">2.4<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 4<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426890 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800390030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426891">2.5<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 5<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426891 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800390031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426892">2.6<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 6<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426892 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800390032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:30.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426893">2.7<span style='font-size:12.0pt;
+color:windowtext;font-weight:normal;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>      </span></span>Test Case 7<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span>PAGEREF
+_Toc12426893 \h</span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800390033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:20.0pt right 431.5pt'><span
+class=MsoHyperlink><a href="#_Toc12426894">3<span style='font-size:12.0pt;
+font-family:"Times New Roman";color:windowtext;text-transform:none;font-weight:
+normal;text-decoration:none;text-underline:none'><span style='mso-tab-count:
+1'>     </span></span>General Instructions<span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc12426894 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000D0000005F0054006F006300310032003400320036003800390034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span><span
+style='font-size:12.0pt;font-family:"Times New Roman";text-transform:none;
+font-weight:normal'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><!--[if supportFields]><span
+style='mso-element:field-end'></span><![endif]--><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'>This document describes the integration test case scenarios
+for which sample input csv files and the generated output files using reference
+libraries have been provided.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc12426885"><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Documentation Conventions</a></h1>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The following documentation
+conventions are used throughout this document.<o:p></o:p></span></p>
+
+<div class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Convention <span
+style='mso-tab-count:2'>                </span>Item<o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='text-align:center;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><b><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>boldface</span></b></span><b><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'> text <span style='mso-tab-count:
+2'>              </span></span></b><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Indicates terms defined in the glossary.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=SpellE><span class=GramE><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Ctrl+Tab</span></span></span><span class=GramE><span style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt'> <span style='mso-tab-count:2'>                     </span>Indicates
+that you must press two or more keys simultaneously.</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>italics</span></i></span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><span style='mso-tab-count:
+3'>                           </span></span></i><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates emphasis or book titles.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=SpellE><span class=GramE><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>monospace</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'> <span class=SpellE>text<span style='mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman"'>Indicates</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'> code samples, commands and
+their options, data <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>structures</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> and their members, data types, directories, and
+filenames <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>and</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> their extensions. <span class=SpellE>Monospace</span>
+text also indicates text that you <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>must</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> enter from the keyboard.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Example</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>s:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier;mso-bidi-font-family:Arial'>#include &lt;<span
+class=SpellE>iostream.h</span>&gt; void main ( ) the pointer <span
+class=SpellE>pszchmod</span> <span class=SpellE>u+w</span> *<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'><span style='mso-tab-count:
+1'>     </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>\tux\data\<span
+class=SpellE>ap</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>.doc<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>tux.doc<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>BITMAP<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier;mso-bidi-font-family:Arial'>float</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier;mso-bidi-font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=SpellE><span class=GramE><b><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier-Bold;mso-bidi-font-family:Arial'>monospace</span></b></span></span><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:2'>     </span></span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Identifies significant words
+in code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><b><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Bold;mso-bidi-font-family:Arial'>boldface</span></b></span><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:2'>      </span></span></b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Exampl</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><b><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Bold;mso-bidi-font-family:Arial'>text</span></b></span><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:3'>          </span></span></b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'>void </span><b><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Bold;mso-bidi-font-family:Arial'>commit
+</span></b><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:
+Courier;mso-bidi-font-family:Arial'>( )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Bold;
+mso-bidi-font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=SpellE><span class=GramE><i><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier-Oblique;mso-bidi-font-family:Arial'>monospace</span></i></span></span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:2'>     </span></span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Identifies variables in code.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><i><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Oblique;mso-bidi-font-family:Arial'>italic</span></i></span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:2'>        </span></span></i><i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Exampl</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><i><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Oblique;mso-bidi-font-family:Arial'>text</span></i></span><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'><span style='mso-tab-count:3'>          </span></span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier;
+mso-bidi-font-family:Arial'>String </span><span class=SpellE><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'>expr</span></i></span><i><span style='font-size:
+12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;mso-bidi-font-family:
+Arial'><o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier-Oblique;
+mso-bidi-font-family:Arial'><o:p>&nbsp;</o:p></span></i></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>UPPERCASE<span
+style='mso-tab-count:2'>              </span>Indicates device names,
+environment variables, and logical <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+class=GramE><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>TEXT<span
+style='mso-tab-count:3'>                           </span>operators.</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><span style='mso-tab-count:
+3'>                                    </span><i>Exampl</i>es:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>LPT1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>SIGNON<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>OR<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>{ } <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates a set of choices in a syntax line. The
+braces themselves <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>should</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>[ ] <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates optional items in a syntax line. The
+brackets themselves <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>should</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Exampl</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span class=SpellE><span class=GramE><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>buildobjclient</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'> [-v] [-o
+name ] [-f </span><i><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Oblique'>file-lis</span></i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'>[-l </span><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>| <span
+style='mso-tab-count:3'>            </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Separates mutually exclusive choices in a syntax
+line. The symbol <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>itself</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>... <span
+style='mso-tab-count:3'>          </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates one of the following in a command line:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>That an argument can be repeated several times in a command line<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>That the statement omits additional optional arguments<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.75in;text-indent:-.25in;mso-list:l2 level1 lfo4;
+tab-stops:list 1.75in;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>That you can enter additional parameters, values, or other information<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>The ellipsis itself should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><i><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Exampl</span></i><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>e:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span class=GramE><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>buildobjclient</span></span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'> [-v] [-o
+name ] [-f </span><i><span style='font-size:12.0pt;mso-bidi-font-size:8.5pt;
+font-family:Courier-Oblique'>file-<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span class=GramE><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t</span></span><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'>[-l </span><i><span style='font-size:12.0pt;
+mso-bidi-font-size:8.5pt;font-family:Courier-Oblique'>file-lis</span></i><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>t]...<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;mso-bidi-font-size:
+8.5pt;font-family:Courier'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<span
+style='mso-tab-count:3'>             </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Indicates the omission of items from a code example
+or from a <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>syntax</span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> line.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<span
+style='mso-tab-count:3'>             </span></span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>The vertical ellipsis itself should never be typed.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;mso-bidi-font-size:8.5pt;font-family:Courier'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc12426886"><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Test Scenarios</a></h1>
+
+<p class=MsoNormal style='margin-left:.3in;text-align:justify;text-indent:-.3in;
+tab-stops:.3in;mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:16.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify'><a
+name="_Toc12426887"><b><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>IPDRWriteTool
+–doctype {XDR|XML} </span></b></a><span style='mso-bookmark:_Toc12426887'><b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>inputfile1.csv</span></i></b></span><span
+style='mso-bookmark:_Toc12426887'><b><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><span style='mso-spacerun:yes'>  </span>. . . –outfile </span></b></span><span
+style='mso-bookmark:_Toc12426887'><span class=SpellE><b><i><span
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:"Courier New"'>outputFileName</span></i></b></span></span><span
+style='mso-bookmark:_Toc12426887'><b><i><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'> </span></i></b></span><span style='mso-bookmark:
+_Toc12426887'><b><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>[–<span
+class=SpellE>recordcount</span> </span></b></span><span style='mso-bookmark:
+_Toc12426887'><span class=SpellE><b><i><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:"Courier New"'>recordcount</span></i></b></span></span><span
+style='mso-bookmark:_Toc12426887'><b><span style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>] [–<span class=SpellE>roundrobin</span>] {-<span class=SpellE>ipdrversion</span>
+3.1/3.5 | -schemavalidation}<o:p></o:p></span></b></span></p>
+
+<p class=MsoBodyText style='margin-left:.4in'><span style='mso-bookmark:_Toc12426887'><b><o:p>&nbsp;</o:p></b></span></p>
+
+<p class=MsoBodyText style='margin-left:.5in'><span style='mso-bookmark:_Toc12426887'><span
+class=SpellE><b>IPDRReadTool</b></span><b> –doctype {XDR|XML}</b></span><span
+style='mso-bookmark:_Toc12426887'><b><span style='font-family:"Courier New"'> <span
+class=SpellE><i>inputFileName</i></span> </span>[–<span class=SpellE>outfiledir</span>]</b></span><span
+style='mso-bookmark:_Toc12426887'><b><span style='font-family:"Courier New"'> <span
+class=SpellE><i>outputFileName</i></span> </span>{-<span class=SpellE>ipdrversion</span>
+3.1/3.5 | -schemavalidation}<o:p></o:p></b></span></p>
+
+<h2 style='margin-left:0in;text-align:justify;text-indent:0in;mso-list:none;
+tab-stops:.5in'><span style='mso-bookmark:_Toc12426887'><o:p>&nbsp;</o:p></span></h2>
+
+<h2 style='text-align:justify'><span style='mso-bookmark:_Toc12426887'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Test
+Case 1</span></h2>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span class=GramE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testVOIP.csv</span></b></span></span><span
+style='font-size:12.0pt;color:black'> file containing 30 records with more than
+20 fields&nbsp;is used as input to<span style='mso-spacerun:yes'>  </span>IPDRWriteTool.
+This file contains schema location&nbsp;for VOIP schema<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>VoIP3.0-A.0ID.xsd</span><span style='font-size:12.0pt;color:black'>
+schema file is used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span style='font-size:12.0pt;
+color:black'>Recordcount</span></span><span style='font-size:12.0pt;color:black'>
+and <span class=SpellE>roundrobin</span> options are off<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Output xdr
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase1.xdr</span><span
+style='font-size:12.0pt;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Output <span
+class=SpellE>xml</span> file <span class=GramE>is :</span> </span><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>TestCase1.xml<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='text-align:justify'><a name="_Toc12426888"><![if !supportLists]><span
+style='font-size:12.0pt;mso-fareast-font-family:Arial;color:black'><span
+style='mso-list:Ignore'>2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Test Case 2</a><span style='mso-bookmark:_Toc12426888'></span><span
+style='font-size:12.0pt;color:black'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Three .csv
+files are used as input to the IPDRWriteTool. </span><span class=SpellE><span
+class=GramE><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>testVOIP.csv</span></b></span></span><span style='font-size:12.0pt;
+color:black'> with 30 records, </span><span class=SpellE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testSM.csv</span></b></span><span
+style='font-size:12.0pt;color:black'> with 40<span style='mso-spacerun:yes'> 
+</span>records, <b>&nbsp;</b></span><span class=SpellE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testWS.csv</span></b></span><span
+style='font-size:12.0pt;color:black'> with 30 records&nbsp;<b> </b>are used.
+All .csv files contain the location of their respective schemas.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><b><span
+style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                        </span></span></b><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>VoIP3.0-A.0ID.xsd</span></b><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>, <b>SM203.0-A.0.xsd</b>, <b>WS30.-A.0RD1.xsd</b></span><span
+style='font-size:12.0pt;color:black'>&nbsp;schema files are used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;color:black'><span style='mso-spacerun:yes'>           
+</span><span class=SpellE>Recordcount</span> of 200 is used and <span
+class=SpellE>roundrobin</span> option is off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;color:black'><span style='mso-spacerun:yes'>           
+</span>Output xdr file <span class=GramE>is :</span> </span><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>TestCase2.xdr<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;color:black'><span style='mso-spacerun:yes'>     
+</span><span style='mso-tab-count:1'>      </span>Output <span class=SpellE>xml</span>
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase2.xml<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc12426889"><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Test Case 3</a></h2>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'>&nbsp;<span style='color:black'><span
+style='mso-spacerun:yes'>            </span>Three .csv files are used as input
+to the IPDRWriteTool. </span></span><span class=SpellE><span class=GramE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testVOIP.csv</span></b></span></span><span
+style='font-size:12.0pt;color:black'> with 30 records, </span><span
+class=SpellE><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>testSM.csv</span></b></span><b><span style='font-size:12.0pt;
+color:black'> </span></b><span style='font-size:12.0pt;color:black'>with <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>40 records<span
+class=GramE>, <b>&nbsp;</b><span class=SpellE><b><span style='font-family:"Courier New"'>testWS.csv</span></b></span></span>
+with 30 records&nbsp;are used. All .csv files contain the location of their
+respective schemas.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span></span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>VoIP3.0-A.0ID.xsd</span></b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>, <b>SM203.0-A.0.xsd</b>,
+<b>WS30.-A.0RD1.xsd</b></span><b><span style='font-size:12.0pt;color:black'> </span></b><span
+style='font-size:12.0pt;color:black'>schema files are used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span><span class=SpellE>Roundrobin</span>
+option is used and <span class=SpellE>recordcount</span> option is off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span>Output xdr file <span class=GramE>is
+:</span> </span><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>TestCase3.xdr</span><span style='font-size:12.0pt;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span>Output <span class=SpellE>xml</span>
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase3.xml</span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<h2 style='text-align:justify'><a name="_Toc12426890"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Test
+Case 4</a></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span class=GramE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testSMWithOneField.csv</span></b></span></span><span
+style='font-size:12.0pt;color:black'> file containing 20 records with one field
+is used as input to&nbsp;IPDRWriteTool. This<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+color:black'>file</span></span><span style='font-size:12.0pt;color:black'>
+contains<span style='mso-spacerun:yes'>  </span>schema location for SM schema
+having one field.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>SM203.0-A.0WithOneField.xsd</span></b><span style='font-size:12.0pt;
+color:black'> schema file is used.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                         </span></span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=SpellE>Recordcount</span> and <span class=SpellE>roundrobin</span>
+options are off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Output xdr
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase4.xdr<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Output <span
+class=SpellE>xml</span> file <span class=GramE>is :</span> </span><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>TestCase4.xml</span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:51.75pt;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc12426891"><![if !supportLists]><span style='mso-fareast-font-family:
+Arial;color:black'><span style='mso-list:Ignore'>2.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Test Case 5</a>&nbsp;<span style='color:black'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>This is
+the case of <b>nested schema</b>. File </span><span class=SpellE><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>testBestvendorSM.csv</span></b></span><span
+style='font-size:12.0pt;color:black'> containing 100 records is used as input
+to <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+color:black'>IPDRWriteTool.</span></span><span style='font-size:12.0pt;
+color:black'><span style='mso-spacerun:yes'>  </span>This file contains <span
+class=GramE>schema<span style='mso-spacerun:yes'>  </span>location</span> for <span
+class=SpellE>BestVendorSM</span> schema. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.4in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>BestvendorSM3.0-A.0.xsd</span></b><b><span style='font-size:12.0pt;
+color:black'> </span></b><span style='font-size:12.0pt;color:black'>schema file
+is used. This schema file in&nbsp;turn contains location for&nbsp;SM schema. So<span
+class=GramE>,<span style='mso-spacerun:yes'>  </span><b><span style='font-family:
+"Courier New"'>SM203.0</span></b></span></span><b><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>-A.0.xsd</span></b><b><span
+style='font-size:12.0pt;color:black'> </span></b><span style='font-size:12.0pt;
+color:black'>schema file is also used internally.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                          </span></span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span style='font-size:12.0pt;
+color:black'>Recordcount</span></span><span style='font-size:12.0pt;color:black'>
+and <span class=SpellE>roundrobin</span> options are off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>Output xdr
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase5.xdr</span><span
+style='font-size:12.0pt;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.4in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>  </span>Output <span class=SpellE>xml</span> file <span
+class=GramE>is :</span> </span><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>TestCase5.xml</span><span style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<h2 style='text-align:justify'><a name="_Toc12426892"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>2.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Test
+Case 6</a></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>VoIP3.0-A.0ID.xsd</span></b><span style='font-size:12.0pt;
+color:black'> file is used as input to IPDRWriteTool. This file contains
+schema&nbsp;location for VOIP<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+color:black'>schema</span></span><span style='font-size:12.0pt;color:black'>.</span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt'>&nbsp;<span
+style='color:black'><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>VoIP3.0-A.0ID.xsd</span></b><span style='font-size:12.0pt;
+color:black'> schema file is used. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>         </span><span style='mso-tab-count:1'>   </span>Old
+version of the same schema is supplied as </span><b><span style='font-size:
+12.0pt;font-family:"Courier New";color:black'>OldVoIP3.0-A.0ID.xsd</span></b><span
+style='font-size:12.0pt;color:black'>. During reading the&nbsp;user has to<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+color:black'>change</span></span><span style='font-size:12.0pt;color:black'>
+the name of<span style='mso-spacerun:yes'>  </span></span><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>OldVoIP3.0-A.0ID.xsd</span></b><b><span
+style='font-size:12.0pt;color:black'> </span></b><span style='font-size:12.0pt;
+color:black'>schema file to </span><b><span style='font-size:12.0pt;font-family:
+"Courier New";color:black'>VoIP3.0-A.0ID.xsd</span></b><b><span
+style='font-size:12.0pt;color:black'> </span></b><span style='font-size:12.0pt;
+color:black'>file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                       </span></span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span style='font-size:12.0pt;
+color:black'>Recordcount</span></span><span style='font-size:12.0pt;color:black'>
+and <span class=SpellE>roundrobin</span> options are off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span>Output xdr file <span class=GramE>is
+:</span> </span><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>TestCase6.xdr<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>            </span>Output <span class=SpellE>xml</span>
+file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase6.xml</span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></p>
+
+<h2 style='text-align:justify'><a name="_Toc12426893"><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>2.6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>Test
+Case 7</a></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;color:black'>This is
+the case of vendor defined <span class=SpellE>nameSpace</span>. One </span><span
+class=SpellE><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>testBestVendor.csv</span></b></span><span style='font-size:12.0pt;
+color:black'> file containing <span class=GramE>20<span
+style='mso-spacerun:yes'>  </span>records</span> is used <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;mso-layout-grid-align:
+none;text-autospace:none'><span class=GramE><span style='font-size:12.0pt;
+color:black'>as</span></span><span style='font-size:12.0pt;color:black'> input
+to IPDRWriteTool. This file <span class=GramE>contains<span
+style='mso-spacerun:yes'>  </span>the</span> location for<span
+style='mso-spacerun:yes'>  </span><span class=SpellE>BestVendor</span><span
+style='mso-spacerun:yes'>  </span>schema.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><b><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                         </span></span></b><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:12.0pt;font-family:"Courier New";
+color:black'>Bestvendor3.0-A.0.xsd</span></b><b><span style='font-size:12.0pt;
+color:black'> </span></b><span style='font-size:12.0pt;color:black'>schema file
+is used. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>                        </span></span><span
+style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:.5in;mso-layout-grid-align:
+none;text-autospace:none'><span class=SpellE><span style='font-size:12.0pt;
+color:black'>Recordcount</span></span><span style='font-size:12.0pt;color:black'>
+and <span class=SpellE>roundrobin</span> options are off.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>         </span><span style='mso-tab-count:1'>   </span>Output
+xdr file <span class=GramE>is :</span> </span><span style='font-size:12.0pt;
+font-family:"Courier New";color:black'>TestCase7.xdr<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><span
+style='mso-spacerun:yes'>         </span><span style='mso-tab-count:1'>   </span>Output
+<span class=SpellE>xml</span> file <span class=GramE>is :</span> </span><span
+style='font-size:12.0pt;font-family:"Courier New";color:black'>TestCase7.xml</span><span
+style='font-size:12.0pt;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc12426894"><![if !supportLists]><span style='mso-fareast-font-family:
+Arial'><span style='mso-list:Ignore'>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>General Instructions</a></h1>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;text-indent:-.25in;
+mso-list:l0 level1 lfo6;tab-stops:33.75pt list .5in left 1.75in;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span style='font-size:12.0pt;
+color:black'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;color:black'>Each
+.csv file contains the location for their respective schemas. Path of the .<span
+class=SpellE>xsd</span> file requires to be mentioned in the first line
+(Mandatory) <span class=GramE>of<span style='mso-spacerun:yes'>  </span>.</span>csv
+file.&nbsp;e.g. if the .<span class=SpellE>xsd</span> file is present in c:\,
+and if working directory is also c:\, then the path of schema location file in
+.csv file will be c:\filename and if the working directory is different then
+relative path or absolute path is required in the .csv file. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;text-indent:-.25in;
+mso-list:l0 level1 lfo6;tab-stops:33.75pt list .5in left 1.75in;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span style='font-size:12.0pt;
+color:black'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;color:black'>Sometimes
+there is a problem of number format. <span class=GramE>e.g</span>. the number
+may be present in scientific format like 8.96E+11. It is required to be
+converted in to decimal notation like 895744000000. Otherwise <span
+class=SpellE>NumberFormatException</span> will arise and data will not get
+processed. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-align:justify;text-indent:-.25in;
+mso-list:l0 level1 lfo6;tab-stops:33.75pt list .5in left 1.75in;mso-layout-grid-align:
+none;text-autospace:none'><![if !supportLists]><span style='font-size:12.0pt;
+color:black'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;color:black'>After
+reading the xdr or <span class=SpellE>xml</span> file, .csv file/files is/are
+generated.<span style='mso-spacerun:yes'>  </span>If .csv files are opened for
+view, the same should be closed before doing read again.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:12.0pt;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+	<element name = "movieTitle" type = "string"/>
+	<element name = "startTime" type = "ipdr:dateTimeMsec"/>
+	<element name = "endTime" type = "ipdr:dateTimeMsec"/>
+	<element name = "qosLevel" type="integer"/>
+	<complexType name = "qosVolumeEvent" >
+	  <sequence>
+	    <element ref = "qosLevel" />
+	    <element ref = "startTime" />
+	    <element ref = "endTime" />
+	  </sequence>
+	</complexType>
+	<complexType name="IPDR-ArrayOfStructures-Type"> 
+	  <complexContent> 
+	    <extension base="ipdr:IPDRType"> 
+	      <sequence>
+	         <element ref="startTime" />
+	         <element ref="endTime" />
+	         <element ref="movieTitle" />
+	         <element ref="qosVolumeEvent" maxOccurs="unbounded"/>
+	      </sequence>
+	    </extension>
+	  </complexContent>
+	</complexType>
+</schema>

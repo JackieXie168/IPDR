@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+
+            xmlns:ipdr="http://www.ipdr.org/namespaces/ipdr"
+
+            targetNamespace="http://www.bestvendor.com/namespaces/ipdr"
+
+            xmlns:bestvendorIPDR="http://www.bestvendor.com/namespaces/ipdr">
+
+ 
+
+            <import namespace="http://www.ipdr.org/namespaces/ipdr"
+
+                schemaLocation="IPDRDoc3.0.xsd"/>
+
+ 
+
+<element name = "qosDelivered" type="string"/>
+<element name = "clientID" type="string"/>
+<element name = "subscriberID" type="string"/>
+<element name = "destAddress" type="bestvendorIPDR:ipv4Addr"/>
+<element name = "startTime" type="bestvendorIPDR:dateTimeMsec"/>
+<element name = "endTime" type="bestvendorIPDR:dateTimeMsec"/>
+
+
+ 
+
+            <complexType name="IPDR-Bestvendor-Type">
+
+                <complexContent>
+
+                   <extension base="ipdr:IPDRType">
+
+                     <sequence>
+                        <element ref="bestvendorIPDR:qosDelivered" minOccurs="0"/>
+			<element ref= "bestvendorIPDR:clientID"/>
+			<element ref= "bestvendorIPDR:subscriberID"/>
+                        <element ref= "bestvendorIPDR:destAddress"/>
+			<element ref= "bestvendorIPDR:startTime"/>
+			<element ref= "bestvendorIPDR:endTime"/>
+			
+                     </sequence>
+
+                   </extension>
+
+                </complexContent>
+
+</complexType>
+
+</schema>
+

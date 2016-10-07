@@ -1,0 +1,1270 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List
+href="./Readme%20for%20Integration%20test%20cases_files/filelist.xml">
+<title>Readme for Integration test cases</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Infosys</o:Author>
+  <o:LastAuthor>vishal_garg</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>104</o:TotalTime>
+  <o:Created>2002-04-22T09:31:00Z</o:Created>
+  <o:LastSaved>2002-04-22T09:31:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1250</o:Words>
+  <o:Characters>7127</o:Characters>
+  <o:Company>infosys</o:Company>
+  <o:Lines>59</o:Lines>
+  <o:Paragraphs>14</o:Paragraphs>
+  <o:CharactersWithSpaces>8752</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	text-decoration:underline;
+	text-underline:single;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.b1
+	{mso-style-name:b1;
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	color:red;
+	mso-text-animation:none;
+	font-weight:bold;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+span.m1
+	{mso-style-name:m1;
+	color:blue;}
+span.pi1
+	{mso-style-name:pi1;
+	color:blue;}
+span.t1
+	{mso-style-name:t1;
+	color:#990000;}
+span.tx1
+	{mso-style-name:tx1;
+	font-weight:bold;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:85425246;
+	mso-list-type:hybrid;
+	mso-list-template-ids:211946962 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:128327465;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1354247690 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:231738964;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1328502188 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:249125415;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1940204812 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:355547339;
+	mso-list-type:hybrid;
+	mso-list-template-ids:445293970 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:366028443;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2003714744 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l6
+	{mso-list-id:393815669;
+	mso-list-type:hybrid;
+	mso-list-template-ids:904031172 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l6:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:416946470;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-24088808 375147396 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l7:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:0in;}
+@list l8
+	{mso-list-id:464205626;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-110338944 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l8:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:650448646;
+	mso-list-type:hybrid;
+	mso-list-template-ids:268981516 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l10
+	{mso-list-id:672532529;
+	mso-list-type:hybrid;
+	mso-list-template-ids:51285914 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l10:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:879974825;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-967510418 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l11:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:897517946;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1877295392 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l12:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l13
+	{mso-list-id:953946828;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2021510852 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l14
+	{mso-list-id:1057247285;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1521061028 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l15
+	{mso-list-id:1170094870;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2106087198 -1794110552 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l15:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l16
+	{mso-list-id:1174682295;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2033549164 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l16:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l17
+	{mso-list-id:1237007480;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1582184054 -1794110552 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l17:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l18
+	{mso-list-id:1265114939;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1432865436 -515207336 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l18:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l19
+	{mso-list-id:1297955379;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-302983574 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l19:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20
+	{mso-list-id:1313216506;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1569771666 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l20:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l21
+	{mso-list-id:1381826845;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-971104346 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l21:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l22
+	{mso-list-id:1496610808;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1708309222 -1794110552 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l22:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l23
+	{mso-list-id:1541091297;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-130918512 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l23:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l24
+	{mso-list-id:1737702339;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1629672356 -727524634 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l24:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l25
+	{mso-list-id:1886790913;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1270605176 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l25:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l26
+	{mso-list-id:1905795014;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1018742236 375147396 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l26:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	text-indent:0in;}
+@list l27
+	{mso-list-id:2105179612;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1281771404 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l27:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l28
+	{mso-list-id:2115633430;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1377535162 -1794110552 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l28:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>This document describes the integration test case scenarios
+for which sample input csv files,range files,capability files and the generated
+output files using reference libraries have been provided.<b><o:p></o:p></b></p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<p class=MsoNormal><b>The procedure for conducting integration tests:<o:p></o:p></b></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>The integration test cases files are lying in the file
+IPDRFTP_testData.tar (For Unix) and IPDRFTP_testData.zip (For Windows).
+Unzipping or untaring these files results in the creation of a test folder. A
+number of sample Capability files have also been provided in the Test folder.
+Apart from these files, the test folder also contains some folders, these are
+the control file directories, for sample SubscriptionGroups as given in the
+CapabilityFile. The sample CapabilityFile is provided below:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:30.0pt;margin-bottom:
+0in;margin-left:12.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+class=m1><span style='font-size:10.0pt;font-family:Verdana'>&lt;?</span></span><span
+class=pi1><span style='font-size:10.0pt;font-family:Verdana'>xml
+version=&quot;1.0&quot; encoding=&quot;us-ascii&quot; </span></span><span
+class=m1><span style='font-size:10.0pt;font-family:Verdana'>?&gt;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> </span><span style='font-size:
+10.0pt;font-family:Verdana;mso-fareast-font-family:"Arial Unicode MS";
+mso-bidi-font-family:"Arial Unicode MS"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:30.0pt;margin-bottom:
+0in;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>CapabilityRsp</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:42.0pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>supportedProtocolList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:.75in;margin-bottom:0in;
+margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>supportedProtocolItem version</span><span class=m1>=&quot;</span><b>3.0</b><span
+class=m1>&quot;</span><span class=t1> protocolMapping</span><span class=m1>=&quot;</span><b>File</b><span
+class=m1>&quot;</span><span class=t1> encoding</span><span class=m1>=&quot;</span><b>XML</b><span
+class=m1>&quot;&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>primitiveList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>primitiveItem</span><span class=m1>&gt;</span><span class=tx1>Pull</span><span
+class=m1>&lt;/</span><span class=t1>primitiveItem</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>primitiveList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>extension</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:84.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>groupId</span><span class=m1>&gt;</span><span class=tx1>Voip</span><span
+class=m1>&lt;/</span><span class=t1>groupId</span><span class=m1>&gt;</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileDirectory</span><span class=m1>&gt;</span><span class=tx1>file://192.168.122.152/home/vishal/ipdrftp/test/Voip/</span><span
+class=m1>&lt;/</span><span class=t1>controlFileDirectory</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFilePrefix</span><span class=m1>&gt;</span><span class=tx1>Voip-</span><span
+class=m1>&lt;/</span><span class=t1>controlFilePrefix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span><span class=tx1>N</span><span
+class=m1>&lt;/</span><span class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileSuffix</span><span class=m1>&gt;</span><span class=tx1>.ctrl</span><span
+class=m1>&lt;/</span><span class=t1>controlFileSuffix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:84.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>groupId</span><span class=m1>&gt;</span><span class=tx1>GSM</span><span
+class=m1>&lt;/</span><span class=t1>groupId</span><span class=m1>&gt;</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileDirectory</span><span class=m1>&gt;</span><span class=tx1>file://192.168.122.152/home/vishal/ipdrftp/test/GSM/</span><span
+class=m1>&lt;/</span><span class=t1>controlFileDirectory</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFilePrefix</span><span class=m1>&gt;</span><span class=tx1>GSM</span><span
+class=m1>&lt;/</span><span class=t1>controlFilePrefix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span><span class=tx1>NNN</span><span
+class=m1>&lt;/</span><span class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileSuffix</span><span class=m1>&gt;</span><span class=tx1>.control</span><span
+class=m1>&lt;/</span><span class=t1>controlFileSuffix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>extension</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:.75in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:-12.0pt'><span class=b1><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>supportedProtocolItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:.75in;margin-bottom:0in;
+margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>supportedProtocolItem version</span><span class=m1>=&quot;</span><b>3.0</b><span
+class=m1>&quot;</span><span class=t1> protocolMapping</span><span class=m1>=&quot;</span><b>File</b><span
+class=m1>&quot;</span><span class=t1> encoding</span><span class=m1>=&quot;</span><b>XML</b><span
+class=m1>&quot;&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>primitiveList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>primitiveItem</span><span class=m1>&gt;</span><span class=tx1>Pul</span><span
+class=m1>&lt;/</span><span class=t1>primitiveItem</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>primitiveList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>extension</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:84.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>groupId</span><span class=m1>&gt;</span><span class=tx1>V</span><span
+class=m1>&lt;/</span><span class=t1>groupId</span><span class=m1>&gt;</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileDirectory</span><span class=m1>&gt;</span><span class=tx1>C:/IPDR/Voip/</span><span
+class=m1>&lt;/</span><span class=t1>controlFileDirectory</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFilePrefix</span><span class=m1>&gt;</span><span class=tx1>Voip-</span><span
+class=m1>&lt;/</span><span class=t1>controlFilePrefix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span><span class=tx1>N</span><span
+class=m1>&lt;/</span><span class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileSuffix</span><span class=m1>&gt;</span><span class=tx1>.ctrl</span><span
+class=m1>&lt;/</span><span class=t1>controlFileSuffix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:84.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+style='font-size:10.0pt;font-family:Verdana'><a
+href="..\..\WINNT\Profiles\vishal_garg\My%20Documents\ipdrftp@22042002Windowstest%22"><b><span
+style='font-family:"Courier New";color:red'>-</span></b></a> <span class=m1>&lt;</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>groupId</span><span class=m1>&gt;</span><span class=tx1>GS</span><span
+class=m1>&lt;/</span><span class=t1>groupId</span><span class=m1>&gt;</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileDirectory</span><span class=m1>&gt;</span><span class=tx1>c:/IPDR/GSM/</span><span
+class=m1>&lt;/</span><span class=t1>controlFileDirectory</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFilePrefix</span><span class=m1>&gt;</span><span class=tx1>GSM</span><span
+class=m1>&lt;/</span><span class=t1>controlFilePrefix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span><span class=tx1>NNN</span><span
+class=m1>&lt;/</span><span class=t1>controlFileNamePolicy</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:102.0pt;margin-bottom:
+0in;margin-left:96.0pt;margin-bottom:.0001pt;text-indent:-24.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;</span><span
+class=t1>controlFileSuffix</span><span class=m1>&gt;</span><span class=tx1>.control</span><span
+class=m1>&lt;/</span><span class=t1>controlFileSuffix</span><span class=m1>&gt;</span>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:1.25in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:78.0pt;margin-bottom:
+0in;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>groupInfoList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:66.0pt;margin-bottom:
+0in;margin-left:48.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>extension</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:.75in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;text-indent:-12.0pt'><span class=b1><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>supportedProtocolItem</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:42.0pt;margin-bottom:
+0in;margin-left:24.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>supportedProtocolList</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:30.0pt;margin-bottom:
+0in;margin-left:12.0pt;margin-bottom:.0001pt;text-indent:-12.0pt'><span
+class=b1><span style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></span><span
+style='font-size:10.0pt;font-family:Verdana'> <span class=m1>&lt;/</span><span
+class=t1>CapabilityRsp</span><span class=m1>&gt;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style="mso-spacerun: yes"> </span></p>
+
+<p class=MsoNormal>The URL for this file has to be specified for running any of
+the test cases. </p>
+
+<p class=MsoNormal>Change the value of the controlFileDirectory(for Consumer)
+and controlFileLocalDirectory( for Producer) nodes to point to the exact
+location and URL of the control file directory, for the SubscriptionGroup
+otherwise the test cases will generate a sequence of errors. Before this, check
+for the existence of control file directories. If they do not exist, create the
+controlFile directories at the desired location, for each of the
+SubscriptionGroups. Inside each of these control file directories, create a
+range file with a name, confirming to the CapabilityFile values. For example,
+for the SubscriptionGroup with groupID “Voip”, create a range file with the
+name “Voip-range-file” (name obtained as &lt;groupID&gt;-range-file) in the
+directory “Voip”. Make an entry as “0-“ in each of the range files. If these
+paths are different from the one specified in the CapabilityFile, change the
+capability file to point to exact controlFile directory location and URL.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<h3>Test Scenarios :</h3>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b>Integration test cases for file transfer library.<o:p></o:p></b></p>
+
+<p class=MsoNormal><b><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></b></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'>Run
+     the “setcpath.sh” script in ipdrftp directory.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'>In
+     the ipdrftp directory, do “make clean” and “make all”</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'>Go to
+     the test directory</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo8;tab-stops:list .5in'>Run
+     the commands “make clean” and “make all”</li>
+</ol>
+
+<p class=MsoNormal>Separate C files have been made for each of the test cases:</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>Note :In each of the test files the capability file URL has
+to be changed before testing.There is also an option of taking URL from command
+prompt </p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 1:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo10;
+tab-stops:list .75in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the executable of file ProducerTest1.c .</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Modify the range file to contain
+“0000-“ string .</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Check for any<span
+style="mso-spacerun: yes">  </span>or errors on the console.At the end all the
+errors occurred will be printed.The range file will have entry
+0000-0010(assuming NNNN as name policy) and 11 control files will be generated.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo10;
+tab-stops:list .75in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the file ConsumerTest1.c by running the command</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Check for any exceptions or errors
+on the console.</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Console will show print statements
+indicating successful reading operations of the control files being generated
+earlier.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 2:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l20 level1 lfo26;
+tab-stops:list .75in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>The earlier test should have created 11 control files and
+range file entry as “0000-0010”</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Run the<span style="mso-spacerun:
+yes">  </span>ConsumerTest2.c.The consumer is configured to read control files
+from sequence number “0006” till last sequence number.So it should read 5
+control files.</p>
+
+<p class=MsoNormal style='margin-left:.75in'>If there is any error message then
+it will be printed on console.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 3:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l24 level1 lfo12;
+tab-stops:list .75in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Make an entry in range file as 9997-9997.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Run the class
+ProducerTest3.c.</p>
+
+<p class=MsoNormal style='margin-left:.75in'>The rangefile now should contain
+“9997-0004” and 7 control files should be generated.Check for any exceptions or
+errors on the console.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l24 level1 lfo12;
+tab-stops:list .75in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the program ConsumerTest3.c.It has been configured to read
+control files from sequence </p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Check for any
+exceptions or errors on the console.</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Console shows the print statements
+indicating successful reading of control files with sequence numbers starting
+from 9998 to 0004.</p>
+
+<p class=MsoNormal style='margin-left:.75in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 4:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l28 level1 lfo13;
+tab-stops:list .75in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the program ProducerTest4a.c</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Check for any
+exceptions or errors on the console.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Control files
+should not contain the end Version string and should contain only 6 IPDRDoc
+names.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l28 level1 lfo13;
+tab-stops:list .75in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the program ProducerTest4b.java by running the command:</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Control files
+should contain the end Version string and should contain only 100 IPDRDoc
+names.</p>
+
+<p class=MsoNormal style='margin-left:.75in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 5:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l22 level1 lfo14;
+tab-stops:list .75in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the program ProducerTest6.c<span style="mso-spacerun:
+yes">  </span>for<span style="mso-spacerun: yes">  </span>generating a control
+file with 100000 records.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Check for any
+exceptions or errors on the console.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Producer will
+create a control file with 100000 records.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Run the program
+ConsumerTest5a.c<span style="mso-spacerun: yes">  </span>and ConsumerTest5b.c
+simultaneously.</p>
+
+<p class=MsoNormal style='margin-left:.75in'>Consumer will simultaneously read
+the control file.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 6:</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Run the program
+ProducerTest6.c , ConsumerTest5a.c<span style="mso-spacerun: yes">   </span>,
+ConsumerTest5b.c simultaneously.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Check for any
+exceptions or errors on the console.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.25in'>Both the
+consumers should be able to read control file document names.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal>For Test Case 7:</p>
+
+<p class=MsoNormal style='margin-left:.75in'>This test has been tested in
+integration test case 3.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText2>Test cases for<span style="mso-spacerun: yes"> 
+</span>integration of conversion libraries with the file transfer libraries.</p>
+
+<p class=MsoBodyText2><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText2 style='margin-left:.5in;text-indent:0in;mso-list:l26 level1 lfo28;
+tab-stops:list .75in'><![if !supportLists]><span style='font-weight:normal'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]><span
+style='font-weight:normal'>For producerIT:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo18;
+tab-stops:list 1.0in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Place the csv files at a location or the csv files are lying
+in the test folder can be used.</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo18;
+tab-stops:list 1.0in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Open ProducerIT.c to edit the following variable values:</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>These variables
+are located at the beginning of the .c files.</p>
+
+<p class=MsoNormal style='margin-left:1.0in'>Specify in “inputFiles” array the
+exact locations of the csv files. The csv files specified in this array will be
+read.</p>
+
+<p class=MsoNormal style='margin-left:1.0in'>For example if the csv files are
+located at the path: “c:/ipdrftp/test/”, then specify locations in the array as
+:</p>
+
+<p class=MsoNormal style='margin-left:.75in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>char**
+inputFiles = (char**)malloc(sizeof(char*));</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>inputFiles[0] =
+&quot; c:/ipdrftp/test//testSM1.csv&quot;;</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>inputFiles[1] =
+&quot; c:/ipdrftp/test/testSM2.csv&quot;;</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>inputFiles[2] =
+NULL;</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in'>Specify docType as 1 in case XML
+is required to be written else specify docType as 0 in case XDR is required to
+be written.</p>
+
+<p class=MsoNormal style='margin-left:1.0in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>int docType = 0;</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>Specify in outFile
+the exact location of the directory in which xml or xdr should be created.</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'>char* outFile =
+&quot;c:/ipdrftp/test/&quot;;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:.5in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo18;
+tab-stops:list 1.0in'><![if !supportLists]>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the command “make clean” and “make all”</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo18;
+tab-stops:list 1.0in'><![if !supportLists]>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Run the ProducerIT.c by running the command ./producerIT</p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l9 level1 lfo18;
+tab-stops:list 1.0in'><![if !supportLists]>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>This creates xml or xdr files in the directory specified in
+the ipdrDocName variable.</p>
+
+<p class=MsoNormal style='margin-left:.75in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoBodyText2 style='margin-left:.5in;text-indent:0in;mso-list:l26 level1 lfo28;
+tab-stops:list .75in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]><span style='font-weight:normal'>For consumerIT:</span></p>
+
+<p class=MsoToc7 style='text-indent:0in;mso-list:l7 level1 lfo29;tab-stops:
+list 1.25in'><![if !supportLists]>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Open the ConsumerIT.c for editing the following variables,
+specified at the beginning of the class.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in'>Specify docType as 0 in case XML
+is required to be read else specify docType as 1 in case XDR is required to be
+read</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>int docType = 0;</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>Specify in
+outDir the exact location of the directory in which csv files will be created.</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'>char* outDir =
+&quot;c:/ipdrftp/test/&quot;;</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='mso-tab-count:1'>            </span>Run the following commands:</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='mso-tab-count:1'>            </span>“make clean”</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='mso-tab-count:1'>            </span>“make all”</p>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:.25in'><span
+style='mso-tab-count:1'>            </span>./consumerIT</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:0in;mso-list:l7 level1 lfo29;
+tab-stops:list 1.25in'><![if !supportLists]>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><![endif]>Consumer should run normally and should create two csv files
+inside the directory specified in the outDir variable.</p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+</div>
+
+</body>
+
+</html>

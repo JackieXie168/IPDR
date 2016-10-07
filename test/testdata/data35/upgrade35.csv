@@ -1,0 +1,4 @@
+test/data35/upgrade35.xsd,,,,,,,,,,,,,,,
+http://www.ipdr.org/namespaces/IPDR,,,,,,,,,,,,,,,
+myIPAddr,myDateTimeUSec,myHexBinary,myString,myEnumeration,( movieTitle ),( movieName ),qosVolume[ startTime;endTime;qosLevel ],subscriberList[ listName;( subscriberName ) ],subscriber[ name;address[ street;city ] ],( qosVolumeEvent[ startTime;endTime;qosLevel ] ),myBoolean,myByte,myUnisgnedByte,myShort,myUnsignedShort
+fedcab1912fe023498efcaff,1090936212563000,test byte array,testing 1\,2\,3,2,(day for night;monster;children of heaven),(day for night;monster;children of heaven;shrek 2;the terminal;kill bill 2),[962012343;962016862;6],[list of movies;(day for night;whale rider;monster)],[rockin rozy;[cubbon road\, shivajinagar;bangalore]],([991847489;991847532;255];[991847489;991847532;256]),false,127,1111,7777,33000

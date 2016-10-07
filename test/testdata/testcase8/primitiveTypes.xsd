@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "IPDRTypes.xsd"/>
+<element name = "myInt" type = "integer"/>
+<element name = "myUnsignedInt" type = "unsignedInt"/>
+<element name = "myLong" type = "long"/>
+<element name = "myUnisgnedLong" type = "unsignedLong"/>
+<element name = "myFloat" type = "float"/>
+<element name = "myDouble" type = "double"/>
+<element name = "myHexBinary" type = "hexbinary"/>
+<element name = "myString" type = "string"/>
+<element name = "myBoolean" type = "boolean"/>
+<element name = "myByte" type = "byte"/>
+<element name = "myUnisgnedByte" type = "unsignedByte"/>
+<element name = "myShort" type = "short"/>
+<element name = "myUnsignedShort" type = "unsignedShort"/>
+<complexType name="IPDR-PrimitiveTypes-Type"> 
+  <complexContent> 
+    <extension base="ipdr:IPDRType"> 
+      <sequence>
+		<element ref="myInt" />
+		<element ref="myUnsignedInt" />
+		<element ref="myLong" />
+		<element ref="myUnisgnedLong" />
+		<element ref="myFloat" />
+		<element ref="myDouble" />
+		<element ref="myHexBinary" />
+		<element ref="myString" />
+		<element ref="myBoolean" />
+		<element ref="myByte" />
+		<element ref="myUnisgnedByte" />
+		<element ref="myShort" />
+		<element ref="myUnsignedShort" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+</schema>

@@ -1,0 +1,7 @@
+IPDRMemory.c: In function `newSchemaElement':
+IPDRMemory.c:3624: incompatible types in assignment
+IPDRMemory.c: In function `newComplexElement':
+IPDRMemory.c:4784: incompatible types in assignment
+IPDRMemory.c: In function `addListComplexElement':
+IPDRMemory.c:4788: parse error at end of input
+make: *** [IPDRMemory.o] Error 1

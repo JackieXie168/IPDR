@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>WinBuild</title>
+             
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+</head>
+  <body>
+   
+<h1>Windows Build Instruction for VisualC++ Compilation of the IPDR Libraries</h1>
+   
+<h2>Dependent Libraries</h2>
+ The reference libraries were built and tested using version 7.9.3 of libcurl 
+for URL implementation and version 1.95.5 of Expat for the XML parser. <br>
+ 
+<h3>Expat (v1.95.5)</h3>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://www.jclark.com/xml/expat.html">http://www.jclark.com/xml/expat.html&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation 
+Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://expat.sourceforge.net">http://expat.sourceforge.net</a><br>
+ 
+<h3>Libcurl (v7.9.3)</h3>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://curl.haxx.se">http://curl.haxx.se</a><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation 
+Instructions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://curl.haxx.se/docs/install.html">http://curl.haxx.se/docs/install.html</a><br>
+ <br>
+ 
+<h2>Build Instructions</h2>
+   
+<ol>
+    <li>After downloading curl and expat, you'll still need to build libcurl.
+ &nbsp;Expat packages the compiled lib, so you won't need to build it. &nbsp;Note
+ the current tested versions are older ones. &nbsp;For libcurl, you will
+need  to pick the "older releases" to find a copy of the version used.</li>
+    <li>Curl provides a .dsw (workspace) file at lib/curllib.dsw. &nbsp;Open
+ this with VisualC++ and do the build.</li>
+    <li>To work with the default .dsw packaged with IPDR, move the following
+ files:</li>
+       
+  <ul>
+      <li>copy curl's lib/Debug/libcurl.lib built in step 2 to ipdr's libs
+ directory</li>
+      <li>copy curl's include/curl directory and its contents to ipd's include
+ area, creating an include/curl subdirectory.</li>
+      <li>copy expat's libs/expat.lib to ipdr's lib directory.</li>
+      <li>copy the header file from expat's source/lib/expat.h to the directry
+ include/expat in the ipdr project.<br>
+      </li>
+       
+  </ul>
+    <li>Open the IPDR .dsw (workspace) file at lib/ipdr.dsw and build.</li>
+    <li>Open the IPDR test .dsw file at test/test.dsw and build both the
+readtest  and writetest projects</li>
+    <li>Create a bin directory in IPDR. &nbsp;Copy the IPDRReadTest.exe and
+ IPDRWriteTest.exe files to this directory. &nbsp;Also copy the ipdr.dll
+file  to this directory, finally copy the libcurl.dll and expat.dll to this
+directory.<br>
+    </li>
+    <li>Modify your classpath add the ipdr/bin directory. &nbsp;This will 
+allow you to simply execute the IPDRReadTest.exe or IPDRWriteTest.exe from 
+any directory.</li>
+    <li>Test the program by doing the following:</li>
+       
+  <ul>
+      <li>Get a DOS prompt.</li>
+      <li>cd &lt;ipdrinstalldir&gt;/test/testdata/testcase1</li>
+      <li>Execute the write tool to create an IPDR XML file:<br>
+               
+      <pre>&gt; <b>IPDRWriteTool -doctype XML -outfile testVOIP.xml -schemavalidation testVOIP.csv</b></pre>
+      </li>
+      <li>Execute the write tool to create an IPDR XDR file:<br>
+                       
+      <pre>&gt; <b>IPDRWriteTool -doctype XDR -outfile c_testVOIP.xdr -schemavalidation testVOIP.csv</b></pre>
+      </li>
+      <li>Use the read tool to validate the results:<br>
+               
+      <pre>&gt; <b>IPDRReadTool -doctype XML -schemavalidation testVOIP.xml</b><br>&gt; <b>IPDRReadTool -doctype XDR -schemavalidation testVOIP.xdr</b></pre>
+     </li>
+       
+  </ul>
+   
+</ol>
+   
+<h2>Documentation<br>
+ </h2>
+ 
+<h3>API Documentation</h3>
+ API Documentation built using Doxygen can be found in <a
+ href="doxygen/html/index.html">C API Documentation</a><br>
+ 
+<h3>Test Tool Usage<br>
+ </h3>
+ Test Tool usage can be found in <a href="TestToolC.htm">Test Tool Usage</a><br>
+ 
+<h3>Integration test cases<br>
+ </h3>
+ Integration Test Cases are described in <a
+ href="Integration%20Test%20Cases.htm">Integration Test Cases</a>. The test 
+data for the test cases can be found under test/testdata.zip<br>
+ 
+<h2><br>
+ </h2>
+ 
+<h2>Known Bugs:</h2>
+   
+<ul>
+    <li>If the schema files are marked as read-only the WriteTool will complain
+ with the following error:<br>
+           
+    <pre>pExceptionStructure-&gt;errorCode = 105<br>pExceptionStructure-&gt;errorMessage = Input Schema file is invalid<br>pExceptionStructure-&gt;errorSeverity = 2<br>pExceptionStructure-&gt;functionName = generateSchemaDescriptor<br>pExceptionStructure-&gt;recordCount = 1<br></pre>
+      <b>Workaround: &nbsp;</b>Turn off the read only property of all the 
+schemas (.xsd) files and things should progress.<br>
+      <br>
+    </li>
+    <li>If Readtool is called with just the arguments "-doctype XML" it will
+ crash rather than report a missing parameter error.<br>
+      <b>Workaround: &nbsp;</b>provide a complete argument string</li>
+   
+</ul>
+   
+<h2>Enhancements</h2>
+   
+<ul>
+    <li>Make the command line argument processing more robust and command 
+line errors more helpful.</li>
+    <li>Provide more context specific information in errors. &nbsp;E.g. what
+ file name was being processed, line numbers on intermediate files, unique
+ ids to locate unique points in code.</li>
+   
+</ul>
+   
+<hr width="100%" size="2"><i>Jeff Meyer &nbsp;June 6, 2003</i><br>
+  <br>
+ <br>
+</body>
+</html>

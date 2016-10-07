@@ -1,0 +1,7 @@
+test/data35/structure.xsd,,,
+http://www.ipdr.org/namespaces/IPDR,,,
+startTime,endTime,movieTitle,qosVolume[ startTime;endTime;qosLevel ]
+991847488,991847533,Sh\[r\]ek\;2,[991847489;991847532;255]
+991847592,991847692,Star Wars,[991847589;991847691;255]
+991847718,991847890,Spider-Man 2,[991847719;991847888;10]
+991847912,991847981,Babe,[991847914;991847980;128]

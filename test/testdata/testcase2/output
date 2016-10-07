@@ -1,0 +1,645 @@
+
+Schema Validation is ON, Calling setSchemaData
+Appending Normal
+Appending Client Failure
+Appending Server Failure
+Appending Connection Failure
+Freeing List
+
+Displaying Node 1
+Node Info = Normal
+
+Displaying Node 2
+Node Info = Client Failure
+
+Displaying Node 3
+Node Info = Server Failure
+
+Displaying Node 4
+Node Info = Connection Failure
+
+
+
+Printing Schema Element 1
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$IPDRCreationTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 2
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$seqNum
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 3
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$subscriberID
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 4
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$destAddress
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = ipV4Addr
+pSchemaElement->documentation_ = IP address of streaming destination.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 5
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$serviceProviderID
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Service provider of streaming service.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 6
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$sourceAddress
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = ipV4Addr
+pSchemaElement->documentation_ = IP address of streaming server
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 7
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$startTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = Time instant the stream starts playing.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 8
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$endTime
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = dateTimeMsec
+pSchemaElement->documentation_ = Time instant the stream stops playing.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 9
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$timeZoneOffset
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = <null>
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 10
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$terminationStatus
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Indication of the nature of termination of the session.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+
+Displaying Node 1
+Node Info = Normal
+
+Displaying Node 2
+Node Info = Client Failure
+
+Displaying Node 3
+Node Info = Server Failure
+
+Displaying Node 4
+Node Info = Connection Failure
+
+
+Printing Schema Element 11
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$streamName
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Descriptive name of stream
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 12
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$streamID
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Unique id of stream. This id is used to uniquely identify the stream where the name does not provide a unique value.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 13
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$charge
+pSchemaElement->attributeType_ = FLOAT
+pSchemaElement->derivedType_ = FLOAT
+pSchemaElement->documentation_ = Monetary amount to be charged.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 14
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$chargeCurrency
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Currency unit of charge amount.
+pSchemaElement->reference_ = http://www.iso.ch
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 15
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$codec
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = Codec used for video stream.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 16
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$numAudioStreams
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = Count of audio streams.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 17
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$numVideoStreams
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = Count of video streams.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 18
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$averageBandwidth
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = HYPER
+pSchemaElement->documentation_ = Average bandwidth used for stream.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = bps
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 19
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$totalVolume
+pSchemaElement->attributeType_ = HYPER
+pSchemaElement->derivedType_ = HYPER
+pSchemaElement->documentation_ = Total volume used for stream.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = bytes
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 20
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$qosRequested
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = Requested QoS corresponding to the SLA or dynamic QoS request
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 21
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$qosDelivered
+pSchemaElement->attributeType_ = INTEGER
+pSchemaElement->derivedType_ = INTEGER
+pSchemaElement->documentation_ = Pre-calculated indicator representing the delivered / negotiated QoS. Physical attributes such as latency or error rates are weighted and combined into one value.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+
+
+Printing Schema Element 22
+pSchemaElement->attributeName_ = IPDR-SM-Type$http://www.ipdr.org/namespaces/ipdr$qosMeasurement
+pSchemaElement->attributeType_ = UTF8_ARRAY
+pSchemaElement->derivedType_ = UTF8_ARRAY
+pSchemaElement->documentation_ = QoS measurement such as delay, jitter or other parameter.
+pSchemaElement->reference_ = <null>
+pSchemaElement->status_ = <null>
+pSchemaElement->unit_ = <null>
+Linked List is pointing to NULL !!!
+Return value from setSchemaData = 0The descriptorID is in addDescriptor : 1
+The string is in addDescriptor : IPDR-SM-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$destAddress*INTEGER*<null>*INTEGER$serviceProviderID*UTF8_ARRAY*<null>*UTF8_ARRAY$sourceAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$timeZoneOffset*INTEGER*<null>*INTEGER$terminationStatus*UTF8_ARRAY*<null>*UTF8_ARRAY$streamName*UTF8_ARRAY*<null>*UTF8_ARRAY$streamID*UTF8_ARRAY*<null>*UTF8_ARRAY$charge*FLOAT*<null>*FLOAT$chargeCurrency*UTF8_ARRAY*<null>*UTF8_ARRAY$codec*UTF8_ARRAY*<null>*UTF8_ARRAY$numAudioStreams*INTEGER*<null>*INTEGER$numVideoStreams*INTEGER*<null>*INTEGER$averageBandwidth*HYPER*<null>*HYPER$totalVolume*HYPER*<null>*HYPER$qosRequested*INTEGER*<null>*INTEGER$qosDelivered*INTEGER*<null>*INTEGER$qosMeasurement*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+The descriptorID is in addDescriptor : 2
+The string is in addDescriptor : IPDR-SM-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$destAddress*INTEGER*<null>*INTEGER$serviceProviderID*UTF8_ARRAY*<null>*UTF8_ARRAY$sourceAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$terminationStatus*UTF8_ARRAY*<null>*UTF8_ARRAY$streamID*UTF8_ARRAY*<null>*UTF8_ARRAY$charge*FLOAT*<null>*FLOAT$chargeCurrency*UTF8_ARRAY*<null>*UTF8_ARRAY$codec*UTF8_ARRAY*<null>*UTF8_ARRAY$numAudioStreams*INTEGER*<null>*INTEGER$numVideoStreams*INTEGER*<null>*INTEGER$averageBandwidth*HYPER*<null>*HYPER$totalVolume*HYPER*<null>*HYPER$qosRequested*INTEGER*<null>*INTEGER$qosDelivered*INTEGER*<null>*INTEGER$qosMeasurement*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[0]The descriptorID is in addDescriptor : 3
+The string is in addDescriptor : IPDR-SM-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$serviceProviderID*UTF8_ARRAY*<null>*UTF8_ARRAY$sourceAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$terminationStatus*UTF8_ARRAY*<null>*UTF8_ARRAY$streamID*UTF8_ARRAY*<null>*UTF8_ARRAY$charge*FLOAT*<null>*FLOAT$chargeCurrency*UTF8_ARRAY*<null>*UTF8_ARRAY$codec*UTF8_ARRAY*<null>*UTF8_ARRAY$numAudioStreams*INTEGER*<null>*INTEGER$qosMeasurement*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[1]The descriptorID is in addDescriptor : 4
+The string is in addDescriptor : IPDR-SM-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$destAddress*INTEGER*<null>*INTEGER$serviceProviderID*UTF8_ARRAY*<null>*UTF8_ARRAY$sourceAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$terminationStatus*UTF8_ARRAY*<null>*UTF8_ARRAY$streamName*UTF8_ARRAY*<null>*UTF8_ARRAY$streamID*UTF8_ARRAY*<null>*UTF8_ARRAY$charge*FLOAT*<null>*FLOAT$chargeCurrency*UTF8_ARRAY*<null>*UTF8_ARRAY$codec*UTF8_ARRAY*<null>*UTF8_ARRAY$numAudioStreams*INTEGER*<null>*INTEGER$numVideoStreams*INTEGER*<null>*INTEGER$averageBandwidth*HYPER*<null>*HYPER$totalVolume*HYPER*<null>*HYPER$qosRequested*INTEGER*<null>*INTEGER$qosDelivered*INTEGER*<null>*INTEGER$qosMeasurement*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[2]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[3]The descriptorID is in addDescriptor : 5
+The string is in addDescriptor : IPDR-SM-Type^subscriberID*UTF8_ARRAY*<null>*UTF8_ARRAY$serviceProviderID*UTF8_ARRAY*<null>*UTF8_ARRAY$sourceAddress*INTEGER*<null>*INTEGER$startTime*HYPER*<null>*HYPER$endTime*HYPER*<null>*HYPER$timeZoneOffset*INTEGER*<null>*INTEGER$terminationStatus*UTF8_ARRAY*<null>*UTF8_ARRAY$streamID*UTF8_ARRAY*<null>*UTF8_ARRAY$charge*FLOAT*<null>*FLOAT$chargeCurrency*UTF8_ARRAY*<null>*UTF8_ARRAY$codec*UTF8_ARRAY*<null>*UTF8_ARRAY$numAudioStreams*INTEGER*<null>*INTEGER$qosMeasurement*UTF8_ARRAY*<null>*UTF8_ARRAY$
+The descriptorID is in getDescriptor 5
+The descriptorID is in getDescriptor 5
+	[4]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[5]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[6]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[7]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[8]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[9]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[10]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[11]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[12]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[13]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[14]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[15]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[16]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[17]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[18]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[19]The descriptorID is in getDescriptor 1
+The descriptorID is in getDescriptor 1
+	[20]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[21]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[22]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[23]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[24]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[25]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[26]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[27]The descriptorID is in getDescriptor 5
+The descriptorID is in getDescriptor 5
+	[28]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[29]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[30]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[31]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[32]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[33]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[34]The descriptorID is in getDescriptor 4
+The descriptorID is in getDescriptor 4
+	[35]The descriptorID is in getDescriptor 2
+The descriptorID is in getDescriptor 2
+	[36]The descriptorID is in getDescriptor 3
+The descriptorID is in getDescriptor 3
+	[37]The descriptorID is in getDescriptor 5
+The descriptorID is in getDescriptor 5
+	[38]	[39]
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 1
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 2
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 3
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 4
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 5
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 6
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 7
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 8
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 9
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 10
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 11
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 12
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 13
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 14
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 15
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 16
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 17
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 18
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 19
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 20
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 21
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 22
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 23
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 24
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 25
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 26
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 27
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 28
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 29
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 30
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 31
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 32
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 33
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 34
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 35
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 36
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 37
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 38
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 39
+
+Displaying Record 1
+Error Code 	= 51
+Error Message 	= Mandatory attribute defined in schema is not found
+Error Severity 	= 1
+Function Name 	= checkForMandatoryAttrInFNFData
+Record Count 	= 40
+ Document decoded Successfully

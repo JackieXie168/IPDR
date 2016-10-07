@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+
+            xmlns:ipdr="http://www.ipdr.org/namespaces/ipdr"
+
+            targetNamespace="http://www.hp.com/namespaces/ipdr"
+
+            xmlns:bestvendorIPDR="http://www.bestvendor.com/namespaces/ipdr"
+            xmlns:HP="http://www.hp.com/namespaces/ipdr">
+ 
+
+            <import namespace="http://www.bestvendor.com/namespaces/ipdr"
+
+                schemaLocation="BestvendorSM3.0-A.0.xsd"/>
+
+ 
+
+<element name = "qosDelivered" type="string"/>
+
+ 
+
+            <complexType name="IPDR-HP-Bestvendor-SM-Type">
+
+                <complexContent>
+
+                   <extension base="bestvendorIPDR:IPDR-Bestvendor-SM-Type">
+
+                     <sequence>
+
+                        <element ref="HP:qosDelivered" minOccurs="0" />
+
+                     </sequence>
+
+                   </extension>
+
+                </complexContent>
+
+</complexType>
+
+</schema>
+

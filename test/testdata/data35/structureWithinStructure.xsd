@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<schema xmlns = "http://www.w3.org/2001/XMLSchema"
+	 targetNamespace = "http://www.ipdr.org/namespaces/IPDR"
+	 xmlns:ipdr = "http://www.ipdr.org/namespaces/IPDR"
+	 version = "3.5-A.0" >
+        <import namespace = "http://www.ipdr.org/namespaces/IPDR"
+              schemaLocation = "test/schema35examples/IPDRDoc3.5.xsd"/>
+        <include schemaLocation = "test/schema35examples/IPDRTypes.xsd"/>
+<element name = "street" type = "string"/>
+<element name = "city" type = "string"/>
+<complexType name="addressEvent">
+  <sequence> 
+    <element ref="street"/> 
+    <element ref="city"/> 
+  </sequence> 
+</complexType> 
+<element name = "name" type = "string"/>
+<element name="address" type="addressEvent"/>
+<complexType name="subscriberEvent">
+  <sequence>
+    <element ref="name"/> 
+    <element ref="address"/> 
+  </sequence> 
+</complexType> 
+<element name="subscriber" type="subscriberEvent"/>
+<complexType name="IPDR-StructureWithinStructure-Type"> 
+  <complexContent> 
+    <extension base="ipdr:IPDRType"> 
+      <sequence>
+         <element ref="subscriber"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+</schema>

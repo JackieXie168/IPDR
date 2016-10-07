@@ -1,0 +1,55 @@
+
+LIBRARY IPDRFTP
+
+EXPORTS
+
+	newCapabilityFile
+	newSubscriptionGroupList
+	freeCapabilityFile
+	freeSubscriptionGroupList
+	addGroup
+	deleteGroup
+	getAllGroups
+	getGroup
+	getGroupIDs
+	toXML
+	readCapabilityFile
+	controlFileFromURL
+	controlFileFromLocation
+	freeControlFile
+	writeStart
+	writeEnd
+	addDocName
+	getDocName
+	isEnd
+	getDocCount
+	refreshControlFile
+	newListErrorStructure
+	printLastError
+	printAllErrors
+	freeListErrorStruct
+	getFileStreamFromURL
+	getFirstSequenceNbr
+	getLastSequenceNbr
+	setFirstSequenceNbr
+	setLastSequenceNbr
+	newSubscriptionGroup
+	freeSubscriptionGroup
+	getGroupID
+	getControlFileDirectory
+	getControlFilePrefix
+	getControlFileNamePolicy
+	getControlFileSuffix
+	getControlFileLocalDirectory
+	setGroupID
+	setControlFileDirectory
+	setControlFilePrefix
+	setControlFileNamePolicy
+	setControlFileSuffix
+	setControlFileLocalDirectory
+	getRangeFileName
+	getControlFileName
+	getMaxSequenceNumber
+	getSequenceBasedOnPolicy
+	incrementSequence
+	decrementSequence
