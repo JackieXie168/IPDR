@@ -1,3 +1,6 @@
+# Makefile.am
+AUTOMAKE_OPTIONS= foreign subdir-objects
+
 noinst_PROGRAMS = ProducerIT ConsumerIT UnitTest ProducerTest1 ProducerTest3 ProducerTest4a ProducerTest4b ProducerTest6 \
      ConsumerTest1 ConsumerTest2 ConsumerTest3 ConsumerTest5a ConsumerTest5b
 

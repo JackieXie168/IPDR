@@ -103,7 +103,7 @@ AC_FUNC_REALLOC
 AC_FUNC_STRTOD
 AC_FUNC_MEMCMP
 AC_FUNC_MKTIME
-AC_CHECK_FUNCS([ftime gethostname gettimeofday gmtime memset mkdir pow strchr strcpy strrchr strstr strtok strtoul sysinfo])
+AC_CHECK_FUNCS([ftime gethostname gettimeofday gmtime memset mkdir pow strncasecmp strchr strcpy strrchr strstr strtok strtoul sysinfo])
 
 ##################### MODULES ##################################################
 #
