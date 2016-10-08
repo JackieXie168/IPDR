@@ -25,8 +25,8 @@
 #ifndef _RANGEFILE_H_
 #define _RANGEFILE_H_
 
-#include "ftp/FtpStructures.H"
-#include "ftp/GetFileFromURL.H"
+#include "ftp/FtpStructures.h"
+#include "ftp/GetFileFromURL.h"
 
 int getFirstSequenceNbr(ListErrorStruct* pErrorList ,
 						  char* rangeFileURL,

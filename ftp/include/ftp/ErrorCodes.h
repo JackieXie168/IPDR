@@ -26,7 +26,7 @@
 #ifndef _ERRORCODE_H_
 #define _ERRORCODE_H_
 
-#include "ftp/FtpStructures.H"
+#include "ftp/FtpStructures.h"
 
 /* LIBCURL ERRORS */
 #define IPDR_CURL_COULDNT_CONNECT					2000

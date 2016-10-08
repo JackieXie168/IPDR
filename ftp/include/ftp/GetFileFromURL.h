@@ -26,7 +26,7 @@
 #include "curl/curl.h"
 #include "curl/types.h"
 #include "curl/easy.h"
-#include "ftp/FtpStructures.H"
+#include "ftp/FtpStructures.h"
 
 struct FileFtp {
   char *filename;

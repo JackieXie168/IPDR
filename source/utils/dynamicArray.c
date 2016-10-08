@@ -20,7 +20,6 @@
  *****************************************************/
 
 #include <stdio.h>
-#include <sys/malloc.h>
 #include <string.h>
 #include "utils/dynamicArray.h"
 #include "utils/errorCode.h"

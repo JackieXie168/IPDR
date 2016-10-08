@@ -28,7 +28,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h> 
-#include <sys/malloc.h>
 #include "curl/curl.h"
 #include "curl/types.h"
 #include "curl/easy.h"

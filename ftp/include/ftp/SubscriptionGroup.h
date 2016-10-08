@@ -23,7 +23,7 @@
 #ifndef _SUBSCRIPTIONGROUP_H_
 #define _SUBSCRIPTIONGROUP_H_
 
-#include"ftp/FtpStructures.H"
+#include"ftp/FtpStructures.h"
 
 SubscriptionGroup* 
 newSubscriptionGroup(ListErrorStruct* pErrorList,

@@ -24,10 +24,10 @@
 #ifndef _CAPABILITYFILE_H_
 #define _CAPABILITYFILE_H_
 
-#include "ftp/FtpStructures.H"
-#include "ftp/SubscriptionGroup.H"
+#include "ftp/FtpStructures.h"
+#include "ftp/SubscriptionGroup.h"
 #include "expat.h"
-#include "ftp/GetFileFromURL.H"
+#include "ftp/GetFileFromURL.h"
 
 CapabilityFile* newCapabilityFile(ListErrorStruct* pErrorList);
 								  

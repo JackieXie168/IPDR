@@ -23,12 +23,12 @@
 #ifndef _IPDR_FTP_H_
 #define _IPDR_FTP_H_
 
-#include "ftp/FtpStructures.H"
-#include "ftp/CapabilityFile.H"
-#include "ftp/SubscriptionGroup.H"
-#include "ftp/RangeFile.H"
-#include "ftp/ControlFile.H"
-#include "ftp/GetFileFromURL.H"
-#include "ftp/ErrorCodes.H"
+#include "ftp/FtpStructures.h"
+#include "ftp/CapabilityFile.h"
+#include "ftp/SubscriptionGroup.h"
+#include "ftp/RangeFile.h"
+#include "ftp/ControlFile.h"
+#include "ftp/GetFileFromURL.h"
+#include "ftp/ErrorCodes.h"
 
 #endif //_IPDR_FTP_H_

@@ -23,7 +23,6 @@
 #define _ERRORHANDLER_H
 
 #include <ctype.h>
-#include <sys/malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

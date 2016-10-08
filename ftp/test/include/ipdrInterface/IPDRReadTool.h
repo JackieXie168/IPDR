@@ -26,7 +26,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <sys/malloc.h>
 #include <stdlib.h>
 
 #include "utils/IPDRMemory.h"

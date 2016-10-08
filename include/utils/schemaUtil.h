@@ -24,7 +24,6 @@
 #ifndef _SCHEMAUTIL_H
 #define _SCHEMAUTIL_H
 
-#include <sys/malloc.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

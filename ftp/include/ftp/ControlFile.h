@@ -23,8 +23,8 @@
 #ifndef _CONTROLFILE_H_
 #define _CONTROLFILE_H_
 
-#include "ftp/FtpStructures.H"
-#include "ftp/GetFileFromURL.H"
+#include "ftp/FtpStructures.h"
+#include "ftp/GetFileFromURL.h"
 
 ControlFile* controlFileFromURL(ListErrorStruct* pErrorList,
 								char* controlFileURL);

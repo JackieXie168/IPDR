@@ -59,7 +59,7 @@ fi
 # Checks for header files.
 AC_FUNC_ALLOCA
 AC_HEADER_STDC
-AC_CHECK_HEADERS([sys/malloc.h limits.h inttypes.h netinet/in.h stddef.h stdlib.h string.h sys/time.h sys/timeb.h unistd.h wchar.h] ,[:] ,[missing_headers="$missing_headers $ac_header"])
+AC_CHECK_HEADERS([limits.h inttypes.h netinet/in.h stddef.h stdlib.h string.h sys/time.h sys/timeb.h unistd.h wchar.h] ,[:] ,[missing_headers="$missing_headers $ac_header"])
 
 if test ! -z "$missing_headers"; then
   AC_MSG_ERROR([missing headers: $missing_headers])

@@ -116,9 +116,6 @@
 /* Define to 1 if you have the `sysinfo' function. */
 #undef HAVE_SYSINFO
 
-/* Define to 1 if you have the <sys/malloc.h> header file. */
-#undef HAVE_SYS_MALLOC_H
-
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #undef HAVE_SYS_STAT_H
 
@@ -155,11 +152,15 @@
 /* Get HostOS Type is Darwin */
 #undef IS_DARWIN
 
-/* Define to the sub-directory where libtool stores uninstalled libraries. */
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
 #undef LT_OBJDIR
 
 /* Get HostOS Type */
 #undef NON_LINUX
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
 
 /* Name of package */
 #undef PACKAGE
